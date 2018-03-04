@@ -1,0 +1,8229 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1" />
+	<title>東海道本線乗車位置案内</title>
+	<script>
+		var cardata =
+		{
+			"4dfront" :
+			{
+				length: 64,
+				car: 62,
+				doors:
+				[
+					{ pos: -22, width: 4 },
+					{ pos: -8, width: 4 },
+					{ pos: 8, width: 4 },
+					{ pos: 24, width: 4 },
+				],
+				split: [-25],
+			},
+			"4dmid":
+			{
+				length: 64,
+				car: 62,
+				doors:
+				[
+					{ pos: -24, width: 4 },
+					{ pos: -8, width: 4 },
+					{ pos: 8, width: 4 },
+					{ pos: 24, width: 4 },
+				],
+			},
+			"4dback":
+			{
+				length: 64,
+				car: 62,
+				doors:
+				[
+					{ pos: -24, width: 4 },
+					{ pos: -8, width: 4 },
+					{ pos: 8, width: 4 },
+					{ pos: 22, width: 4 },
+				],
+				split: [25],
+			},
+			"4dgreen":
+			{
+				length: 64,
+				car: 62,
+				doors:
+				[
+					{ pos: -18.5, width: 3 },
+					{ pos: 18.5, width: 3 },
+				],
+			},
+			"E231-4600":
+			{
+				length: 64,
+				car: 62,
+				doors:
+				[
+					{ pos: -24, width: 4 },
+					{ pos: -8, width: 4 },
+					{ pos: 8, width: 4 },
+					{ pos: 22, width: 4 },
+				],
+			},
+			"E657front":
+			{
+				length: 69,
+				car: 67,
+				doors:
+				[
+					{ pos: -20, width: 3 },
+					{ pos: 24, width: 3 },
+				],
+				split: [-23],
+			},
+			"E657mide":
+			{
+				length: 65.5,
+				car: 63.5,
+				doors:
+				[
+					{ pos: 25, width: 3 },
+				],
+			},
+			"E657mido":
+			{
+				length: 65.5,
+				car: 63.5,
+				doors:
+				[
+					{ pos: 22, width: 3 },
+				],
+			},
+			"E657mid4":
+			{
+				length: 65.5,
+				car: 63.5,
+				doors:
+				[
+					{ pos: 30, width: 3 },
+				],
+			},
+			"E657back":
+			{
+				length: 69,
+				car: 67,
+				doors:
+				[
+					{ pos: 20, width: 3 },
+				],
+				split: [23],
+			},
+			"185front":
+			{
+				length: 64,
+				car: 62,
+				doors:
+				[
+					{ pos: -21.5, width: 3 },
+					{ pos: 24.5, width: 3 },
+				],
+				split: [-25],
+			},
+			"185mide":
+			{
+				length: 64,
+				car: 62,
+				doors:
+				[
+					{ pos: -28.5, width: 3 },
+					{ pos: 24.5, width: 3 },
+				],
+			},
+			"185mido":
+			{
+				length: 64,
+				car: 62,
+				doors:
+				[
+					{ pos: -28.5, width: 3 },
+					{ pos: 28.5, width: 3 },
+				],
+			},
+			"185green":
+			{
+				length: 64,
+				car: 62,
+				doors:
+				[
+					{ pos: 28.5, width: 3 },
+				],
+			},
+			"185back":
+			{
+				length: 64,
+				car: 62,
+				doors:
+				[
+					{ pos: -24.5, width: 3 },
+					{ pos: 21.5, width: 3 },
+				],
+				split: [25],
+			},
+			"215front":
+			{
+				length: 64,
+				car: 62,
+				doors:
+				[
+					{ pos: -15.5, width: 3 },
+					{ pos: 18.5, width: 3 },
+				],
+				split: [-25],
+			},
+			"215mid":
+			{
+				length: 64,
+				car: 62,
+				doors:
+				[
+					{ pos: -20.5, width: 3 },
+					{ pos: 20.5, width: 3 },
+				],
+			},
+			"215back":
+			{
+				length: 64,
+				car: 62,
+				doors:
+				[
+					{ pos: -18.5, width: 3 },
+					{ pos: 15.5, width: 3 },
+				],
+				split: [25],
+			},
+			"251front":
+			{
+				length: 64,
+				car: 62,
+				doors:
+				[
+					{ pos: 23.25, width: 3 },
+				],
+				split: [-25],
+			},
+			"251mid2":
+			{
+				length: 62.5,
+				car: 60.5,
+				doors:
+				[
+					{ pos: -28.25, width: 3 },
+				],
+			},
+			"251mide":
+			{
+				length: 62.5,
+				car: 60.5,
+				doors:
+				[
+					{ pos: 24.25, width: 3 },
+				],
+			},
+			"251mido":
+			{
+				length: 62.5,
+				car: 60.5,
+				doors:
+				[
+					{ pos: 28.25, width: 3 },
+				],
+			},
+			"251mid9":
+			{
+				length: 62.5,
+				car: 60.5,
+				doors:
+				[
+					{ pos: 18.25, width: 3 },
+				],
+			},
+			"251back":
+			{
+				length: 64,
+				car: 62,
+				doors:
+				[
+					{ pos: -22.5, width: 3 },
+				],
+				split: [25],
+			},
+			"3dfront":
+			{
+				length: 64,
+				car: 62,
+				doors:
+				[
+					{ pos: -21, width: 4 },
+					{ pos: 0, width: 4 },
+					{ pos: 21, width: 4 },
+				],
+				split: [-26],
+			},
+			"3dmid":
+			{
+				length: 64,
+				car: 62,
+				doors:
+				[
+					{ pos: -21, width: 4 },
+					{ pos: 0, width: 4 },
+					{ pos: 21, width: 4 },
+				],
+			},
+			"3dback":
+			{
+				length: 64,
+				car: 62,
+				doors:
+				[
+					{ pos: -21, width: 4 },
+					{ pos: 0, width: 4 },
+					{ pos: 21, width: 4 },
+				],
+				split: [26],
+			},
+			"373front":
+			{
+				length: 68,
+				car: 66,
+				doors:
+				[
+					{ pos: -24, width: 4 },
+					{ pos: 24, width: 4 },
+				],
+				split: [-27],
+			},
+			"373mid":
+			{
+				length: 68,
+				car: 66,
+				doors:
+				[
+					{ pos: -24, width: 4 },
+					{ pos: 24, width: 4 },
+				],
+			},
+			"373back":
+			{
+				length: 68,
+				car: 66,
+				doors:
+				[
+					{ pos: -24, width: 4 },
+					{ pos: 24, width: 4 },
+				],
+				split: [27],
+			},
+			"metetsufront":
+			{
+				length: 65,
+				car: 63,
+				doors:
+				[
+					{ pos: -19.5, width: 4 },
+					{ pos: 1, width: 4 },
+					{ pos: 21.5, width: 4 },
+				],
+				split: [-26.5],
+			},
+			"metetsumid":
+			{
+				length: 63,
+				car: 61,
+				doors:
+				[
+					{ pos: -20.5, width: 4 },
+					{ pos: 0, width: 4 },
+					{ pos: 20.5, width: 4 },
+				],
+			},
+			"metetsugreen":
+			{
+				length: 63,
+				car: 61,
+				doors:
+				[
+					{ pos: -28, width: 3 },
+					{ pos: 28, width: 3 },
+				],
+			},
+			"metetsuback":
+			{
+				length: 65,
+				car: 63,
+				doors:
+				[
+					{ pos: -29, width: 3 },
+					{ pos: 5, width: 3 },
+				],
+			},
+			"681-1":
+			{
+				length: 68,
+				car: 66,
+				doors:
+				[
+					{ pos: 30.5, width: 3 },
+				],
+				split: [-23],
+			},
+			"681-2":
+			{
+				length: 68,
+				car: 66,
+				doors:
+				[
+					{ pos: 30.5, width: 3 },
+				],
+			},
+			"681-3":
+			{
+				length: 68,
+				car: 66,
+				doors:
+				[
+					{ pos: -20, width: 4 },
+				],
+			},
+			"681-4":
+			{
+				length: 68,
+				car: 66,
+				doors:
+				[
+					{ pos: -30.5, width: 3 },
+					{ pos: 30.5, width: 3 },
+				],
+			},
+			"681-5":
+			{
+				length: 68,
+				car: 66,
+				doors:
+				[
+					{ pos: 30.5, width: 3 },
+				],
+			},
+			"681-6":
+			{
+				length: 68,
+				car: 66,
+				doors:
+				[
+					{ pos: -26.5, width: 3 },
+				],
+				split: [23],
+			},
+			"tarumi":
+			{
+				length: 58,
+				car: 58,
+				doors:
+				[
+					{ pos: -24.5, width: 3 },
+					{ pos: 24.5, width: 3 },
+				],
+			},
+		};
+		var frmdata =
+		{
+			"4d-15":
+			{
+				name: "近郊形4ドア15両",
+				form: ["4dfront", "4dmid", "4dmid", "4dgreen", "4dgreen", "4dmid", "4dmid", "4dmid", "4dmid", "4dback", "4dfront", "4dmid", "4dmid", "4dmid", "4dback"],
+				equip:
+				[
+					{ car: 1, dir: 1, type: "toilet" },
+					{ car: 4, dir: 1, type: "green" },
+					{ car: 5, dir: 1, type: "green" },
+					{ car: 5, dir: -1, type: "toilet" },
+					{ car: 6, dir: -1, type: "toiletp" },
+					{ car: 10, dir: -1, type: "toilet" },
+					{ car: 11, dir: 1, type: "toilet" },
+				],
+			},
+			"4d-10":
+			{
+				name: "近郊形4ドア10両",
+				form: ["4dfront", "4dmid", "4dmid", "4dgreen", "4dgreen", "4dmid", "4dmid", "4dmid", "4dmid", "4dback"],
+				equip:
+				[
+					{ car: 1, dir: 1, type: "toilet" },
+					{ car: 4, dir: 1, type: "green" },
+					{ car: 5, dir: 1, type: "green" },
+					{ car: 5, dir: -1, type: "toilet" },
+					{ car: 6, dir: -1, type: "toiletp" },
+					{ car: 10, dir: -1, type: "toilet" },
+				],
+			},
+			"4d-5":
+			{
+				name: "近郊形4ドア5両",
+				form: ["4dfront", "4dmid", "4dmid", "4dmid", "4dback"],
+				num: [11, 12, 13, 14, 15],
+				equip:
+				[
+					{ car: 1, dir: 1, type: "toilet" },
+				],
+			},
+			"E231-0-15":
+			{
+				name: "E231系0番台15両",
+				form: ["4dfront", "4dmid", "4dmid", "4dmid", "4dmid", "4dmid", "4dmid", "4dmid", "4dmid", "4dback", "4dfront", "4dmid", "4dmid", "4dmid", "4dback"],
+			},
+			"E231-0-10":
+			{
+				name: "E231系0番台10両",
+				form: ["4dfront", "4dmid", "4dmid", "4dmid", "4dmid", "4dmid", "4dmid", "4dmid", "4dmid", "4dback"],
+			},
+			"E231-500":
+			{
+				name: "E231系500番台",
+				form: ["4dfront", "4dmid", "4dmid", "4dmid", "4dmid", "4dmid", "4dmid", "4dmid", "4dmid", "E231-4600", "4dback"],
+			},
+			"E233-1000":
+			{
+				name: "E233系1000番台",
+				form: ["4dfront", "4dmid", "4dmid", "4dmid", "4dmid", "4dmid", "4dmid", "4dmid", "4dmid", "4dback"],
+			},
+			"E233-0":
+			{
+				name: "E233系0番台",
+				form: ["4dfront", "4dmid", "4dmid", "4dmid", "4dmid", "4dmid", "4dmid", "4dmid", "4dmid", "4dback"],
+			},
+			"E657":
+			{
+				name: "E657系",
+				form: ["E657front", "E657mide", "E657mido", "E657mid4", "E657mido", "E657mide", "E657mido", "E657mide", "E657mido", "E657back"],
+				equip:
+				[
+					{ car: 1, dir: 1, type: "toilet" },
+					{ car: 3, dir: 1, type: "toilet" },
+					{ car: 5, dir: -1, type: "green" },
+					{ car: 5, dir: 1, type: "toilet" },
+					{ car: 7, dir: 1, type: "toilet" },
+					{ car: 9, dir: 1, type: "toilet" },
+				],
+			},
+			"185-15":
+			{
+				name: "185系15両",
+				form: ["185front", "185mide", "185mido", "185green", "185green", "185mide", "185mido", "185mide", "185mido", "185back", "185front", "185mido", "185mide", "185mido", "185back"],
+				equip:
+				[
+					{ car: 1, dir: 1, type: "toilet" },
+					{ car: 2, dir: 1, type: "toilet" },
+					{ car: 4, dir: -1, type: "toilet" },
+					{ car: 4, dir: 1, type: "green" },
+					{ car: 5, dir: -1, type: "toilet" },
+					{ car: 5, dir: 1, type: "green" },
+					{ car: 6, dir: 1, type: "toilet" },
+					{ car: 8, dir: 1, type: "toilet" },
+					{ car: 10, dir: -1, type: "toilet" },
+					{ car: 11, dir: 1, type: "toilet" },
+					{ car: 13, dir: 1, type: "toilet" },
+					{ car: 15, dir: -1, type: "toilet" },
+				],
+			},
+			"185-10":
+			{
+				name: "185系10両",
+				form: ["185front", "185mide", "185mido", "185green", "185green", "185mide", "185mido", "185mide", "185mido", "185back"],
+				equip:
+				[
+					{ car: 1, dir: 1, type: "toilet" },
+					{ car: 2, dir: 1, type: "toilet" },
+					{ car: 4, dir: -1, type: "toilet" },
+					{ car: 4, dir: 1, type: "green" },
+					{ car: 5, dir: -1, type: "toilet" },
+					{ car: 5, dir: 1, type: "green" },
+					{ car: 6, dir: 1, type: "toilet" },
+					{ car: 8, dir: 1, type: "toilet" },
+					{ car: 10, dir: -1, type: "toilet" },
+				],
+			},
+			"185-7":
+			{
+				name: "185系7両",
+				form: ["185front", "185mide", "185mido", "185green", "185mide", "185mido", "185back"],
+				equip:
+				[
+					{ car: 1, dir: 1, type: "toilet" },
+					{ car: 2, dir: 1, type: "toilet" },
+					{ car: 4, dir: -1, type: "toilet" },
+					{ car: 4, dir: 1, type: "green" },
+					{ car: 5, dir: 1, type: "toilet" },
+					{ car: 7, dir: -1, type: "toilet" },
+				],
+			},
+			"nagara":
+			{
+				name: "ムーンライトながら",
+				form: ["185front", "185mide", "185mido", "185back", "185front", "185mide", "185mido", "185mide", "185mido", "185back"],
+				equip:
+				[
+					{ car: 1, dir: 1, type: "toilet" },
+					{ car: 2, dir: 1, type: "toilet" },
+					{ car: 4, dir: -1, type: "toilet" },
+					{ car: 5, dir: 1, type: "toilet" },
+					{ car: 6, dir: 1, type: "toilet" },
+					{ car: 8, dir: 1, type: "toilet" },
+					{ car: 10, dir: -1, type: "toilet" },
+				],
+			},
+			"215":
+			{
+				name: "215系",
+				form: ["215front", "215mid", "215mid", "4dgreen", "4dgreen", "215mid", "215mid", "215mid", "215mid", "215back"],
+				equip:
+				[
+					{ car: 3, dir: -1, type: "toilet" },
+					{ car: 4, dir: 1, type: "green" },
+					{ car: 5, dir: 1, type: "green" },
+					{ car: 5, dir: -1, type: "toilet" },
+					{ car: 8, dir: -1, type: "toilet" },
+				],
+			},
+			"E233-8000":
+			{
+				name: "E233系8000番台",
+				form: ["4dfront", "4dmid", "4dmid", "4dmid", "4dmid", "4dback"],
+			},
+			"E217":
+			{
+				name: "E217系15両",
+				form: ["4dfront", "4dmid", "4dmid", "4dback", "4dfront", "4dmid", "4dmid", "4dgreen", "4dgreen", "4dmid", "4dmid", "4dmid", "4dmid", "4dmid", "4dback"],
+				num: ["増1", "増2", "増3", "増4", 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+				equip:
+				[
+					{ car: 1, dir: 1, type: "toilet" },
+					{ car: 5, dir: 1, type: "toilet" },
+					{ car: 8, dir: 1, type: "green" },
+					{ car: 9, dir: 1, type: "green" },
+					{ car: 9, dir: -1, type: "toilet" },
+					{ car: 15, dir: -1, type: "toilet" },
+				],
+			},
+			"251":
+			{
+				name: "251系",
+				form: ["251front", "251mid2", "251mido", "251mide", "E657mido", "251mide", "251mido", "251mide", "251mid9", "251back"],
+				equip:
+				[
+					{ car: 1, dir: -1, type: "green" },
+					{ car: 1, dir: 1, type: "toilet" },
+					{ car: 2, dir: -1, type: "green" },
+					{ car: 2, dir: 1, type: "toilet" },
+					{ car: 3, dir: -1, type: "toilet" },
+					{ car: 4, dir: 1, type: "toilet" },
+					{ car: 5, dir: -1, type: "toilet" },
+					{ car: 6, dir: 1, type: "toilet" },
+					{ car: 7, dir: -1, type: "toilet" },
+					{ car: 8, dir: 1, type: "toilet" },
+					{ car: 9, dir: 1, type: "toilet" },
+				],
+			},
+			"205-500":
+			{
+				name: "205系500番台",
+				form: ["4dfront", "4dmid", "4dmid", "4dback"],
+			},
+			"izukyu8000":
+			{
+				name: "伊豆急行8000系",
+				form: ["4dfront", "4dmid", "4dback", "4dfront", "4dmid", "4dback"],
+			},
+			"3ds-2":
+			{
+				name: "静岡地区3ドア2両",
+				form: ["3dfront", "3dback"],
+				equip:
+				[
+					{ car: 1, dir: 1, type: "toiletp" },
+				],
+			},
+			"3ds-3":
+			{
+				name: "静岡地区3ドア3両",
+				form: ["3dfront", "3dmid", "3dback"],
+				equip:
+				[
+					{ car: 1, dir: 1, type: "toiletp" },
+				],
+			},
+			"3ds-4":
+			{
+				name: "静岡地区3ドア4両",
+				form: ["3dfront", "3dback", "3dfront", "3dback"],
+				equip:
+				[
+					{ car: 1, dir: 1, type: "toiletp" },
+					{ car: 3, dir: 1, type: "toiletp" },
+				],
+			},
+			"3ds-5":
+			{
+				name: "静岡地区3ドア5両",
+				form: ["3dfront", "3dmid", "3dmid", "3dmid", "3dback"],
+				equip:
+				[
+					{ car: 1, dir: 1, type: "toiletp" },
+				],
+			},
+			"3ds-6":
+			{
+				name: "静岡地区3ドア6両",
+				form: ["3dfront", "3dmid", "3dback", "3dfront", "3dmid", "3dback"],
+				equip:
+				[
+					{ car: 1, dir: 1, type: "toiletp" },
+					{ car: 4, dir: 1, type: "toiletp" },
+				],
+			},
+			"3ds-7":
+			{
+				name: "静岡地区3ドア7両",
+				form: ["3dfront", "3dback", "3dfront", "3dback", "3dfront", "3dmid", "3dback"],
+				equip:
+				[
+					{ car: 3, dir: 1, type: "toilet" },
+				],
+			},
+			"3ds-8":
+			{
+				name: "静岡地区3ドア8両",
+				form: ["3dfront", "3dmid", "3dback", "3dfront", "3dback", "3dfront", "3dmid", "3dback"],
+				equip:
+				[
+					{ car: 4, dir: 1, type: "toilet" },
+					{ car: 6, dir: 1, type: "toilet" },
+				],
+			},
+			"3dn-2":
+			{
+				name: "名古屋地区3ドア2両",
+				form: ["3dfront", "3dback"],
+				equip:
+				[
+					{ car: 1, dir: 1, type: "toilet" },
+				],
+			},
+			"3dn-4":
+			{
+				name: "名古屋地区3ドア4両",
+				form: ["3dfront", "3dmid", "3dmid", "3dback"],
+				equip:
+				[
+					{ car: 1, dir: 1, type: "toilet" },
+				],
+			},
+			"3dn-6":
+			{
+				name: "名古屋地区3ドア6両",
+				form: ["3dfront", "3dmid", "3dmid", "3dmid", "3dmid", "3dback"],
+				equip:
+				[
+					{ car: 1, dir: 1, type: "toilet" },
+					{ car: 3, dir: 1, type: "toiletp" },
+				],
+			},
+			"3dn-8":
+			{
+				name: "名古屋地区3ドア8両",
+				form: ["3dfront", "3dmid", "3dmid", "3dmid", "3dmid", "3dmid", "3dmid", "3dback"],
+				equip:
+				[
+					{ car: 1, dir: 1, type: "toilet" },
+					{ car: 3, dir: 1, type: "toiletp" },
+					{ car: 5, dir: 1, type: "toiletp" },
+				],
+			},
+			"373-3":
+			{
+				name: "373系3両",
+				form: ["373front", "373mid", "373back"],
+				equip:
+				[
+					{ car: 1, dir: 1, type: "toilet" },
+				],
+			},
+			"373-6":
+			{
+				name: "373系6両",
+				form: ["373front", "373mid", "373back", "373front", "373mid", "373back"],
+				equip:
+				[
+					{ car: 1, dir: 1, type: "toilet" },
+					{ car: 4, dir: 1, type: "toilet" },
+				],
+			},
+			"metetsu1000":
+			{
+				name: "名鉄1000系",
+				form: ["metetsufront", "metetsumid", "metetsumid", "metetsumid", "metetsugreen", "metetsuback"],
+				num: [6, 5, 4, 3, 2, 1],
+				equip:
+				[
+					{ car: 5, dir: -1, type: "toilet" },
+				],
+			},
+			"681":
+			{
+				name: "681系",
+				form: ["681-1", "681-2", "681-3", "681-4", "681-5", "681-6"],
+				equip:
+				[
+					{ car: 2, dir: -1, type: "toilet" },
+					{ car: 3, dir: -1, type: "toilet" },
+					{ car: 5, dir: -1, type: "toilet" },
+					{ car: 6, dir: -1, type: "green" },
+				],
+			},
+			"tarumi":
+			{
+				name: "樽見鉄道",
+				form: ["tarumi"],
+				num: [""],
+			},
+			"3d-4":
+			{
+				name: "近郊形3ドア4両",
+				form: ["3dfront", "3dmid", "3dmid", "3dback"],
+				equip:
+				[
+					{ car: 1, dir: 1, type: "toilet" },
+				],
+			},
+			"3d-6":
+			{
+				name: "近郊形3ドア6両",
+				form: ["3dfront", "3dmid", "3dmid", "3dmid", "3dmid", "3dback"],
+				equip:
+				[
+					{ car: 1, dir: 1, type: "toilet" },
+				],
+			},
+			"3d-8":
+			{
+				name: "近郊形3ドア8両",
+				form: ["3dfront", "3dmid", "3dmid", "3dmid", "3dmid", "3dmid", "3dmid", "3dback"],
+				equip:
+				[
+					{ car: 1, dir: 1, type: "toilet" },
+					{ car: 5, dir: 1, type: "toiletp" },
+				],
+			},
+			"3d-10":
+			{
+				name: "近郊形3ドア10両",
+				form: ["3dfront", "3dmid", "3dmid", "3dmid", "3dmid", "3dmid", "3dmid", "3dmid", "3dmid", "3dback"],
+				equip:
+				[
+					{ car: 1, dir: 1, type: "toilet" },
+					{ car: 5, dir: 1, type: "toiletp" },
+					{ car: 7, dir: 1, type: "toiletp" },
+				],
+			},
+			"3d-12":
+			{
+				name: "近郊形3ドア12両",
+				form: ["3dfront", "3dmid", "3dmid", "3dmid", "3dmid", "3dmid",  "3dmid", "3dmid", "3dmid", "3dmid", "3dmid", "3dback"],
+				equip:
+				[
+					{ car: 1, dir: 1, type: "toilet" },
+					{ car: 5, dir: 1, type: "toiletp" },
+					{ car: 9, dir: 1, type: "toiletp" },
+				],
+			},
+			"4d-7":
+			{
+				name: "通勤形4ドア7両",
+				form: ["4dfront", "4dmid", "4dmid", "4dmid", "4dmid", "4dmid", "4dback"],
+			},
+		};
+		var stadata =
+		{
+			"ueno":
+			{
+				name: "上野",
+				line: "ge",
+				width: 26,
+				height: 82,
+				plat: "M49,49H863V111H49ZM1,193H863V255H1ZM177,337H1183V399H177ZM193,481H1199V543H193ZM193,688V625H1647V687H479V769H1567V831H479V880M1567,912V975H447V1057H1551V1119H527V1201H1663V1263H527V1312",
+				track:
+				[
+					{ row: 2, name: "京浜東北線", color: "#00b2e5", beg: -1, end: -1, arrow: "rR" },
+					{ row: 8, name: "山手線", color: "#9acd32", beg: -1, end: -1, arrow: "rR" },
+					{ row: 11, name: "山手線", color: "#9acd32", beg: -1, end: -1, arrow: "lL" },
+					{ row: 17, name: "京浜東北線", color: "#00b2e5", beg: -1, end: -1, arrow: "lL" },
+					{ row: 44, name: "常磐線", color: "#3333ff", beg: 7.5, end: -1, arrow: "LR" },
+					{ row: 47, name: "常磐線", color: "#3333ff", beg: 7.5, end: -1, arrow: "LR" },
+					{ row: 53, name: "常磐線", color: "#3333ff", beg: 7.5, end: -1, arrow: "LR" },
+					{ row: 20, name: "上野東京\nライン", color: "purple", beg: -1, end: 10.5, arrow: "r" },
+					{ row: 20, name: "宇都宮線\n高崎線", color: "#f68b1e", beg: 10.5, end: -1, arrow: "LR" },
+					{ row: 26, name: "上野東京\nライン", color: "purple", beg: -1, end: 10.5, arrow: "r" },
+					{ row: 26, name: "宇都宮線\n高崎線常磐線", color: "#f68b1e", beg: 10.5, end: -1, arrow: "LR" },
+					{ row: 29, name: "上野東京\nライン", color: "purple", beg: -1, end: 11, arrow: "l" },
+					{ row: 29, name: "宇都宮線\n高崎線常磐線", color: "#f68b1e", beg: 11, end: -1, arrow: "LR" },
+					{ row: 35, name: "上野東京\nライン", color: "purple", beg: -1, end: 11, arrow: "lr" },
+					{ row: 35, name: "常磐線", color: "#3333ff", beg: 11, end: -1, arrow: "LR" },
+					{ row: 38, name: "上野東京\nライン", color: "purple", beg: -1, end: 11, arrow: "l" },
+					{ row: 38, name: "常磐線", color: "#3333ff", beg: 11, end: -1, arrow: "LR" },
+					{ row: 62, name: "宇都宮線\n高崎線", color: "#f68b1e", beg: 7, end: -1, arrow: "LR" },
+					{ row: 65, name: "宇都宮線\n高崎線", color: "#f68b1e", beg: 7, end: -1, arrow: "LR" },
+					{ row: 71, name: "宇都宮線\n高崎線", color: "#f68b1e", beg: 8.25, end: -1, arrow: "LR" },
+					{ row: 74, name: "常磐線", color: "#3333ff", beg: 8.25, end: -1, arrow: "LR" },
+					{ row: 80, name: "常磐線", color: "#3333ff", beg: 8.25, end: -1, arrow: "LR" },
+				],
+				number:
+				[
+					{ row: 3, pos: 1.25, dir: 1, num: 1 },
+					{ row: 7, pos: 1.25, dir: -1, num: 2 },
+					{ row: 12, pos: 0.5, dir: 1, num: 3 },
+					{ row: 16, pos: 0.5, dir: -1, num: 4 },
+					{ row: 21, pos: 3.5, dir: 1, num: 5 },
+					{ row: 25, pos: 3.5, dir: -1, num: 6 },
+					{ row: 30, pos: 4, dir: 1, num: 7 },
+					{ row: 34, pos: 4, dir: -1, num: 8 },
+					{ row: 39, pos: 4, dir: 1, num: 9 },
+					{ row: 43, pos: 8, dir: -1, num: 10 },
+					{ row: 48, pos: 8, dir: 1, num: 11 },
+					{ row: 52, pos: 8, dir: -1, num: 12 },
+					{ row: 61, pos: 7.5, dir: -1, num: 13 },
+					{ row: 66, pos: 7.5, dir: 1, num: 14 },
+					{ row: 70, pos: 8.75, dir: -1, num: 15 },
+					{ row: 75, pos: 8.75, dir: 1, num: 16 },
+					{ row: 79, pos: 8.75, dir: -1, num: 17 },
+				],
+				equip:
+				[
+					{
+						row: 3,
+						list:
+						[
+							{ pos: 2.5, dir: -1, type: "s" },
+							{ pos: 4.5, dir: -1, type: "si" },
+							{ pos: 6, dir: -1, type: "eb" },
+							{ pos: 8.5, dir: 1, type: "eus" },
+							{ pos: 10, dir: 1, type: "ev" },
+							{ pos: 10.5, dir: 1, type: "si" },
+							{ pos: 13, dir: 1, type: "s" },
+						],
+					},
+					{
+						row: 12,
+						list:
+						[
+							{ pos: 2.5, dir: -1, type: "s" },
+							{ pos: 4.5, dir: -1, type: "ebi" },
+							{ pos: 6.75, dir: -1, type: "s" },
+							{ pos: 8.75, dir: 1, type: "s" },
+							{ pos: 9.5, dir: 1, type: "ev" },
+							{ pos: 10.5, dir: 1, type: "eusi" },
+							{ pos: 13, dir: 1, type: "s" },
+						],
+					},
+					{
+						row: 21,
+						list:
+						[
+							{ pos: 7, dir: -1, type: "ebs" },
+							{ pos: 8.75, dir: 1, type: "s" },
+							{ pos: 9.5, dir: 1, type: "ev" },
+							{ pos: 10.5, dir: 1, type: "eusi" },
+							{ pos: 13.5, dir: 1, type: "s" },
+							{ pos: 15, dir: 1, type: "si" },
+						],
+					},
+					{
+						row: 30,
+						list:
+						[
+							{ pos: 7, dir: -1, type: "ebs" },
+							{ pos: 8.75, dir: 1, type: "s" },
+							{ pos: 9.5, dir: 1, type: "ev" },
+							{ pos: 10.5, dir: 1, type: "eusi" },
+							{ pos: 13.5, dir: 1, type: "s" },
+							{ pos: 15, dir: 1, type: "si" },
+						],
+					},
+					{
+						row: 39,
+						list:
+						[
+							{ pos: 7, dir: -1, type: "ebs" },
+							{ pos: 8.75, dir: 1, type: "s" },
+							{ pos: 9.5, dir: 1, type: "ev" },
+							{ pos: 10.5, dir: 1, type: "si" },
+							{ pos: 13.75, dir: 1, type: "s" },
+							{ pos: 15, dir: 1, type: "eusi" },
+						],
+					},
+					{
+						row: 48,
+						list:
+						[
+							{ pos: 7, dir: -1, type: "ebs" },
+							{ pos: 8.75, dir: 1, type: "s" },
+							{ pos: 9.5, dir: 1, type: "ev" },
+							{ pos: 10.5, dir: 1, type: "si" },
+							{ pos: 13.75, dir: 1, type: "s" },
+							{ pos: 15, dir: 1, type: "eusi" },
+						],
+					},
+					{
+						row: 57,
+						list:
+						[
+							{ pos: 17, dir: 1, type: "eusi" },
+						],
+					},
+					{
+						row: 66,
+						list:
+						[
+							{ pos: 9.5, dir: 1, type: "ev" },
+							{ pos: 16.75, dir: 1, type: "eusi" },
+						],
+					},
+					{
+						row: 75,
+						list:
+						[
+							{ pos: 14.25, dir: 1, type: "eus" },
+							{ pos: 16.75, dir: 1, type: "eusi" },
+						],
+					},
+				],
+				stop:
+				[
+					{
+						row: 0,
+						dir: 1,
+						list:
+						[
+							{
+								stop:
+								{
+									11: 12,
+								},
+							},
+							{
+								stop:
+								{
+									10: 2,
+								},
+							},
+						],
+						def: { pos: 12, dir: 1, form: "E233-1000" },
+					},
+					{
+						row: 6,
+						dir: -1,
+						list:
+						[
+							{
+								stop:
+								{
+									10: 11.5,
+									11: 12.5,
+								},
+							},
+							{
+							},
+						],
+						def: { pos: 12.5, dir: 1, form: "E231-500" },
+					},
+					{
+						row: 9,
+						dir: 1,
+						list:
+						[
+							{
+							},
+							{
+								stop:
+								{
+									10: 2.75,
+									11: 1.75,
+								},
+							},
+						],
+						def: { pos: 1.75, dir: -1, form: "E231-500" },
+					},
+					{
+						row: 15,
+						dir: -1,
+						list:
+						[
+							{
+							},
+							{
+								stop:
+								{
+									10: 2.75,
+									11: 1.75,
+								},
+							},
+						],
+						def: { pos: 2.75, dir: -1, form: "E233-1000" },
+					},
+					{
+						row: 18,
+						dir: 1,
+						list:
+						[
+							{
+								stop:
+								{
+									10: 17,
+									15: 18,
+								},
+								form:
+								{
+									"4d-15": 18,
+									"4d-10": 17,
+									"E231-0-15": 18,
+									"E231-0-10": 17,
+								}
+							},
+							{
+								stop:
+								{
+									10: 7,
+									15: 3,
+								},
+								form:
+								{
+									"4d-15": 3,
+									"4d-10": 7,
+								}
+							}
+						],
+					},
+					{
+						row: 24,
+						dir: -1,
+						list:
+						[
+							{
+								stop:
+								{
+									10: 17,
+									15: 18,
+								},
+								form:
+								{
+									"4d-15": 18,
+									"4d-10": 17,
+								}
+							},
+							{
+								stop:
+								{
+									10: 7,
+									15: 3,
+								},
+								form:
+								{
+									"4d-15": 3,
+									"4d-10": 7,
+								}
+							},
+						],
+					},
+					{
+						row: 27,
+						dir: 1,
+						list:
+						[
+							{
+								stop:
+								{
+									10: 17.5,
+									15: 18.5,
+								},
+							},
+							{
+								stop:
+								{
+									10: 7.5,
+									15: 3.5,
+								},
+								form:
+								{
+									"4d-15": 3.5,
+									"4d-10": 7.5,
+									"E231-0-15": 3.5,
+									"E231-0-10": 7.5,
+								}
+							},
+						],
+					},
+					{
+						row: 33,
+						dir: -1,
+						list:
+						[
+							{
+								stop:
+								{
+									8: 13.5,
+									10: 17.5,
+									15: 18.5,
+								},
+								form:
+								{
+									"4d-15": 18.5,
+									"4d-10": 17.5,
+								}
+							},
+							{
+								stop:
+								{
+									10: 7.5,
+									15: 3.5,
+								},
+								form:
+								{
+									"4d-15": 3.5,
+									"4d-10": 7.5,
+									"E231-0-15": 3.5,
+									"E231-0-10": 7.5,
+								}
+							},
+						],
+					},
+					{
+						row: 36,
+						dir: 1,
+						list:
+						[
+							{
+								stop:
+								{
+									10: 17.5,
+									15: 18.5,
+								},
+							},
+							{
+								stop:
+								{
+									10: 7.5,
+									15: 3.5,
+								},
+								form:
+								{
+									"4d-15": 3.5,
+									"4d-10": 7.5,
+									"E231-0-15": 3.5,
+									"E231-0-10": 7.5,
+								}
+							},
+						],
+					},
+					{
+						row: 42,
+						dir: -1,
+						list:
+						[
+							{
+							},
+							{
+								stop:
+								{
+									"": 10.5,
+								},
+								form:
+								{
+									"4d-15": 10.5,
+									"4d-10": 10.5,
+								}
+							},
+						],
+					},
+					{
+						row: 45,
+						dir: 1,
+						list:
+						[
+							{
+							},
+							{
+								stop:
+								{
+									10: 10,
+									15: 9,
+								},
+								form:
+								{
+									"4d-15": 9,
+									"4d-10": 10,
+									"E231-0-15": 9,
+									"E231-0-10": 10,
+								}
+							},
+						],
+					},
+					{
+						row: 51,
+						dir: -1,
+						list:
+						[
+							{
+							},
+							{
+								stop:
+								{
+									10: 10,
+									15: 9,
+								},
+								form:
+								{
+									"4d-15": 9,
+									"4d-10": 10,
+									"E231-0-15": 9,
+									"E231-0-10": 10,
+								}
+							},
+						],
+					},
+					{
+						row: 60,
+						dir: -1,
+						list:
+						[
+							{
+							},
+							{
+								stop:
+								{
+									"": 9,
+								},
+								form:
+								{
+									"4d-15": 9,
+									"4d-10": 9,
+								}
+							},
+						],
+					},
+					{
+						row: 63,
+						dir: 1,
+						list:
+						[
+							{
+							},
+							{
+								stop:
+								{
+									"": 8.25,
+								},
+								form:
+								{
+									"4d-15": 8.25,
+									"4d-10": 8.25,
+								}
+							},
+						],
+					},
+					{
+						row: 69,
+						dir: -1,
+						list:
+						[
+							{
+							},
+							{
+								stop:
+								{
+									"": 9.25,
+								},
+								form:
+								{
+									"4d-15": 9.25,
+									"4d-10": 9.25,
+								}
+							},
+						],
+					},
+					{
+						row: 72,
+						dir: 1,
+						list:
+						[
+							{
+							},
+							{
+								stop:
+								{
+									"": 9.25,
+								},
+							},
+						],
+						def: { pos: 9.25, dir: -1, form: "E657" },
+					},
+					{
+						row: 78,
+						dir: -1,
+						list:
+						[
+							{
+							},
+							{
+								stop:
+								{
+									"": 10.25,
+								},
+							},
+						],
+						def: { pos: 10.25, dir: -1, form: "E657" },
+					},
+				],
+				form:
+				[
+					"4d-15",
+					"4d-10",
+					"E231-0-15",
+					"E231-0-10",
+				],
+			},
+			"tokyo":
+			{
+				name: "東京",
+				line: "g",
+				width: 17,
+				height: 46,
+				plat: "M49,49H911V111H49ZM49,193H783V255H49ZM81,337H831V399H81ZM33,481H1039V543H33ZM33,625H1039V687H33Z",
+				track:
+				[
+					{ row: 2, name: "中央線", color: "#f15a22", beg: 1, end: -1, arrow: "LR" },
+					{ row: 8, name: "中央線", color: "#f15a22", beg: 1, end: -1, arrow: "LR" },
+					{ row: 11, name: "京浜東北線", color: "#00b2e5", beg: -1, end: -1, arrow: "rR" },
+					{ row: 17, name: "山手線", color: "#9acd32", beg: -1, end: -1, arrow: "rR" },
+					{ row: 20, name: "山手線", color: "#9acd32", beg: -1, end: -1, arrow: "lL" },
+					{ row: 26, name: "京浜東北線", color: "#00b2e5", beg: -1, end: -1, arrow: "lL" },
+					{ row: 29, name: "上野東京\nライン", color: "purple", beg: 8, end: -1, arrow: "R" },
+					{ row: 29, name: "東海道本線", color: "#f68b1e", beg: -1, end: 8, arrow: "lr" },
+					{ row: 35, name: "上野東京\nライン", color: "purple", beg: 8.5, end: -1, arrow: "R" },
+					{ row: 35, name: "東海道本線", color: "#f68b1e", beg: -1, end: 8.5, arrow: "lr" },
+					{ row: 38, name: "上野東京\nライン", color: "purple", beg: 8.5, end: -1, arrow: "L" },
+					{ row: 38, name: "東海道本線", color: "#f68b1e", beg: -1, end: 8.5, arrow: "lr" },
+					{ row: 44, name: "上野東京\nライン", color: "purple", beg: 8.5, end: -1, arrow: "L" },
+					{ row: 44, name: "東海道本線", color: "#f68b1e", beg: -1, end: 8.5, arrow: "lr" },
+				],
+				number:
+				[
+					{ row: 3, pos: 1.5, dir: 1, num: 1 },
+					{ row: 7, pos: 1.5, dir: -1, num: 2 },
+					{ row: 12, pos: 2, dir: 1, num: 3 },
+					{ row: 16, pos: 2, dir: -1, num: 4 },
+					{ row: 21, pos: 2.25, dir: 1, num: 5 },
+					{ row: 25, pos: 2.25, dir: -1, num: 6 },
+					{ row: 30, pos: 1.5, dir: 1, num: 7 },
+					{ row: 34, pos: 1.5, dir: -1, num: 8 },
+					{ row: 39, pos: 2, dir: 1, num: 9 },
+					{ row: 43, pos: 2, dir: -1, num: 10 },
+				],
+				equip:
+				[
+					{
+						row: 3,
+						list:
+						[
+							{ pos: 2, dir: -1, type: "s" },
+							{ pos: 2.75, dir: -1, type: "ev" },
+							{ pos: 3.25, dir: -1, type: "eb" },
+							{ pos: 4, dir: -1, type: "ebi" },
+							{ pos: 5, dir: -1, type: "eb" },
+							{ pos: 6, dir: -1, type: "edi" },
+							{ pos: 7.5, dir: -1, type: "ebi" },
+							{ pos: 8.5, dir: -1, type: "eb" },
+							{ pos: 9.25, dir: -1, type: "ebi" },
+							{ pos: 10.5, dir: -1, type: "ed" },
+							{ pos: 11.25, dir: -1, type: "si" },
+						],
+					},
+					{
+						row: 12,
+						list:
+						[
+							{ pos: 1, dir: -1, type: "si" },
+							{ pos: 2.5, dir: -1, type: "ev" },
+							{ pos: 3.25, dir: -1, type: "eus" },
+							{ pos: 6, dir: -1, type: "eusi" },
+							{ pos: 8.25, dir: -1, type: "eds" },
+							{ pos: 11.75, dir: -1, type: "si" },
+						],
+					},
+					{
+						row: 21,
+						list:
+						[
+							{ pos: 2.5, dir: -1, type: "ev" },
+							{ pos: 3.25, dir: -1, type: "eus" },
+							{ pos: 6, dir: -1, type: "eusi" },
+							{ pos: 8.25, dir: -1, type: "eds" },
+							{ pos: 11.75, dir: -1, type: "si" },
+						],
+					},
+					{
+						row: 30,
+						list:
+						[
+							{ pos: 2.5, dir: -1, type: "ev" },
+							{ pos: 3.75, dir: -1, type: "eus" },
+							{ pos: 6, dir: -1, type: "edsi" },
+							{ pos: 8.5, dir: -1, type: "eus" },
+							{ pos: 11.75, dir: -1, type: "si" },
+						],
+					},
+					{
+						row: 39,
+						list:
+						[
+							{ pos: 3.5, dir: -1, type: "eus" },
+							{ pos: 5.75, dir: -1, type: "edsi" },
+							{ pos: 7.5, dir: -1, type: "ev" },
+							{ pos: 11.75, dir: -1, type: "si" },
+							{ pos: 13, dir: -1, type: "s" },
+						],
+					},
+				],
+				stop:
+				[
+					{
+						row: 0,
+						dir: 1,
+						list:
+						[
+							{
+							},
+							{
+								stop:
+								{
+									10: 2.5,
+									12: 1,
+								},
+							},
+						],
+						def: { pos: 2.5, dir: -1, form: "E233-0" },
+					},
+					{
+						row: 6,
+						dir: -1,
+						list:
+						[
+							{
+							},
+							{
+								stop:
+								{
+									10: 2.5,
+									12: 1,
+								},
+							},
+						],
+						def: { pos: 2.5, dir: -1, form: "E233-0" },
+					},
+					{
+						row: 9,
+						dir: 1,
+						list:
+						[
+							{
+								stop:
+								{
+									11: 12,
+								},
+							},
+							{
+							},
+						],
+						def: { pos: 12, dir: 1, form: "E233-1000" },
+					},
+					{
+						row: 15,
+						dir: -1,
+						list:
+						[
+							{
+								stop:
+								{
+									10: 11,
+									11: 12,
+								},
+							},
+							{
+							},
+						],
+						def: { pos: 12, dir: 1, form: "E231-500" },
+					},
+					{
+						row: 18,
+						dir: 1,
+						list:
+						[
+							{
+							},
+							{
+								stop:
+								{
+									10: 2.75,
+									11: 1.75,
+								},
+							},
+						],
+						def: { pos: 1.75, dir: -1, form: "E231-500" },
+					},
+					{
+						row: 24,
+						dir: -1,
+						list:
+						[
+							{
+							},
+							{
+								stop:
+								{
+									10: 2.75,
+									11: 1.75,
+								},
+							},
+						],
+						def: { pos: 2.75, dir: -1, form: "E233-1000" },
+					},
+					{
+						row: 27,
+						dir: 1,
+						list:
+						[
+							{
+								stop:
+								{
+									10: 10.5,
+									15: 15.5,
+								},
+								form:
+								{
+									"4d-15": 15.5,
+									"4d-10": 10.5,
+									"E231-0-15": 15.5,
+									"E231-0-10": 10.5,
+									"185-15": 15.5,
+								}
+							},
+							{
+								stop:
+								{
+									6: 4.25,
+									"踊": 3.5,
+									8: 2.5,
+									9: 1,
+									15: 0.5,
+								},
+							},
+						],
+					},
+					{
+						row: 33,
+						dir: -1,
+						list:
+						[
+							{
+								stop:
+								{
+									10: 11,
+									15: 16,
+								},
+								form:
+								{
+									"4d-15": 16,
+									"4d-10": 11,
+									"E231-0-15": 16,
+									"E231-0-10": 11,
+									"185-15": 16,
+									"185-10": 11,
+									"nagara": 11,
+								}
+							},
+							{
+								stop:
+								{
+									6: 4.5,
+									"踊": 3,
+									8: 3,
+									9: 1.5,
+									15: 1,
+								},
+							},
+						],
+					},
+					{
+						row: 36,
+						dir: 1,
+						list:
+						[
+							{
+								stop:
+								{
+									10: 11,
+									15: 16,
+								},
+								form:
+								{
+									"4d-15": 16,
+									"4d-10": 11,
+									"185-15": 16,
+									"185-10": 11,
+									"215": 11,
+									"nagara": 11,
+								}
+							},
+							{
+								stop:
+								{
+									6: 4.5,
+									"踊": 3,
+									8: 3,
+									9: 1.5,
+									15: 1,
+								},
+								form:
+								{
+									"4d-15": 1,
+									"4d-10": 1,
+									"E231-0-15": 1,
+									"E231-0-10": 1,
+								}
+							},
+						],
+					},
+					{
+						row: 42,
+						dir: -1,
+						list:
+						[
+							{
+								stop:
+								{
+									10: 11,
+									15: 16,
+								},
+								form:
+								{
+									"4d-15": 16,
+									"4d-10": 11,
+								}
+							},
+							{
+								stop:
+								{
+									8: 3,
+									9: 1.5,
+									15: 1,
+								},
+								form:
+								{
+									"4d-15": 1,
+									"4d-10": 1,
+									"E231-0-15": 1,
+									"E231-0-10": 1,
+								}
+							},
+						],
+					},
+				],
+				form:
+				[
+					"4d-15",
+					"4d-10",
+					"E231-0-15",
+					"E231-0-10",
+					"185-15",
+					"185-10",
+					"215",
+					"nagara",
+				],
+			},
+			"shinagawa":
+			{
+				name: "品川",
+				line: "g",
+				width: 22,
+				height: 70,
+				plat: "M17,49H799V111H17ZM161,193H911V255H161ZM193,337H1167V399H193ZM177,481H1167V543H177ZM81,625H1087V657H1103V687H113V655H81ZM97,769H1087V801H1231V831H257V799H97ZM257,913H1231V945H1247V975H257ZM369,1057H1343V1119H369Z",
+				track:
+				[
+					{ row: 2, name: "山手線", color: "#9acd32", beg: -1, end: -1, arrow: "rR" },
+					{ row: 8, name: "山手線", color: "#9acd32", beg: -1, end: -1, arrow: "lL" },
+					{ row: 11, name: "京浜東北線", color: "#00b2e5", beg: -1, end: -1, arrow: "rR" },
+					{ row: 17, name: "京浜東北線", color: "#00b2e5", beg: -1, end: -1, arrow: "lL" },
+					{ row: 20, name: "東海道本線", color: "#f68b1e", beg: -1, end: -1, arrow: "rR" },
+					{ row: 35, name: "東海道本線", color: "#f68b1e", beg: -1, end: -1, arrow: "rR" },
+					{ row: 38, name: "東海道本線", color: "#f68b1e", beg: -1, end: -1, arrow: "lrLR" },
+					{ row: 44, name: "東海道本線", color: "#f68b1e", beg: -1, end: -1, arrow: "lrLR" },
+					{ row: 47, name: "東海道本線", color: "#f68b1e", beg: -1, end: -1, arrow: "lLR" },
+					{ row: 53, name: "東海道本線", color: "#f68b1e", beg: -1, end: -1, arrow: "lL" },
+					{ row: 56, name: "横須賀線", color: "#234059", beg: -1, end: -1, arrow: "rR" },
+					{ row: 62, name: "横須賀線", color: "#234059", beg: -1, end: -1, arrow: "lrLR" },
+					{ row: 65, name: "横須賀線", color: "#234059", beg: -1, end: -1, arrow: "lL" },
+				],
+				number:
+				[
+					{ row: 3, pos: 0.75, dir: 1, num: 1 },
+					{ row: 7, pos: 0.75, dir: -1, num: 2 },
+					{ row: 12, pos: 3, dir: 1, num: 3 },
+					{ row: 16, pos: 3, dir: -1, num: 4 },
+					{ row: 21, pos: 3.5, dir: 1, num: 5 },
+					{ row: 34, pos: 3.25, dir: -1, num: 8 },
+					{ row: 39, pos: 2.25, dir: 1, num: 9 },
+					{ row: 43, pos: 2.25, dir: -1, num: 10 },
+					{ row: 48, pos: 2.25, dir: 1, num: 11 },
+					{ row: 52, pos: 4.5, dir: -1, num: 12 },
+					{ row: 57, pos: 4.5, dir: 1, num: 13 },
+					{ row: 61, pos: 4.5, dir: -1, num: 14 },
+					{ row: 66, pos: 6.5, dir: 1, num: 15 },
+				],
+				equip:
+				[
+					{
+						row: 3,
+						list:
+						[
+							{ pos: 4.5, dir: 1, type: "eus" },
+							{ pos: 5.25, dir: 1, type: "ev" },
+							{ pos: 6.75, dir: 1, type: "s" },
+							{ pos: 9, dir: 1, type: "si" },
+							{ pos: 10, dir: 1, type: "eusi" },
+							{ pos: 12, dir: 1, type: "ebs" },
+						],
+					},
+					{
+						row: 12,
+						list:
+						[
+							{ pos: 4.5, dir: 1, type: "s" },
+							{ pos: 5.25, dir: 1, type: "ev" },
+							{ pos: 7.25, dir: 1, type: "s" },
+							{ pos: 9, dir: 1, type: "si" },
+							{ pos: 10, dir: 1, type: "eusi" },
+							{ pos: 12, dir: 1, type: "eb" },
+							{ pos: 13.5, dir: 1, type: "s" },
+						],
+					},
+					{
+						row: 21,
+						list:
+						[
+							{ pos: 4.25, dir: 1, type: "s" },
+							{ pos: 5.25, dir: 1, type: "ev" },
+							{ pos: 9, dir: 1, type: "si" },
+							{ pos: 10.25, dir: 1, type: "eusi" },
+							{ pos: 13.75, dir: 1, type: "eusi" },
+						],
+					},
+					{
+						row: 30,
+						list:
+						[
+							{ pos: 4.25, dir: 1, type: "s" },
+							{ pos: 4.75, dir: 1, type: "ev" },
+							{ pos: 9, dir: 1, type: "eusi" },
+							{ pos: 13.75, dir: 1, type: "eusi" },
+						],
+					},
+					{
+						row: 39,
+						list:
+						[
+							{ pos: 4.25, dir: 1, type: "s" },
+							{ pos: 5.25, dir: 1, type: "ev" },
+							{ pos: 9, dir: 1, type: "eusi" },
+							{ pos: 13.75, dir: 1, type: "eusi" },
+						],
+					},
+					{
+						row: 48,
+						list:
+						[
+							{ pos: 5, dir: 1, type: "si" },
+							{ pos: 7.5, dir: 1, type: "ev" },
+							{ pos: 8.75, dir: 1, type: "eusi" },
+							{ pos: 12, dir: 1, type: "eds" },
+							{ pos: 13.5, dir: 1, type: "si" },
+						],
+					},
+					{
+						row: 57,
+						list:
+						[
+							{ pos: 6.75, dir: 1, type: "s" },
+							{ pos: 7.75, dir: 1, type: "ev" },
+							{ pos: 8.25, dir: 1, type: "eusi" },
+							{ pos: 12, dir: 1, type: "eds" },
+							{ pos: 13.25, dir: 1, type: "eusi" },
+						],
+					},
+					{
+						row: 66,
+						list:
+						[
+							{ pos: 8, dir: 1, type: "ev" },
+							{ pos: 8.75, dir: 1, type: "eusi" },
+							{ pos: 12, dir: 1, type: "eds" },
+							{ pos: 13, dir: 1, type: "eusi" },
+						],
+					},
+				],
+				stop:
+				[
+					{
+						row: 0,
+						dir: 1,
+						list:
+						[
+							{
+								stop:
+								{
+									11: 11.5,
+								},
+							},
+							{
+							},
+						],
+						def: { pos: 11.5, dir: 1, form: "E231-500" },
+					},
+					{
+						row: 6,
+						dir: -1,
+						list:
+						[
+							{
+							},
+							{
+								stop:
+								{
+									11: 0.5,
+								},
+							},
+						],
+						def: { pos: 0.5, dir: -1, form: "E231-500" },
+					},
+					{
+						row: 9,
+						dir: 1,
+						list:
+						[
+							{
+								stop:
+								{
+									10: 13.75,
+								},
+							},
+							{
+							},
+						],
+						def: { pos: 13.75, dir: 1, form: "E233-1000" },
+					},
+					{
+						row: 15,
+						dir: -1,
+						list:
+						[
+							{
+							},
+							{
+								stop:
+								{
+									10: 4,
+								},
+							},
+						],
+						def: { pos: 4, dir: -1, form: "E233-1000" },
+					},
+					{
+						row: 18,
+						dir: 1,
+						list:
+						[
+							{
+								stop:
+								{
+									10: 15,
+									15: 18,
+								},
+								form:
+								{
+									"4d-15": 18,
+									"4d-10": 15,
+									"185-15": 18,
+									"nagara": 15,
+								}
+							},
+							{
+							},
+						],
+					},
+					{
+						row: 33,
+						dir: -1,
+						list:
+						[
+							{
+								stop:
+								{
+									11: 14,
+									12: 15,
+									15: 18,
+								},
+								form:
+								{
+									"4d-15": 18,
+									"185-10": 14,
+								}
+							},
+							{
+								stop:
+								{
+									6: 8,
+									7: 7,
+									8: 6,
+									10: 4,
+									15: 3,
+								},
+							},
+						],
+					},
+					{
+						row: 36,
+						dir: 1,
+						list:
+						[
+							{
+								stop:
+								{
+									12: 13.75,
+									15: 17.75,
+								},
+								form:
+								{
+									"185-10": 13.75,
+									"185-7": 13.75,
+								}
+							},
+							{
+								stop:
+								{
+									6: 7.75,
+									7: 6.75,
+									8: 5.75,
+									10: 3.75,
+									15: 1.75,
+								},
+							},
+						],
+					},
+					{
+						row: 42,
+						dir: -1,
+						list:
+						[
+							{
+								stop:
+								{
+									12: 14,
+									15: 17,
+								},
+								form:
+								{
+									"4d-15": 17,
+									"4d-10": 14,
+								}
+							},
+							{
+								stop:
+								{
+									6: 8,
+									7: 7,
+									8: 6,
+									10: 4,
+									15: 2,
+								},
+								form:
+								{
+									"4d-15": 2,
+									"4d-10": 4,
+									"E231-0-15": 2,
+								}
+							},
+						],
+					},
+					{
+						row: 45,
+						dir: 1,
+						list:
+						[
+							{
+								stop:
+								{
+									10: 11.75,
+									12: 13.75,
+									15: 17.75,
+								},
+							},
+							{
+								stop:
+								{
+									8: 5.75,
+									10: 3.75,
+									15: 1.75,
+								},
+								form:
+								{
+									"4d-15": 1.75,
+									"4d-10": 3.75,
+									"E231-0-15": 1.75,
+									"185-15": 1.75,
+									"185-10": 3.75,
+									"215": 3.75,
+								}
+							},
+						],
+					},
+					{
+						row: 51,
+						dir: -1,
+						list:
+						[
+							{
+							},
+							{
+								stop:
+								{
+									6: 8.25,
+									8: 7.25,
+									15: 4.25,
+								},
+								form:
+								{
+									"4d-15": 4.25,
+									"4d-10": 4.25,
+									"nagara": 4.25,
+								}
+							},
+						],
+					},
+					{
+						row: 54,
+						dir: 1,
+						list:
+						[
+							{
+								stop:
+								{
+									5: 13,
+									10: 17,
+									15: 19,
+								},
+							},
+							{
+							},
+						],
+						def: { pos: 19, dir: 1, form: "E217" },
+					},
+					{
+						row: 60,
+						dir: -1,
+						list:
+						[
+							{
+								stop:
+								{
+									11: 15.25,
+									15: 19.25,
+								},
+							},
+							{
+								stop:
+								{
+									6: 7.25,
+									15: 4.25,
+								},
+							},
+						],
+						def: { pos: 19.25, dir: 1, form: "E217" },
+					},
+					{
+						row: 63,
+						dir: 1,
+						list:
+						[
+							{
+								stop:
+								{
+									6: 14,
+									11: 17,
+									15: 21,
+								},
+							},
+							{
+								stop:
+								{
+									6: 8,
+									15: 6,
+								},
+							},
+						],
+						def: { pos: 6, dir: -1, form: "E217" },
+					},
+				],
+				form:
+				[
+					"4d-15",
+					"4d-10",
+					"E231-0-15",
+					"185-15",
+					"185-10",
+					"215",
+					"nagara",
+				],
+			},
+			"kawasaki":
+			{
+				name: "川崎",
+				line: "g",
+				width: 17,
+				height: 28,
+				plat: "M257,49H815V111H257ZM161,193H895V255H161ZM65,337H1023V399H65Z",
+				track:
+				[
+					{ row: 2, name: "南武線", color: "#ffd400", beg: -1, end: 12.75, arrow: "lr" },
+					{ row: 8, name: "南武線", color: "#ffd400", beg: -1, end: 12.75, arrow: "lr" },
+					{ row: 11, name: "京浜東北線", color: "#00b2e5", beg: -1, end: -1, arrow: "rR" },
+					{ row: 17, name: "京浜東北線", color: "#00b2e5", beg: -1, end: -1, arrow: "lL" },
+					{ row: 20, name: "東海道本線", color: "#f68b1e", beg: -1, end: -1, arrow: "rR" },
+					{ row: 26, name: "東海道本線", color: "#f68b1e", beg: -1, end: -1, arrow: "lL" },
+				],
+				number:
+				[
+					{ row: 3, pos: 5, dir: 1, num: 6 },
+					{ row: 7, pos: 5, dir: -1, num: 5 },
+					{ row: 12, pos: 3, dir: 1, num: 4 },
+					{ row: 16, pos: 3, dir: -1, num: 3 },
+					{ row: 21, pos: 1.5, dir: 1, num: 2 },
+					{ row: 25, pos: 1.5, dir: -1, num: 1 },
+				],
+				equip:
+				[
+					{
+						row: 3,
+						list:
+						[
+							{ pos: 4, dir: 1, type: "si" },
+							{ pos: 6, dir: 1, type: "eus" },
+							{ pos: 7, dir: 1, type: "s" },
+							{ pos: 7.5, dir: 1, type: "ev" },
+							{ pos: 8.25, dir: 1, type: "si" },
+							{ pos: 12.25, dir: 1, type: "s" },
+						],
+					},
+					{
+						row: 12,
+						list:
+						[
+							{ pos: 4, dir: 1, type: "si" },
+							{ pos: 6, dir: 1, type: "eus" },
+							{ pos: 6.75, dir: 1, type: "s" },
+							{ pos: 7.25, dir: 1, type: "ev" },
+							{ pos: 8.5, dir: 1, type: "si" },
+							{ pos: 13.5, dir: 1, type: "s" },
+						],
+					},
+					{
+						row: 21,
+						list:
+						[
+							{ pos: 3.5, dir: 1, type: "si" },
+							{ pos: 6, dir: 1, type: "eus" },
+							{ pos: 7, dir: 1, type: "s" },
+							{ pos: 7.5, dir: 1, type: "ev" },
+							{ pos: 8.5, dir: 1, type: "si" },
+							{ pos: 13.5, dir: 1, type: "s" },
+						],
+					},
+				],
+				stop:
+				[
+					{
+						row: 0,
+						dir: 1,
+						list:
+						[
+							{
+								stop:
+								{
+									4: 8.5,
+									6: 10.5,
+								},
+							},
+							{
+							},
+						],
+						def: { pos: 10.5, dir: 1, form: "E233-8000" },
+					},
+					{
+						row: 6,
+						dir: -1,
+						list:
+						[
+							{
+								stop:
+								{
+									4: 8.5,
+									6: 10.5,
+								},
+							},
+							{
+							},
+						],
+						def: { pos: 10.5, dir: 1, form: "E233-8000" },
+					},
+					{
+						row: 9,
+						dir: 1,
+						list:
+						[
+							{
+								stop:
+								{
+									10: 13,
+								},
+							},
+							{
+							},
+						],
+						def: { pos: 13, dir: 1, form: "E233-1000" },
+					},
+					{
+						row: 15,
+						dir: -1,
+						list:
+						[
+							{
+							},
+							{
+								stop:
+								{
+									10: 3,
+								},
+							},
+						],
+						def: { pos: 3, dir: -1, form: "E233-1000" },
+					},
+					{
+						row: 18,
+						dir: 1,
+						list:
+						[
+							{
+								stop:
+								{
+									10: 11,
+									12: 13,
+									15: 16,
+								},
+								form:
+								{
+									"4d-15": 16,
+									"4d-10": 11,
+								}
+							},
+							{
+							},
+						],
+					},
+					{
+						row: 24,
+						dir: -1,
+						list:
+						[
+							{
+							},
+							{
+								stop:
+								{
+									9: 4,
+									15: 1,
+								},
+								form:
+								{
+									"4d-15": 1,
+									"4d-10": 1,
+								}
+							},
+						],
+					},
+				],
+				form:
+				[
+					"4d-15",
+					"4d-10",
+				],
+			},
+			"yokohama":
+			{
+				name: "横浜",
+				line: "g",
+				width: 20,
+				height: 37,
+				plat: "M257,49H1231V111H257ZM17,193H1055V255H17ZM33,337H1055V399H33ZM289,481H1087V543H289Z",
+				track:
+				[
+					{ row: 2, name: "横須賀線", color: "#234059", beg: -1, end: -1, arrow: "rR" },
+					{ row: 8, name: "横須賀線", color: "#234059", beg: -1, end: -1, arrow: "lL" },
+					{ row: 11, name: "東海道本線", color: "#f68b1e", beg: -1, end: -1, arrow: "rR" },
+					{ row: 17, name: "東海道本線", color: "#f68b1e", beg: -1, end: -1, arrow: "rR" },
+					{ row: 20, name: "東海道本線", color: "#f68b1e", beg: -1, end: -1, arrow: "lL" },
+					{ row: 26, name: "東海道本線", color: "#f68b1e", beg: -1, end: -1, arrow: "lL" },
+					{ row: 29, name: "根岸線", color: "#00b2e5", beg: -1, end: 10.25, arrow: "r" },
+					{ row: 29, name: "京浜東北線", color: "#00b2e5", beg: 10.25, end: -1, arrow: "R" },
+					{ row: 35, name: "根岸線", color: "#00b2e5", beg: -1, end: 11.25, arrow: "l" },
+					{ row: 35, name: "京浜東北線", color: "#00b2e5", beg: 11.25, end: -1, arrow: "L" },
+				],
+				number:
+				[
+					{ row: 3, pos: 5.5, dir: 1, num: 10 },
+					{ row: 7, pos: 5.5, dir: -1, num: 9 },
+					{ row: 12, pos: 0.75, dir: 1, num: 8 },
+					{ row: 16, pos: 0.75, dir: -1, num: 7 },
+					{ row: 21, pos: 1.5, dir: 1, num: 6 },
+					{ row: 25, pos: 1.5, dir: -1, num: 5 },
+					{ row: 30, pos: 5.5, dir: 1, num: 4 },
+					{ row: 34, pos: 5.5, dir: -1, num: 3 },
+				],
+				equip:
+				[
+					{
+						row: 3,
+						list:
+						[
+							{ pos: 4.5, dir: -1, type: "ebs" },
+							{ pos: 7.25, dir: -1, type: "eui" },
+							{ pos: 8, dir: -1, type: "si" },
+							{ pos: 9.5, dir: -1, type: "s" },
+							{ pos: 11.5, dir: -1, type: "si" },
+							{ pos: 13, dir: -1, type: "ev" },
+							{ pos: 14, dir: -1, type: "ebs" },
+							{ pos: 16.5, dir: -1, type: "eusi" },
+							{ pos: 18, dir: -1, type: "s" },
+						],
+					},
+					{
+						row: 12,
+						list:
+						[
+							{ pos: 2.75, dir: -1, type: "edsi" },
+							{ pos: 5, dir: -1, type: "eus" },
+							{ pos: 8, dir: -1, type: "si" },
+							{ pos: 9.75, dir: -1, type: "eus" },
+							{ pos: 11.5, dir: -1, type: "eusi" },
+							{ pos: 13, dir: -1, type: "ev" },
+							{ pos: 14, dir: -1, type: "s" },
+							{ pos: 16, dir: -1, type: "eusi" },
+						],
+					},
+					{
+						row: 21,
+						list:
+						[
+							{ pos: 2.75, dir: -1, type: "eusi" },
+							{ pos: 5, dir: -1, type: "eds" },
+							{ pos: 8, dir: -1, type: "si" },
+							{ pos: 9.75, dir: -1, type: "eus" },
+							{ pos: 11.5, dir: -1, type: "eusi" },
+							{ pos: 13, dir: -1, type: "ev" },
+							{ pos: 13.75, dir: -1, type: "s" },
+							{ pos: 16, dir: -1, type: "eusi" },
+						],
+					},
+					{
+						row: 30,
+						list:
+						[
+							{ pos: 4.5, dir: -1, type: "eus" },
+							{ pos: 8, dir: -1, type: "si" },
+							{ pos: 9.5, dir: -1, type: "eds" },
+							{ pos: 11.5, dir: -1, type: "edsi" },
+							{ pos: 13, dir: -1, type: "ev" },
+							{ pos: 13.75, dir: -1, type: "s" },
+							{ pos: 16.5, dir: -1, type: "eusi" },
+						],
+					},
+				],
+				stop:
+				[
+					{
+						row: 0,
+						dir: 1,
+						list:
+						[
+							{
+								stop:
+								{
+									10: 14,
+									11: 15,
+									15: 19,
+								},
+							},
+							{
+							},
+						],
+						def: { pos: 19, dir: 1, form: "E217" },
+					},
+					{
+						row: 6,
+						dir: -1,
+						list:
+						[
+							{
+							},
+							{
+								stop:
+								{
+									15: 4.25,
+								},
+							},
+						],
+						def: { pos: 4.25, dir: -1, form: "E217" },
+					},
+					{
+						row: 9,
+						dir: 1,
+						list:
+						[
+							{
+								stop:
+								{
+									10: 15,
+									15: 16,
+								},
+								form:
+								{
+									"4d-15": 16,
+									"4d-10": 15,
+								}
+							},
+							{
+							},
+						],
+					},
+					{
+						row: 15,
+						dir: -1,
+						list:
+						[
+							{
+								stop:
+								{
+									10: 15,
+									15: 16,
+								},
+								form:
+								{
+									"4d-15": 16,
+									"4d-10": 15,
+									"nagara": 15,
+								}
+							},
+							{
+							},
+						],
+					},
+					{
+						row: 18,
+						dir: 1,
+						list:
+						[
+							{
+							},
+							{
+								stop:
+								{
+									8: 7,
+									10: 4,
+									12: 3,
+									15: 1,
+								},
+								form:
+								{
+									"4d-15": 1,
+									"4d-10": 4,
+									"nagara": 4,
+								}
+							},
+						],
+					},
+					{
+						row: 24,
+						dir: -1,
+						list:
+						[
+							{
+							},
+							{
+								stop:
+								{
+									8: 7,
+									10: 4,
+									12: 3,
+									15: 1,
+								},
+								form:
+								{
+									"4d-15": 1,
+									"4d-10": 4,
+								}
+							},
+						],
+					},
+					{
+						row: 27,
+						dir: 1,
+						list:
+						[
+							{
+								stop:
+								{
+									"": 15.25,
+								},
+							},
+							{
+							},
+						],
+						def: { pos: 15.25, dir: 1, form: "E233-1000" },
+					},
+					{
+						row: 33,
+						dir: -1,
+						list:
+						[
+							{
+							},
+							{
+								stop:
+								{
+									"": 6.25,
+								},
+							},
+						],
+						def: { pos: 6.25, dir: -1, form: "E233-1000" },
+					},
+				],
+				form:
+				[
+					"4d-15",
+					"4d-10",
+					"nagara",
+				],
+			},
+			"totsuka":
+			{
+				name: "戸塚",
+				line: "g",
+				width: 17,
+				height: 19,
+				plat: "M49,49H1055V111H49ZM33,193H1055V255H33Z",
+				track:
+				[
+					{ row: 2, name: "横須賀線", color: "#234059", beg: -1, end: -1, arrow: "rR" },
+					{ row: 8, name: "東海道本線", color: "#f68b1e", beg: -1, end: -1, arrow: "rR" },
+					{ row: 11, name: "東海道本線", color: "#f68b1e", beg: -1, end: -1, arrow: "lL" },
+					{ row: 17, name: "横須賀線", color: "#234059", beg: -1, end: -1, arrow: "lL" },
+				],
+				number:
+				[
+					{ row: 3, pos: 1.25, dir: 1, num: 1 },
+					{ row: 7, pos: 1.25, dir: -1, num: 2 },
+					{ row: 12, pos: 1.5, dir: 1, num: 3 },
+					{ row: 16, pos: 1.5, dir: -1, num: 4 },
+				],
+				equip:
+				[
+					{
+						row: 3,
+						list:
+						[
+							{ pos: 7.5, dir: 1, type: "eus" },
+							{ pos: 8.75, dir: -1, type: "edsi" },
+							{ pos: 9.25, dir: 1, type: "ev" },
+							{ pos: 9.75, dir: -1, type: "ev" },
+							{ pos: 10.5, dir: -1, type: "eus" },
+						],
+					},
+					{
+						row: 12,
+						list:
+						[
+							{ pos: 7.5, dir: 1, type: "eus" },
+							{ pos: 8, dir: 1, type: "ev" },
+							{ pos: 8.75, dir: -1, type: "edsi" },
+							{ pos: 10.5, dir: -1, type: "eus" },
+						],
+					},
+				],
+				stop:
+				[
+					{
+						row: 0,
+						dir: 1,
+						list:
+						[
+							{
+								stop:
+								{
+									6: 11,
+									10: 15,
+									15: 16,
+								},
+							},
+							{
+							},
+						],
+						def: { pos: 16, dir: 1, form: "E217" },
+					},
+					{
+						row: 6,
+						dir: -1,
+						list:
+						[
+							{
+								stop:
+								{
+									11: 12,
+									12: 13,
+									15: 16,
+								},
+								form:
+								{
+									"4d-15": 16,
+									"4d-10": 12,
+								}
+							},
+							{
+							},
+						],
+					},
+					{
+						row: 9,
+						dir: 1,
+						list:
+						[
+							{
+							},
+							{
+								stop:
+								{
+									11: 5,
+									15: 1,
+								},
+								form:
+								{
+									"4d-15": 1,
+									"4d-10": 5,
+								}
+							},
+						],
+					},
+					{
+						row: 15,
+						dir: -1,
+						list:
+						[
+							{
+							},
+							{
+								stop:
+								{
+									6: 6.75,
+									11: 5,
+									15: 1,
+								},
+							},
+						],
+						def: { pos: 1, dir: -1, form: "E217" },
+					},
+				],
+				form:
+				[
+					"4d-15",
+					"4d-10",
+				],
+			},
+			"ofuna":
+			{
+				name: "大船",
+				line: "g",
+				width: 19,
+				height: 46,
+				plat: "M49,49H1039V111H49ZM49,193H1039V255H49ZM241,337H1215V399H241ZM97,481H1103V543H97ZM177,625H879V687H177Z",
+				track:
+				[
+					{ row: 2, name: "東海道本線", color: "#f68b1e", beg: -1, end: -1, arrow: "rR" },
+					{ row: 8, name: "東海道本線", color: "#f68b1e", beg: -1, end: -1, arrow: "rR" },
+					{ row: 11, name: "東海道本線", color: "#f68b1e", beg: -1, end: -1, arrow: "lL" },
+					{ row: 17, name: "東海道本線", color: "#f68b1e", beg: -1, end: -1, arrow: "lL" },
+					{ row: 20, name: "横須賀線", color: "#234059", beg: -1, end: -1, arrow: "lrR" },
+					{ row: 26, name: "横須賀線", color: "#234059", beg: -1, end: -1, arrow: "lrLR" },
+					{ row: 29, name: "横須賀線", color: "#234059", beg: -1, end: -1, arrow: "lrLR" },
+					{ row: 35, name: "横須賀線", color: "#234059", beg: -1, end: -1, arrow: "lrL" },
+					{ row: 38, name: "根岸線", color: "#00b2e5", beg: 2.75, end: -1, arrow: "LR" },
+					{ row: 44, name: "根岸線", color: "#00b2e5", beg: 2.75, end: -1, arrow: "LR" },
+				],
+				number:
+				[
+					{ row: 3, pos: 1.25, dir: 1, num: 1 },
+					{ row: 7, pos: 1.25, dir: -1, num: 2 },
+					{ row: 12, pos: 1.5, dir: 1, num: 3 },
+					{ row: 16, pos: 1.5, dir: -1, num: 4 },
+					{ row: 21, pos: 4.25, dir: 1, num: 5 },
+					{ row: 25, pos: 4.25, dir: -1, num: 6 },
+					{ row: 30, pos: 2.25, dir: 1, num: 7 },
+					{ row: 34, pos: 2.25, dir: -1, num: 8 },
+					{ row: 39, pos: 3.75, dir: 1, num: 9 },
+					{ row: 43, pos: 3.75, dir: -1, num: 10 },
+				],
+				equip:
+				[
+					{
+						row: 3,
+						list:
+						[
+							{ pos: 4.5, dir: 1, type: "s" },
+							{ pos: 6, dir: 1, type: "eusi" },
+							{ pos: 9.25, dir: 1, type: "eb" },
+							{ pos: 10.5, dir: 1, type: "ev" },
+							{ pos: 11.25, dir: 1, type: "si" },
+						],
+					},
+					{
+						row: 12,
+						list:
+						[
+							{ pos: 4.5, dir: 1, type: "s" },
+							{ pos: 6, dir: 1, type: "eusi" },
+							{ pos: 9.25, dir: 1, type: "eb" },
+							{ pos: 10.5, dir: 1, type: "ev" },
+							{ pos: 11.25, dir: 1, type: "si" },
+						],
+					},
+					{
+						row: 21,
+						list:
+						[
+							{ pos: 5.75, dir: 1, type: "si" },
+							{ pos: 7.5, dir: 1, type: "ebi" },
+							{ pos: 9.5, dir: 1, type: "s" },
+							{ pos: 10.5, dir: 1, type: "ev" },
+							{ pos: 11.25, dir: 1, type: "ebi" },
+						],
+					},
+					{
+						row: 30,
+						list:
+						[
+							{ pos: 4.25, dir: 1, type: "s" },
+							{ pos: 7.5, dir: 1, type: "ebi" },
+							{ pos: 9.25, dir: 1, type: "s" },
+							{ pos: 10.5, dir: 1, type: "ev" },
+							{ pos: 11.25, dir: 1, type: "ebi" },
+						],
+					},
+					{
+						row: 39,
+						list:
+						[
+							{ pos: 6, dir: 1, type: "si" },
+							{ pos: 7.5, dir: 1, type: "ebi" },
+							{ pos: 9.25, dir: 1, type: "eb" },
+							{ pos: 10.5, dir: 1, type: "ev" },
+							{ pos: 11.25, dir: 1, type: "si" },
+						],
+					},
+				],
+				stop:
+				[
+					{
+						row: 0,
+						dir: 1,
+						list:
+						[
+							{
+								stop:
+								{
+									10: 12,
+									12: 13,
+									15: 16,
+								},
+								form:
+								{
+									"4d-15": 16,
+									"4d-10": 12,
+									"185-15": 16,
+								}
+							},
+							{
+							},
+						],
+					},
+					{
+						row: 6,
+						dir: -1,
+						list:
+						[
+							{
+								stop:
+								{
+									10: 12,
+									12: 13,
+									15: 16,
+								},
+								form:
+								{
+									"4d-15": 16,
+									"4d-10": 12,
+								}
+							},
+							{
+							},
+						],
+					},
+					{
+						row: 9,
+						dir: 1,
+						list:
+						[
+							{
+							},
+							{
+								stop:
+								{
+									7: 2,
+									"": 1,
+								},
+								form:
+								{
+									"4d-15": 1,
+									"4d-10": 1,
+									"185-15": 1,
+									"185-10": 1,
+									"215": 1,
+								}
+							},
+						],
+					},
+					{
+						row: 15,
+						dir: -1,
+						list:
+						[
+							{
+							},
+							{
+								stop:
+								{
+									"": 1,
+								},
+								form:
+								{
+									"4d-15": 1,
+									"4d-10": 1,
+								}
+							},
+						],
+					},
+					{
+						row: 18,
+						dir: 1,
+						list:
+						[
+							{
+								stop:
+								{
+									5: 9.25,
+									6: 11.25,
+									10: 13.75,
+									11: 14.75,
+									12: 15.75,
+									15: 18.75,
+								},
+							},
+							{
+							},
+						],
+						def: { pos: 18.75, dir: 1, form: "E217" },
+					},
+					{
+						row: 24,
+						dir: -1,
+						list:
+						[
+							{
+								stop:
+								{
+									"373": 15.75,
+									15: 18.75,
+								},
+							},
+							{
+								stop:
+								{
+									3: 12.75,
+									6: 9.75,
+									8: 6.75,
+									9: 5.75,
+									10: 4.75,
+									15: 3.75,
+								},
+							},
+						],
+						def: { pos: 18.75, dir: 1, form: "E217" },
+					},
+					{
+						row: 27,
+						dir: 1,
+						list:
+						[
+							{
+								stop:
+								{
+									9: 10.75,
+									10: 11.75,
+									11: 12.75,
+									"373": 15.75,
+									15: 16.75,
+								},
+							},
+							{
+								stop:
+								{
+									6: 7.75,
+									8: 6.75,
+									9: 5.75,
+									"": 1.75,
+								},
+							},
+						],
+						def: { pos: 1.75, dir: -1, form: "E217" },
+					},
+					{
+						row: 33,
+						dir: -1,
+						list:
+						[
+							{
+								stop:
+								{
+									8: 9.75,
+									11: 12.75,
+									12: 13.75,
+									15: 16.75,
+								},
+							},
+							{
+								stop:
+								{
+									"": 1.75,
+								},
+							},
+						],
+						def: { pos: 1.75, dir: -1, form: "E217" },
+					},
+					{
+						row: 36,
+						dir: 1,
+						list:
+						[
+							{
+								stop:
+								{
+									8: 11.25,
+									10: 13.25,
+								},
+							},
+							{
+								stop:
+								{
+									"": 3.25,
+								},
+							},
+						],
+						def: { pos: 3.25, dir: -1, form: "E233-1000" },
+					},
+					{
+						row: 42,
+						dir: -1,
+						list:
+						[
+							{
+								stop:
+								{
+									8: 11.25,
+									10: 13.25,
+								},
+							},
+							{
+								stop:
+								{
+									6: 6.25,
+									"": 3.25,
+								},
+							},
+						],
+						def: { pos: 3.25, dir: -1, form: "E233-1000" },
+					},
+				],
+				form:
+				[
+					"4d-15",
+					"4d-10",
+					"185-15",
+					"185-10",
+					"215",
+				],
+			},
+			"fujisawa":
+			{
+				name: "藤沢",
+				line: "g",
+				width: 18,
+				height: 19,
+				plat: "M193,49H879V111H193ZM65,193H1103V255H113V223H65Z",
+				track:
+				[
+					{ row: 2, name: "東海道本線\nライナー", color: "#f68b1e", beg: -1, end: -1, arrow: "rR" },
+					{ row: 8, name: "東海道本線\nライナー", color: "#f68b1e", beg: -1, end: -1, arrow: "lL" },
+					{ row: 11, name: "東海道本線", color: "#f68b1e", beg: -1, end: -1, arrow: "rR" },
+					{ row: 17, name: "東海道本線", color: "#f68b1e", beg: -1, end: -1, arrow: "lL" },
+				],
+				number:
+				[
+					{ row: 3, pos: 3.5, dir: 1, num: 1 },
+					{ row: 7, pos: 3.5, dir: -1, num: 2 },
+					{ row: 12, pos: 2.25, dir: 1, num: 3 },
+					{ row: 16, pos: 2.25, dir: -1, num: 4 },
+				],
+				equip:
+				[
+					{
+						row: 3,
+						list:
+						[
+							{ pos: 7, dir: 1, type: "s" },
+							{ pos: 9.75, dir: 1, type: "eus" },
+							{ pos: 10.5, dir: 1, type: "ev" },
+						],
+					},
+					{
+						row: 12,
+						list:
+						[
+							{ pos: 7, dir: 1, type: "s" },
+							{ pos: 9.5, dir: 1, type: "eus" },
+							{ pos: 11.25, dir: 1, type: "si" },
+							{ pos: 12.25, dir: 1, type: "ev" },
+						],
+					},
+				],
+				stop:
+				[
+					{
+						row: 0,
+						dir: 1,
+						list:
+						[
+							{
+								stop:
+								{
+									7: 10.25,
+									9: 12.5,
+									10: 13.25,
+								},
+								form:
+								{
+									"185-10": 13.25,
+									"185-7": 10.25,
+									"215": 13.25,
+									"251": 13.25,
+								}
+							},
+							{
+							},
+						],
+					},
+					{
+						row: 6,
+						dir: -1,
+						list:
+						[
+							{
+							},
+							{
+								stop:
+								{
+									7: 5.5,
+									10: 3,
+								},
+								form:
+								{
+									"185-10": 3,
+									"185-7": 5.5,
+									"251": 3,
+								}
+							},
+						],
+					},
+					{
+						row: 9,
+						dir: 1,
+						list:
+						[
+							{
+								stop:
+								{
+									8: 12,
+									10: 14,
+									15: 16,
+								},
+								form:
+								{
+									"4d-15": 16,
+									"4d-10": 14,
+									"185-15": 16,
+								}
+							},
+							{
+							},
+						],
+					},
+					{
+						row: 15,
+						dir: -1,
+						list:
+						[
+							{
+							},
+							{
+								stop:
+								{
+									8: 6.25,
+									10: 4.25,
+									15: 2.25,
+								},
+								form:
+								{
+									"4d-15": 2.25,
+									"4d-10": 4.25,
+									"185-15": 2.25,
+									"185-10": 4.25,
+									"215": 4.25,
+								}
+							},
+						],
+					},
+				],
+				form:
+				[
+					"4d-15",
+					"4d-10",
+					"185-15",
+					"185-10",
+					"185-7",
+					"215",
+					"251",
+				],
+			},
+			"chigasaki":
+			{
+				name: "茅ヶ崎",
+				line: "g",
+				width: 17,
+				height: 28,
+				plat: "M481,49H799V111H481ZM289,193H975V255H289ZM49,337H1071V399H49Z",
+				track:
+				[
+					{ row: 2, name: "相模線", color: "#009793", beg: 7.5, end: -1, arrow: "LR" },
+					{ row: 8, name: "相模線", color: "#009793", beg: 7.5, end: -1, arrow: "LR" },
+					{ row: 11, name: "東海道本線\nライナー", color: "#f68b1e", beg: -1, end: -1, arrow: "rR" },
+					{ row: 17, name: "東海道本線\nライナー", color: "#f68b1e", beg: -1, end: -1, arrow: "lL" },
+					{ row: 20, name: "東海道本線", color: "#f68b1e", beg: -1, end: -1, arrow: "rR" },
+					{ row: 26, name: "東海道本線", color: "#f68b1e", beg: -1, end: -1, arrow: "lL" },
+				],
+				number:
+				[
+					{ row: 3, pos: 10.5, dir: 1, num: 1 },
+					{ row: 7, pos: 10.5, dir: -1, num: 2 },
+					{ row: 12, pos: 5, dir: 1, num: 3 },
+					{ row: 16, pos: 5, dir: -1, num: 4 },
+					{ row: 21, pos: 1.25, dir: 1, num: 5 },
+					{ row: 25, pos: 1.25, dir: -1, num: 6 },
+				],
+				equip:
+				[
+					{
+						row: 3,
+						list:
+						[
+							{ pos: 7.5, dir: 1, type: "si" },
+							{ pos: 8.25, dir: 1, type: "ev" },
+							{ pos: 9.5, dir: 1, type: "eusi" },
+						],
+					},
+					{
+						row: 12,
+						list:
+						[
+							{ pos: 7.75, dir: 1, type: "ebi" },
+							{ pos: 8.25, dir: 1, type: "ev" },
+							{ pos: 9.25, dir: 1, type: "si" },
+						],
+					},
+					{
+						row: 21,
+						list:
+						[
+							{ pos: 6.25, dir: 1, type: "s" },
+							{ pos: 8, dir: 1, type: "ebi" },
+							{ pos: 8.5, dir: 1, type: "ev" },
+							{ pos: 9.25, dir: 1, type: "si" },
+						],
+					},
+				],
+				stop:
+				[
+					{
+						row: 0,
+						dir: 1,
+						list:
+						[
+							{
+							},
+							{
+								stop:
+								{
+									"": 8.25,
+								},
+							},
+						],
+						def: { pos: 8.25, dir: -1, form: "205-500" },
+					},
+					{
+						row: 6,
+						dir: -1,
+						list:
+						[
+							{
+							},
+							{
+								stop:
+								{
+									"": 8.25,
+								},
+							},
+						],
+						def: { pos: 8.25, dir: -1, form: "205-500" },
+					},
+					{
+						row: 9,
+						dir: 1,
+						list:
+						[
+							{
+								stop:
+								{
+									10: 15,
+								},
+								form:
+								{
+									"185-10": 15,
+									"185-7": 15,
+									"215": 15,
+									"251": 15,
+								}
+							},
+							{
+							},
+						],
+					},
+					{
+						row: 15,
+						dir: -1,
+						list:
+						[
+							{
+							},
+							{
+								stop:
+								{
+									10: 5,
+								},
+								form:
+								{
+									"185-10": 5,
+									"185-7": 5,
+									"251": 5,
+								}
+							},
+						],
+					},
+					{
+						row: 18,
+						dir: 1,
+						list:
+						[
+							{
+								stop:
+								{
+									9: 10.75,
+									10: 11.25,
+									12: 13.25,
+									15: 16.25,
+								},
+								form:
+								{
+									"4d-15": 16.25,
+									"4d-10": 11.25,
+									"185-15": 16.25,
+								}
+							},
+							{
+							},
+						],
+					},
+					{
+						row: 24,
+						dir: -1,
+						list:
+						[
+							{
+							},
+							{
+								stop:
+								{
+									8: 4,
+									9: 3.5,
+									10: 3,
+									15: 1,
+								},
+								form:
+								{
+									"4d-15": 1,
+									"4d-10": 3,
+									"185-15": 1,
+									"185-10": 3,
+									"215": 3,
+								}
+							},
+						],
+					},
+				],
+				form:
+				[
+					"4d-15",
+					"4d-10",
+					"185-15",
+					"185-10",
+					"185-7",
+					"215",
+					"251",
+				],
+			},
+			"hiratsuka":
+			{
+				name: "平塚",
+				line: "g",
+				width: 19,
+				height: 19,
+				plat: "M49,49H1167V111H49ZM49,193H1183V255H49Z",
+				track:
+				[
+					{ row: 2, name: "東海道本線", color: "#f68b1e", beg: -1, end: -1, arrow: "rR" },
+					{ row: 8, name: "東海道本線", color: "#f68b1e", beg: -1, end: -1, arrow: "rLR" },
+					{ row: 11, name: "東海道本線", color: "#f68b1e", beg: -1, end: -1, arrow: "lLR" },
+					{ row: 17, name: "東海道本線", color: "#f68b1e", beg: -1, end: -1, arrow: "lL" },
+				],
+				number:
+				[
+					{ row: 3, pos: 2.25, dir: 1, num: 1 },
+					{ row: 7, pos: 2.25, dir: -1, num: 2 },
+					{ row: 12, pos: 2.25, dir: 1, num: 3 },
+					{ row: 16, pos: 2.25, dir: -1, num: 4 },
+				],
+				equip:
+				[
+					{
+						row: 3,
+						list:
+						[
+							{ pos: 0.75, dir: 1, type: "ev" },
+							{ pos: 1.25, dir: 1, type: "si" },
+							{ pos: 13, dir: 1, type: "eb" },
+							{ pos: 13.5, dir: 1, type: "ev" },
+							{ pos: 14.5, dir: 1, type: "eus" },
+							{ pos: 15.75, dir: 1, type: "si" },
+						],
+					},
+					{
+						row: 12,
+						list:
+						[
+							{ pos: 0.75, dir: 1, type: "ev" },
+							{ pos: 1.25, dir: 1, type: "si" },
+							{ pos: 13, dir: 1, type: "eb" },
+							{ pos: 13.5, dir: 1, type: "ev" },
+							{ pos: 14.5, dir: 1, type: "eus" },
+							{ pos: 15.75, dir: 1, type: "si" },
+						],
+					},
+				],
+				stop:
+				[
+					{
+						row: 0,
+						dir: 1,
+						list:
+						[
+							{
+								stop:
+								{
+									10: 17,
+									15: 18,
+								},
+								form:
+								{
+									"4d-15": 18,
+									"4d-10": 17,
+									"185-15": 18,
+									"185-7": 17,
+									"215": 17,
+								}
+							},
+							{
+								stop:
+								{
+									12: 6,
+								},
+							},
+						],
+					},
+					{
+						row: 6,
+						dir: -1,
+						list:
+						[
+							{
+								stop:
+								{
+									10: 17,
+									15: 18,
+								},
+								form:
+								{
+									"4d-15": 18,
+									"4d-10": 17,
+								}
+							},
+							{
+								stop:
+								{
+									8: 9,
+									10: 7,
+									15: 3,
+								},
+								form:
+								{
+									"4d-15": 3,
+									"4d-10": 7,
+								}
+							},
+						],
+					},
+					{
+						row: 9,
+						dir: 1,
+						list:
+						[
+							{
+							},
+							{
+								stop:
+								{
+									8: 9,
+									10: 7,
+									15: 3,
+								},
+								form:
+								{
+									"4d-15": 3,
+									"4d-10": 7,
+								}
+							},
+						],
+					},
+					{
+						row: 15,
+						dir: -1,
+						list:
+						[
+							{
+							},
+							{
+								stop:
+								{
+									8: 9,
+									10: 7,
+									15: 3,
+								},
+								form:
+								{
+									"4d-15": 3,
+									"4d-10": 7,
+									"4d-5": 9,
+									"185-15": 3,
+									"185-10": 7,
+									"185-7": 9,
+									"215": 7,
+									"251": 7,
+								}
+							},
+						],
+					},
+				],
+				form:
+				[
+					"4d-15",
+					"4d-10",
+					"4d-5",
+					"185-15",
+					"185-10",
+					"185-7",
+					"215",
+					"251",
+				],
+			},
+			"kozu":
+			{
+				name: "国府津",
+				line: "g",
+				width: 20,
+				height: 25,
+				plat: "M97,49H1231V111H97ZM97,193H1279V255H97ZM33,400V337H1263V399H62",
+				track:
+				[
+					{ row: 2, name: "東海道本線", color: "#f68b1e", beg: -1, end: -1, arrow: "rR" },
+					{ row: 8, name: "東海道本線", color: "#f68b1e", beg: -1, end: -1, arrow: "rLR" },
+					{ row: 11, name: "御殿場線", color: "#f68b1e", beg: -1, end: 11.25, arrow: "lr" },
+					{ row: 11, name: "東海道本線", color: "#f68b1e", beg: 11.25, end: -1, arrow: "L" },
+					{ row: 17, name: "東海道本線", color: "#f68b1e", beg: -1, end: -1, arrow: "lL" },
+					{ row: 20, name: "東海道本線", color: "#f68b1e", beg: -1, end: -1, arrow: "lL" },
+				],
+				number:
+				[
+					{ row: 3, pos: 2.5, dir: 1, num: 5 },
+					{ row: 7, pos: 2.5, dir: -1, num: 4 },
+					{ row: 12, pos: 2.5, dir: 1, num: 3 },
+					{ row: 16, pos: 2.5, dir: -1, num: 2 },
+					{ row: 21, pos: 2.5, dir: 1, num: 1 },
+				],
+				equip:
+				[
+					{
+						row: 3,
+						list:
+						[
+							{ pos: 1.5, dir: -1, type: "s" },
+							{ pos: 8.75, dir: 1, type: "ev" },
+							{ pos: 9.5, dir: 1, type: "si" },
+						],
+					},
+					{
+						row: 12,
+						list:
+						[
+							{ pos: 1.5, dir: -1, type: "s" },
+							{ pos: 8.75, dir: 1, type: "s" },
+							{ pos: 9.5, dir: 1, type: "ev" },
+						],
+					},
+					{
+						row: 21,
+						list:
+						[
+							{ pos: 1, dir: -1, type: "si" },
+							{ pos: 1.5, dir: -1, type: "s" },
+							{ pos: 8.25, dir: 1, type: "ev" },
+							{ pos: 8.75, dir: 1, type: "s" },
+							{ pos: 9.5, dir: 1, type: "si" },
+						],
+					},
+				],
+				stop:
+				[
+					{
+						row: 0,
+						dir: 1,
+						list:
+						[
+							{
+								stop:
+								{
+									8: 12,
+									10: 14,
+									12: 15,
+									15: 18,
+								},
+								form:
+								{
+									"4d-15": 18,
+									"4d-10": 14,
+									"185-7": 12,
+									"215": 14,
+								}
+							},
+							{
+							},
+						],
+					},
+					{
+						row: 6,
+						dir: -1,
+						list:
+						[
+							{
+								stop:
+								{
+									2: 5.75,
+									3: 6.75,
+									4: 7.75,
+									5: 8.75,
+									6: 9.75,
+									8: 11.75,
+									10: 13.75,
+									12: 15.75,
+									"単": 17.75,
+									15: 18.75,
+								},
+								form:
+								{
+									"4d-15": 18.75,
+									"4d-10": 13.75,
+								}
+							},
+							{
+								stop:
+								{
+									"": 3.75,
+								},
+								form:
+								{
+									"4d-15": 3.75,
+								}
+							},
+						],
+					},
+					{
+						row: 9,
+						dir: 1,
+						list:
+						[
+							{
+								stop:
+								{
+									2: 5.75,
+									3: 6.75,
+									4: 7.75,
+									5: 8.75,
+									6: 9.75,
+									8: 11.75,
+									10: 13.75,
+									12: 15.75,
+									"単": 17.75,
+									15: 18.75,
+								},
+							},
+							{
+								stop:
+								{
+									"": 3.75,
+								},
+								form:
+								{
+									"4d-15": 3.75,
+								}
+							},
+						],
+					},
+					{
+						row: 15,
+						dir: -1,
+						list:
+						[
+							{
+								stop:
+								{
+									3: 7,
+									4: 8,
+									7: 11.25,
+									10: 15,
+									15: 19,
+								},
+							},
+							{
+								stop:
+								{
+									9: 4.5,
+									"": 4,
+								},
+								form:
+								{
+									"4d-15": 4,
+									"4d-10": 4,
+									"185-10": 4,
+								}
+							},
+						],
+					},
+					{
+						row: 18,
+						dir: 1,
+						list:
+						[
+							{
+							},
+							{
+								stop:
+								{
+									9: 4.5,
+									"": 4,
+								},
+								form:
+								{
+									"4d-15": 4,
+									"4d-10": 4,
+									"4d-5": 4.5,
+									"185-15": 4,
+									"185-10": 4,
+									"185-7": 4.5,
+									"215": 4,
+									"251": 4,
+								}
+							},
+						],
+					},
+				],
+				form:
+				[
+					"4d-15",
+					"4d-10",
+					"4d-5",
+					"185-15",
+					"185-10",
+					"185-7",
+					"215",
+					"251",
+				],
+			},
+			"odawara":
+			{
+				name: "小田原",
+				line: "g",
+				width: 18,
+				height: 19,
+				plat: "M49,49H1039V111H49ZM129,193H1135V255H129Z",
+				track:
+				[
+					{ row: 2, name: "東海道本線", color: "#f68b1e", beg: -1, end: -1, arrow: "rR" },
+					{ row: 8, name: "東海道本線", color: "#f68b1e", beg: -1, end: -1, arrow: "rLR" },
+					{ row: 11, name: "東海道本線", color: "#f68b1e", beg: -1, end: -1, arrow: "lLR" },
+					{ row: 17, name: "東海道本線", color: "#f68b1e", beg: -1, end: -1, arrow: "lL" },
+				],
+				number:
+				[
+					{ row: 3, pos: 1.25, dir: 1, num: 6 },
+					{ row: 7, pos: 1.25, dir: -1, num: 5 },
+					{ row: 12, pos: 2.75, dir: 1, num: 4 },
+					{ row: 16, pos: 2.75, dir: -1, num: 3 },
+				],
+				equip:
+				[
+					{
+						row: 3,
+						list:
+						[
+							{ pos: 5.5, dir: 1, type: "s" },
+							{ pos: 6.25, dir: 1, type: "ev" },
+							{ pos: 7.5, dir: 1, type: "ebi" },
+						],
+					},
+					{
+						row: 12,
+						list:
+						[
+							{ pos: 5.5, dir: 1, type: "s" },
+							{ pos: 6.25, dir: 1, type: "ev" },
+							{ pos: 7.5, dir: 1, type: "ebi" },
+						],
+					},
+				],
+				stop:
+				[
+					{
+						row: 0,
+						dir: 1,
+						list:
+						[
+							{
+								stop:
+								{
+									10: 12,
+									15: 16,
+								},
+								form:
+								{
+									"4d-15": 16,
+									"4d-10": 12,
+									"185-15": 16,
+									"185-10": 12,
+								}
+							},
+							{
+							},
+						],
+					},
+					{
+						row: 6,
+						dir: -1,
+						list:
+						[
+							{
+								stop:
+								{
+									10: 11,
+									15: 16,
+								},
+								form:
+								{
+									"4d-15": 16,
+								}
+							},
+							{
+								stop:
+								{
+									15: 1,
+								},
+								form:
+								{
+									"4d-15": 1,
+									"4d-10": 1,
+									"185-15": 1,
+									"185-10": 1,
+									"185-7": 1,
+									"215": 1,
+								}
+							},
+						],
+					},
+					{
+						row: 9,
+						dir: 1,
+						list:
+						[
+							{
+								stop:
+								{
+									10: 12.25,
+								},
+							},
+							{
+								stop:
+								{
+									9: 5,
+									15: 2.25,
+								},
+								form:
+								{
+									"4d-15": 2.25,
+									"4d-10": 2.25,
+									"185-15": 2.25,
+									"185-10": 2.25,
+									"215": 2.25,
+									"251": 2.25,
+								}
+							},
+						],
+					},
+					{
+						row: 15,
+						dir: -1,
+						list:
+						[
+							{
+							},
+							{
+								stop:
+								{
+									5: 6.5,
+									9: 3.75,
+									15: 2.75,
+								},
+								form:
+								{
+									"4d-15": 2.75,
+									"4d-10": 2.75,
+									"4d-5": 6.5,
+									"nagara": 2.75,
+									"215": 2.75,
+								}
+							},
+						],
+					},
+				],
+				form:
+				[
+					"4d-15",
+					"4d-10",
+					"4d-5",
+					"185-15",
+					"185-10",
+					"185-7",
+					"nagara",
+					"215",
+					"251",
+				],
+			},
+			"atami":
+			{
+				name: "熱海",
+				line: "go",
+				width: 18,
+				height: 25,
+				plat: "M145,49H1135V111H145ZM49,193H1039V255H49ZM273,337H1039V399H273Z",
+				track:
+				[
+					{ row: 2, name: "東海道本線", color: "#f68b1e", beg: -1, end: -1, arrow: "rR" },
+					{ row: 8, name: "東海道本線", color: "#f68b1e", beg: -1, end: -1, arrow: "lrLR" },
+					{ row: 11, name: "東海道本線\n伊東線", color: "#f68b1e", beg: -1, end: 8.5, arrow: "lr" },
+					{ row: 11, name: "東海道本線", color: "#f68b1e", beg: 8.5, end: -1, arrow: "LR" },
+					{ row: 17, name: "東海道本線\n伊東線", color: "#f68b1e", beg: -1, end: 8.5, arrow: "l" },
+					{ row: 17, name: "東海道本線", color: "#f68b1e", beg: 8.5, end: -1, arrow: "L" },
+					{ row: 20, name: "伊東線", color: "#f68b1e", beg: -1, end: 16.25, arrow: "lr" },
+				],
+				number:
+				[
+					{ row: 3, pos: 2.75, dir: 1, num: 5 },
+					{ row: 7, pos: 2.75, dir: -1, num: 4 },
+					{ row: 12, pos: 1.5, dir: 1, num: 3 },
+					{ row: 16, pos: 1.5, dir: -1, num: 2 },
+					{ row: 21, pos: 5.5, dir: 1, num: 1 },
+				],
+				equip:
+				[
+					{
+						row: 3,
+						list:
+						[
+							{ pos: 8.25, dir: -1, type: "si" },
+							{ pos: 9, dir: -1, type: "ev" },
+							{ pos: 9.75, dir: -1, type: "eus" },
+						],
+					},
+					{
+						row: 12,
+						list:
+						[
+							{ pos: 8.25, dir: -1, type: "si" },
+							{ pos: 9, dir: -1, type: "ev" },
+							{ pos: 9.75, dir: -1, type: "eus" },
+						],
+					},
+					{
+						row: 21,
+						list:
+						[
+							{ pos: 8.25, dir: -1, type: "si" },
+							{ pos: 9, dir: -1, type: "ev" },
+							{ pos: 9.75, dir: -1, type: "eus" },
+						],
+					},
+				],
+				stop:
+				[
+					{
+						row: 0,
+						dir: 1,
+						list:
+						[
+							{
+								stop:
+								{
+									5: 12.5,
+									10: 14.5,
+									12: 16.5,
+									15: 17.5,
+								},
+								form:
+								{
+									"4d-15": 17.5,
+									"4d-10": 14.5,
+								}
+							},
+							{
+							},
+						],
+					},
+					{
+						row: 6,
+						dir: -1,
+						list:
+						[
+							{
+								stop:
+								{
+									3: 10.5,
+									8: 12.5,
+									10: 14.5,
+									12: 16.5,
+									15: 17.5,
+								},
+								form:
+								{
+									"4d-15": 17.5,
+									"4d-10": 14.5,
+									"3ds-5": 12.5,
+									"3ds-6": 12.5,
+									"373-3": 10.5,
+								}
+							},
+							{
+								stop:
+								{
+									5: 7.5,
+									7: 5.5,
+									12: 4.5,
+									15: 2.5,
+								},
+								form:
+								{
+									"4d-15": 2.5,
+									"4d-10": 4.5,
+									"4d-5": 7.5,
+								}
+							},
+						],
+					},
+					{
+						row: 9,
+						dir: 1,
+						list:
+						[
+							{
+								stop:
+								{
+									7: 12,
+									8: 13,
+									10: 14,
+								},
+								form:
+								{
+									"4d-15": 16,
+									"4d-10": 14,
+									"3ds-3": 12,
+									"3ds-5": 12,
+									"3ds-6": 12,
+								}
+							},
+							{
+								stop:
+								{
+									5: 7,
+									8: 4,
+									10: 3,
+									15: 1,
+								},
+								form:
+								{
+									"4d-15": 1,
+									"4d-10": 3,
+								}
+							},
+						],
+					},
+					{
+						row: 15,
+						dir: -1,
+						list:
+						[
+							{
+								stop:
+								{
+									15: 16,
+								},
+							},
+							{
+								stop:
+								{
+									12: 4,
+									15: 1,
+								},
+								form:
+								{
+									"4d-15": 1,
+									"4d-10": 4,
+								}
+							},
+						],
+					},
+					{
+						row: 18,
+						dir: 1,
+						list:
+						[
+							{
+								stop:
+								{
+									4: 10.5,
+									6: 11.5,
+									8: 12.5,
+									11: 16,
+								},
+							},
+							{
+								stop:
+								{
+									5: 7,
+									8: 5,
+								},
+							},
+						],
+						def: { pos: 11.5, dir: 1, form: "izukyu8000" },
+					},
+				],
+				form:
+				[
+					"4d-15",
+					"4d-10",
+					"4d-5",
+					"3ds-3",
+					"3ds-5",
+					"3ds-6",
+					"373-3",
+				],
+			},
+			"mishima":
+			{
+				name: "三島",
+				line: "o",
+			},
+			"numazu":
+			{
+				name: "沼津",
+				line: "o",
+			},
+			"fuji":
+			{
+				name: "富士",
+				line: "o",
+				width: 19,
+				height: 28,
+				plat: "M1,49H527V79H479V111H65V79H1ZM97,193H1151V255H97ZM65,337H1055V399H65Z",
+				track:
+				[
+					{ row: 2, name: "身延線", color: "#f68b1e", beg: -1, end: 8.25, arrow: "lr" },
+					{ row: 8, name: "身延線", color: "#f68b1e", beg: -1, end: 7.5, arrow: "lr" },
+					{ row: 11, name: "身延線\n東海道本線", color: "#f68b1e", beg: -1, end: 7.5, arrow: "lr" },
+					{ row: 11, name: "東海道本線", color: "#f68b1e", beg: 7.5, end: -1, arrow: "R" },
+					{ row: 17, name: "身延線\n東海道本線", color: "#f68b1e", beg: -1, end: 7.5, arrow: "lr" },
+					{ row: 17, name: "東海道本線", color: "#f68b1e", beg: 7.5, end: -1, arrow: "LR" },
+					{ row: 20, name: "東海道本線", color: "#f68b1e", beg: -1, end: -1, arrow: "lLR" },
+					{ row: 26, name: "東海道本線", color: "#f68b1e", beg: -1, end: -1, arrow: "" },
+				],
+				number:
+				[
+					{ row: 3, pos: 1.5, dir: 1, num: 1 },
+					{ row: 7, pos: 1.5, dir: -1, num: 2 },
+					{ row: 12, pos: 2, dir: 1, num: 3 },
+					{ row: 16, pos: 2, dir: -1, num: 4 },
+					{ row: 21, pos: 2, dir: 1, num: 5 },
+					{ row: 25, pos: 2, dir: -1, num: 6 },
+				],
+				equip:
+				[
+					{
+						row: 3,
+						list:
+						[
+							{ pos: 4.5, dir: 1, type: "ev" },
+							{ pos: 5, dir: 1, type: "s" },
+						],
+					},
+					{
+						row: 12,
+						list:
+						[
+							{ pos: 5, dir: 1, type: "s" },
+							{ pos: 6.25, dir: 1, type: "ev" },
+							{ pos: 7, dir: 1, type: "ebi" },
+						],
+					},
+					{
+						row: 21,
+						list:
+						[
+							{ pos: 5, dir: 1, type: "s" },
+							{ pos: 6.25, dir: 1, type: "ev" },
+							{ pos: 7, dir: 1, type: "ebi" },
+						],
+					},
+				],
+				stop:
+				[
+					{
+						row: 0,
+						dir: 1,
+						list:
+						[
+							{
+							},
+							{
+								stop:
+								{
+									4: 5,
+									"o": 8.25,
+								},
+							},
+						],
+						def: { pos: 5, dir: 1, form: "3dn-2" },
+					},
+					{
+						row: 6,
+						dir: -1,
+						list:
+						[
+							{
+							},
+							{
+								stop:
+								{
+									4: 5,
+									"o": 6.75,
+								},
+							},
+						],
+						def: { pos: 5, dir: 1, form: "3dn-2" },
+					},
+					{
+						row: 9,
+						dir: 1,
+						list:
+						[
+							{
+								stop:
+								{
+									4: 8,
+									6: 10,
+									8: 12,
+									11: 15,
+									"o": 18,
+								},
+								form:
+								{
+									"3dn-2": 8,
+									"3ds-3": 8,
+									"3ds-5": 10,
+									"3ds-6": 10,
+								}
+							},
+							{
+							},
+						],
+					},
+					{
+						row: 15,
+						dir: -1,
+						list:
+						[
+							{
+								stop:
+								{
+									4: 8,
+									6: 10,
+									8: 12,
+									9: 13,
+									11: 15,
+									"o": 18,
+								},
+								form:
+								{
+									"3ds-3": 8,
+									"3ds-4": 8,
+									"3ds-5": 10,
+									"3ds-6": 10,
+									"373-3": 8,
+									"373-6": 10,
+								}
+							},
+							{
+							},
+						],
+					},
+					{
+						row: 18,
+						dir: 1,
+						list:
+						[
+							{
+							},
+							{
+								stop:
+								{
+									2: 5.5,
+									8: 4.5,
+									11: 2.5,
+									"o": 1.5,
+								},
+								form:
+								{
+									"3ds-3": 4.5,
+									"3ds-4": 4.5,
+									"3ds-5": 4.5,
+									"3ds-6": 4.5,
+									"373-3": 4.5,
+									"373-6": 4.5,
+								}
+							},
+						],
+					},
+					{
+						row: 24,
+						dir: -1,
+						list:
+						[
+							{
+								stop:
+								{
+									4: 7.5,
+									8: 11.5,
+								},
+							},
+							{
+								stop:
+								{
+									8: 4.5,
+									11: 3.5,
+									"o": 1.5,
+								},
+							},
+						],
+					},
+				],
+				form:
+				[
+					"3dn-2",
+					"3ds-3",
+					"3ds-4",
+					"3ds-5",
+					"3ds-6",
+					"373-3",
+					"373-6",
+				],
+			},
+			"okitsu":
+			{
+				name: "興津",
+				line: "o",
+				width: 16,
+				height: 16,
+				plat: "M145,49H735V81H991V111H145ZM33,193H943V255H33Z",
+				track:
+				[
+					{ row: 2, name: "東海道本線", color: "#f68b1e", beg: -1, end: -1, arrow: "lrR" },
+					{ row: 8, name: "東海道本線", color: "#f68b1e", beg: -1, end: -1, arrow: "rR" },
+					{ row: 11, name: "東海道本線", color: "#f68b1e", beg: -1, end: -1, arrow: "lL" },
+				],
+				number:
+				[
+					{ row: 3, pos: 2.75, dir: 1, num: 3 },
+					{ row: 7, pos: 2.75, dir: -1, num: 2 },
+					{ row: 12, pos: 1.5, dir: 1, num: 1 },
+				],
+				equip:
+				[
+					{
+						row: 3,
+						list:
+						[
+							{ pos: 8.25, dir: 1, type: "ev" },
+							{ pos: 8.75, dir: 1, type: "si" },
+						],
+					},
+					{
+						row: 12,
+						list:
+						[
+							{ pos: 8.25, dir: 1, type: "ev" },
+							{ pos: 8.75, dir: 1, type: "si" },
+						],
+					},
+				],
+				stop:
+				[
+					{
+						row: 0,
+						dir: 1,
+						list:
+						[
+							{
+								stop:
+								{
+									9: 11.5,
+								},
+								form:
+								{
+									"3ds-3": 11.5,
+									"3ds-4": 11.5,
+									"3ds-5": 11.5,
+									"3ds-6": 11.5,
+								}
+							},
+							{
+							},
+						],
+					},
+					{
+						row: 6,
+						dir: -1,
+						list:
+						[
+							{
+								stop:
+								{
+									3: 11.25,
+									6: 13.25,
+									9: 14.25,
+									"o": 15.25,
+								},
+								form:
+								{
+									"3ds-3": 11.25,
+									"3ds-4": 13.25,
+									"3ds-5": 13.25,
+									"3ds-6": 13.25,
+								}
+							},
+							{
+							},
+						],
+					},
+					{
+						row: 9,
+						dir: 1,
+						list:
+						[
+							{
+							},
+							{
+								stop:
+								{
+									4: 8,
+									8: 6,
+									9: 3,
+									12: 1,
+									"o": 0.5,
+								},
+								form:
+								{
+									"3ds-3": 8,
+									"3ds-4": 8,
+									"3ds-5": 6,
+									"3ds-6": 6,
+									"373-3": 8,
+								}
+							},
+						],
+					},
+				],
+				form:
+				[
+					"3ds-3",
+					"3ds-4",
+					"3ds-5",
+					"3ds-6",
+					"373-3",
+				],
+			},
+			"shizuoka":
+			{
+				name: "静岡",
+				line: "o",
+				width: 18,
+				height: 19,
+				plat: "M65,49H1087V111H65ZM65,193H1087V255H65Z",
+				track:
+				[
+					{ row: 2, name: "東海道本線", color: "#f68b1e", beg: -1, end: -1, arrow: "rLR" },
+					{ row: 8, name: "東海道本線", color: "#f68b1e", beg: -1, end: -1, arrow: "lrLR" },
+					{ row: 11, name: "東海道本線", color: "#f68b1e", beg: -1, end: -1, arrow: "lrLR" },
+					{ row: 17, name: "東海道本線", color: "#f68b1e", beg: -1, end: -1, arrow: "lL" },
+				],
+				number:
+				[
+					{ row: 3, pos: 1.5, dir: 1, num: 1 },
+					{ row: 7, pos: 1.5, dir: -1, num: 2 },
+					{ row: 12, pos: 1.5, dir: 1, num: 3 },
+					{ row: 16, pos: 1.5, dir: -1, num: 4 },
+				],
+				equip:
+				[
+					{
+						row: 3,
+						list:
+						[
+							{ pos: 9.75, dir: -1, type: "eusi" },
+							{ pos: 10.75, dir: -1, type: "ev" },
+							{ pos: 11.75, dir: -1, type: "s" },
+						],
+					},
+					{
+						row: 12,
+						list:
+						[
+							{ pos: 9.75, dir: -1, type: "eusi" },
+							{ pos: 10.75, dir: -1, type: "ev" },
+							{ pos: 11.75, dir: -1, type: "s" },
+						],
+					},
+				],
+				stop:
+				[
+					{
+						row: 0,
+						dir: 1,
+						list:
+						[
+							{
+								stop:
+								{
+									3: 11,
+									8: 13,
+									12: 16,
+									"o": 17,
+								},
+								form:
+								{
+									"3ds-3": 11,
+									"3ds-4": 13,
+									"3ds-5": 13,
+									"3ds-6": 13,
+									"3ds-8": 13,
+									"nagara": 16,
+								}
+							},
+							{
+								stop:
+								{
+									6: 8,
+									9: 6,
+									12: 5,
+									"o": 1,
+								},
+								form:
+								{
+									"3ds-3": 8,
+									"3ds-4": 8,
+									"3ds-5": 8,
+									"3ds-6": 8,
+									"373-3": 8,
+									"373-6": 8,
+								}
+							},
+						],
+					},
+					{
+						row: 6,
+						dir: -1,
+						list:
+						[
+							{
+								stop:
+								{
+									3: 11,
+									8: 13,
+									12: 16,
+									"o": 17,
+								},
+								form:
+								{
+									"3ds-3": 11,
+									"3ds-4": 13,
+									"3ds-5": 13,
+									"3ds-6": 13,
+									"373-3": 11,
+									"373-6": 13.25,
+								}
+							},
+							{
+								stop:
+								{
+									6: 8,
+									9: 6,
+									12: 5,
+									"o": 1,
+								},
+								form:
+								{
+									"3ds-3": 8,
+									"3ds-4": 8,
+									"3ds-5": 8,
+									"3ds-6": 8,
+									"373-3": 8,
+									"373-6": 6.75,
+									"nagara": 5,
+								}
+							},
+						],
+					},
+					{
+						row: 9,
+						dir: 1,
+						list:
+						[
+							{
+								stop:
+								{
+									4: 11,
+									8: 14,
+									12: 15,
+									"o": 17,
+								},
+								form:
+								{
+									"3ds-3": 11,
+									"3ds-4": 11,
+									"3ds-5": 14,
+									"3ds-6": 14,
+								}
+							},
+							{
+								stop:
+								{
+									6: 8,
+									9: 6,
+									12: 4,
+									"o": 1,
+								},
+								form:
+								{
+									"3ds-3": 8,
+									"3ds-4": 8,
+									"3ds-5": 8,
+									"3ds-6": 8,
+									"373-3": 8,
+									"373-6": 6.75,
+								}
+							},
+						],
+					},
+					{
+						row: 15,
+						dir: -1,
+						list:
+						[
+							{
+							},
+							{
+								stop:
+								{
+									6: 8,
+									9: 6,
+									12: 4,
+									"o": 1,
+								},
+								form:
+								{
+									"3ds-3": 8,
+									"3ds-4": 8,
+									"3ds-5": 8,
+									"3ds-6": 8,
+									"3ds-7": 6,
+									"373-3": 8,
+									"373-6": 8,
+								}
+							},
+						],
+					},
+				],
+				form:
+				[
+					"3ds-3",
+					"3ds-4",
+					"3ds-5",
+					"3ds-6",
+					"3ds-7",
+					"3ds-8",
+					"373-3",
+					"373-6",
+					"nagara",
+				],
+			},
+			"shimada":
+			{
+				name: "島田",
+				line: "o",
+				width: 16,
+				height: 16,
+				plat: "M49,49H1007V111H49ZM33,193H1007V255H641V223H33Z",
+				track:
+				[
+					{ row: 2, name: "東海道本線", color: "#f68b1e", beg: -1, end: -1, arrow: "rR" },
+					{ row: 8, name: "東海道本線", color: "#f68b1e", beg: -1, end: -1, arrow: "lL" },
+					{ row: 11, name: "東海道本線", color: "#f68b1e", beg: -1, end: -1, arrow: "LR" },
+				],
+				number:
+				[
+					{ row: 3, pos: 1.25, dir: 1, num: 1 },
+					{ row: 7, pos: 1.25, dir: -1, num: 2 },
+					{ row: 12, pos: 1, dir: 1, num: 3 },
+				],
+				equip:
+				[
+					{
+						row: 3,
+						list:
+						[
+							{ pos: 14.75, dir: 1, type: "eus" },
+							{ pos: 15.25, dir: 1, type: "ev" },
+						],
+					},
+					{
+						row: 12,
+						list:
+						[
+							{ pos: 14.75, dir: 1, type: "s" },
+							{ pos: 15.25, dir: 1, type: "ev" },
+						],
+					},
+				],
+				stop:
+				[
+					{
+						row: 0,
+						dir: 1,
+						list:
+						[
+							{
+								stop:
+								{
+									3: 14,
+									"o": 15,
+								},
+								form:
+								{
+									"3ds-3": 14,
+									"3ds-4": 15,
+									"3ds-5": 15,
+									"3ds-6": 15,
+									"3ds-8": 15,
+									"373-3": 14,
+									"373-6": 15,
+								}
+							},
+							{
+							},
+						],
+					},
+					{
+						row: 6,
+						dir: -1,
+						list:
+						[
+							{
+							},
+							{
+								stop:
+								{
+									3: 11.5,
+									5: 9.5,
+									6: 8.5,
+									8: 6.5,
+									10: 4.5,
+									"o": 1,
+								},
+								form:
+								{
+									"3ds-3": 11.5,
+									"3ds-4": 9.5,
+									"3ds-5": 9.5,
+									"3ds-6": 8.5,
+									"3ds-7": 6.5,
+									"373-3": 11.5,
+									"373-6": 8.5,
+								}
+							},
+						],
+					},
+					{
+						row: 9,
+						dir: 1,
+						list:
+						[
+							{
+								stop:
+								{
+									"o": 14,
+								},
+							},
+							{
+								stop:
+								{
+									3: 11,
+									5: 9,
+									6: 8,
+									8: 6,
+									10: 4,
+									"o": 0.5,
+								},
+								form:
+								{
+									"3ds-3": 11,
+									"3ds-4": 9,
+									"3ds-5": 9,
+									"3ds-6": 8,
+								}
+							},
+						],
+					},
+				],
+				form:
+				[
+					"3ds-3",
+					"3ds-4",
+					"3ds-5",
+					"3ds-6",
+					"3ds-7",
+					"3ds-8",
+					"373-3",
+					"373-6",
+				],
+			},
+			"kakegawa":
+			{
+				name: "掛川",
+				line: "o",
+				width: 18,
+				height: 16,
+				plat: "M33,1H703V63H33ZM225,145H1151V207H225Z",
+				track:
+				[
+					{ row: 5, name: "東海道本線", color: "#f68b1e", beg: -1, end: -1, arrow: "lrR" },
+					{ row: 8, name: "東海道本線", color: "#f68b1e", beg: -1, end: -1, arrow: "rR" },
+					{ row: 14, name: "東海道本線", color: "#f68b1e", beg: -1, end: -1, arrow: "lL" },
+				],
+				number:
+				[
+					{ row: 4, pos: 1, dir: -1, num: 1 },
+					{ row: 9, pos: 4, dir: 1, num: 2 },
+					{ row: 13, pos: 4, dir: -1, num: 3 },
+				],
+				equip:
+				[
+					{
+						row: 0,
+						list:
+						[
+							{ pos: 8, dir: -1, type: "si" },
+							{ pos: 9.25, dir: 1, type: "ev" },
+						],
+					},
+					{
+						row: 9,
+						list:
+						[
+							{ pos: 8, dir: -1, type: "si" },
+							{ pos: 8.5, dir: -1, type: "s" },
+							{ pos: 9.25, dir: 1, type: "ev" },
+						],
+					},
+				],
+				stop:
+				[
+					{
+						row: 3,
+						dir: -1,
+						list:
+						[
+							{
+								stop:
+								{
+									"o": 10.5,
+								},
+								form:
+								{
+									"3ds-3": 10.5,
+									"3ds-5": 10.5,
+									"3ds-6": 10.5,
+									"3ds-8": 10.5,
+									"3dn-4": 10.5,
+									"373-6": 10.5,
+								}
+							},
+							{
+							},
+						],
+					},
+					{
+						row: 6,
+						dir: 1,
+						list:
+						[
+							{
+								stop:
+								{
+									4: 10.75,
+									6: 11.75,
+									9: 14.75,
+									11: 16.75,
+									"o": 17.75,
+								},
+								form:
+								{
+									"3ds-3": 10.75,
+									"3ds-4": 10.75,
+									"3ds-5": 11.75,
+									"3ds-6": 11.75,
+									"373-3": 10.75,
+									"373-6": 11.75,
+								}
+							},
+							{
+							},
+						],
+					},
+					{
+						row: 12,
+						dir: -1,
+						list:
+						[
+							{
+							},
+							{
+								stop:
+								{
+									4: 7,
+									11: 6,
+									"o": 4,
+								},
+								form:
+								{
+									"3ds-3": 7,
+									"3ds-4": 7,
+									"3ds-5": 6,
+									"3ds-6": 6,
+									"3ds-7": 6,
+									"373-3": 7,
+									"373-6": 6,
+								}
+							},
+						],
+					},
+				],
+				form:
+				[
+					"3ds-3",
+					"3ds-4",
+					"3ds-5",
+					"3ds-6",
+					"3ds-7",
+					"3ds-8",
+					"3dn-4",
+					"373-3",
+					"373-6",
+				],
+			},
+			"hamamatsu":
+			{
+				name: "浜松",
+				line: "o",
+				width: 18,
+				height: 19,
+				plat: "M65,49H1087V111H65ZM65,193H1087V255H65Z",
+				track:
+				[
+					{ row: 2, name: "東海道本線", color: "#f68b1e", beg: -1, end: -1, arrow: "rR" },
+					{ row: 8, name: "東海道本線", color: "#f68b1e", beg: -1, end: -1, arrow: "rLR" },
+					{ row: 11, name: "東海道本線", color: "#f68b1e", beg: -1, end: -1, arrow: "lrLR" },
+					{ row: 17, name: "東海道本線", color: "#f68b1e", beg: -1, end: -1, arrow: "lrLR" },
+				],
+				number:
+				[
+					{ row: 3, pos: 1.5, dir: 1, num: 1 },
+					{ row: 7, pos: 1.5, dir: -1, num: 2 },
+					{ row: 12, pos: 1.5, dir: 1, num: 3 },
+					{ row: 16, pos: 1.5, dir: -1, num: 4 },
+				],
+				equip:
+				[
+					{
+						row: 3,
+						list:
+						[
+							{ pos: 7, dir: -1, type: "eui" },
+							{ pos: 7.5, dir: -1, type: "ev" },
+							{ pos: 8, dir: -1, type: "si" },
+							{ pos: 9.75, dir: -1, type: "s" },
+						],
+					},
+					{
+						row: 12,
+						list:
+						[
+							{ pos: 7, dir: -1, type: "eui" },
+							{ pos: 7.5, dir: -1, type: "ev" },
+							{ pos: 8, dir: -1, type: "si" },
+							{ pos: 9.75, dir: -1, type: "s" },
+						],
+					},
+				],
+				stop:
+				[
+					{
+						row: 0,
+						dir: 1,
+						list:
+						[
+							{
+								stop:
+								{
+									3: 10,
+									8: 11,
+									10: 13,
+									12: 15,
+									"o": 17,
+								},
+								form:
+								{
+									"3ds-3": 10,
+									"3ds-4": 11,
+									"3ds-5": 11,
+									"3ds-6": 11,
+									"3dn-4": 11,
+									"373-3": 10,
+									"373-6": 11,
+								}
+							},
+							{
+								stop:
+								{
+									6: 7,
+									10: 4,
+									12: 3,
+									"o": 1,
+								},
+								form:
+								{
+								}
+							},
+						],
+					},
+					{
+						row: 6,
+						dir: -1,
+						list:
+						[
+							{
+								stop:
+								{
+									3: 10,
+									4: 11,
+									10: 13,
+									12: 15,
+									"o": 17,
+								},
+								form:
+								{
+									"3ds-3": 10,
+									"3ds-6": 13,
+								}
+							},
+							{
+								stop:
+								{
+									6: 7,
+									10: 4,
+									12: 3,
+									"o": 1,
+								},
+								form:
+								{
+									"3ds-3": 7,
+									"3ds-4": 7,
+									"3ds-5": 7,
+									"3ds-6": 7,
+									"373-3": 7,
+								}
+							},
+						],
+					},
+					{
+						row: 9,
+						dir: 1,
+						list:
+						[
+							{
+								stop:
+								{
+									2: 9,
+									3: 10,
+									4: 11,
+									6: 12,
+									8: 13,
+									9: 14,
+									12: 15,
+									"o": 17,
+								},
+								form:
+								{
+									"3dn-4": 11,
+									"3dn-6": 12,
+									"3dn-8": 13,
+									"373-6": 12.5,
+									"nagara": 15,
+								}
+							},
+							{
+								stop:
+								{
+									3: 9,
+									4: 7,
+									8: 6,
+									10: 5,
+									12: 3,
+									"o": 1,
+								},
+								form:
+								{
+									"3ds-3": 9,
+									"3ds-5": 6,
+									"3ds-6": 6,
+									"3ds-7": 6,
+									"3dn-4": 7,
+									"373-6": 6,
+									"nagara": 5,
+								}
+							},
+						],
+					},
+					{
+						row: 15,
+						dir: -1,
+						list:
+						[
+							{
+								stop:
+								{
+									3: 10,
+									4: 11,
+									6: 12,
+									8: 13,
+									12: 15,
+									"o": 17,
+								},
+								form:
+								{
+									"3ds-3": 10,
+									"3dn-4": 11,
+									"3dn-6": 12,
+									"3dn-8": 13,
+								}
+							},
+							{
+								stop:
+								{
+									4: 7,
+									8: 6,
+									10: 5,
+									12: 3,
+									"o": 1,
+								},
+								form:
+								{
+									"3ds-3": 7,
+									"3ds-5": 6,
+									"3ds-6": 6,
+									"3dn-4": 7,
+								}
+							},
+						],
+					},
+				],
+				form:
+				[
+					"3ds-3",
+					"3ds-4",
+					"3ds-5",
+					"3ds-6",
+					"3ds-7",
+					"3dn-4",
+					"3dn-6",
+					"3dn-8",
+					"373-3",
+					"373-6",
+					"nagara",
+				],
+			},
+			"toyohashi":
+			{
+				name: "豊橋",
+				line: "o",
+				width: 23,
+				height: 41,
+				plat: "M177,1H703V257H831V319H433V257H609V207H33V177H177V145H625V63H177ZM433,401H1423V463H433ZM433,545H1423V607H433Z",
+				track:
+				[
+					{ row: 5, name: "飯田線", color: "#f68b1e", beg: -1, end: 9.75, arrow: "lr" },
+					{ row: 8, name: "飯田線", color: "#f68b1e", beg: -1, end: 9.75, arrow: "lr" },
+					{ row: 14, name: "名鉄線", color: "#e94646", beg: -1, end: 9.5, arrow: "lr" },
+					{ row: 21, name: "飯田線\n東海道本線", color: "#f68b1e", beg: -1, end: 9.75, arrow: "lr" },
+					{ row: 21, name: "東海道本線", color: "#f68b1e", beg: 9.75, end: -1, arrow: "" },
+					{ row: 24, name: "東海道本線", color: "#f68b1e", beg: -1, end: -1, arrow: "lrLR" },
+					{ row: 30, name: "東海道本線", color: "#f68b1e", beg: -1, end: -1, arrow: "lrLR" },
+					{ row: 33, name: "東海道本線", color: "#f68b1e", beg: -1, end: -1, arrow: "lrLR" },
+					{ row: 39, name: "東海道本線", color: "#f68b1e", beg: -1, end: -1, arrow: "lrLR" },
+				],
+				number:
+				[
+					{ row: 4, pos: 3.25, dir: -1, num: 1 },
+					{ row: 9, pos: 3.25, dir: 1, num: 2 },
+					{ row: 13, pos: 1, dir: -1, num: 3 },
+					{ row: 20, pos: 7.25, dir: -1, num: 4 },
+					{ row: 25, pos: 7.25, dir: 1, num: 5 },
+					{ row: 29, pos: 7.25, dir: -1, num: 6 },
+					{ row: 34, pos: 7.5, dir: 1, num: 7 },
+					{ row: 38, pos: 7.5, dir: -1, num: 8 },
+				],
+				equip:
+				[
+					{
+						row: 9,
+						list:
+						[
+							{ pos: 10.5, dir: 1, type: "ebs" },
+						],
+					},
+					{
+						row: 16,
+						list:
+						[
+							{ pos: 10.5, dir: 1, type: "ev" },
+						],
+					},
+					{
+						row: 25,
+						list:
+						[
+							{ pos: 10.5, dir: 1, type: "s" },
+							{ pos: 11.75, dir: 1, type: "eusi" },
+							{ pos: 12.5, dir: 1, type: "ev" },
+						],
+					},
+					{
+						row: 34,
+						list:
+						[
+							{ pos: 10.5, dir: 1, type: "s" },
+							{ pos: 11.75, dir: 1, type: "eusi" },
+							{ pos: 12.5, dir: 1, type: "ev" },
+						],
+					},
+				],
+				stop:
+				[
+					{
+						row: 3,
+						dir: -1,
+						list:
+						[
+							{
+								stop:
+								{
+									"o": 8,
+								},
+							},
+							{
+							},
+						],
+						def: { pos: 8, dir: 1, form: "3dn-2" },
+					},
+					{
+						row: 6,
+						dir: 1,
+						list:
+						[
+							{
+								stop:
+								{
+									"o": 8,
+								},
+							},
+							{
+							},
+						],
+						def: { pos: 8, dir: 1, form: "3dn-2" },
+					},
+					{
+						row: 12,
+						dir: -1,
+						list:
+						[
+							{
+								stop:
+								{
+									"o": 8.25,
+								},
+							},
+							{
+							},
+						],
+						def: { pos: 8.25, dir: 1, form: "metetsu1000" },
+					},
+					{
+						row: 19,
+						dir: -1,
+						list:
+						[
+							{
+								stop:
+								{
+									4: 10.75,
+									"o": 12.75,
+								},
+								form:
+								{
+									"3dn-4": 10.75,
+									"3dn-6": 12.75,
+								}
+							},
+							{
+							},
+						],
+					},
+					{
+						row: 22,
+						dir: 1,
+						list:
+						[
+							{
+								stop:
+								{
+									4: 13,
+									6: 15,
+									8: 17,
+									10: 19,
+									12: 21,
+									"o": 22,
+								},
+								form:
+								{
+									"3dn-4": 13,
+									"3dn-6": 15,
+									"3dn-8": 17,
+								}
+							},
+							{
+								stop:
+								{
+									3: 10,
+									8: 9,
+									"o": 8,
+								},
+								form:
+								{
+									"3ds-6": 9,
+									"3dn-4": 9,
+									"3dn-8": 9,
+									"373-3": 10,
+								}
+							},
+						],
+					},
+					{
+						row: 28,
+						dir: -1,
+						list:
+						[
+							{
+								stop:
+								{
+									4: 13,
+									6: 15,
+									8: 17,
+									10: 18,
+									12: 20,
+									14: 22,
+									"o": 22.75,
+								},
+								form:
+								{
+									"3dn-4": 13,
+									"3dn-6": 15,
+									"3dn-8": 17,
+									"nagara": 18,
+								}
+							},
+							{
+								stop:
+								{
+									3: 10,
+									8: 9,
+									"o": 8,
+								},
+								form:
+								{
+									"3dn-6": 9,
+								}
+							},
+						],
+					},
+					{
+						row: 31,
+						dir: 1,
+						list:
+						[
+							{
+								stop:
+								{
+									4: 13,
+									5: 14,
+									6: 15,
+									8: 16,
+									10: 17,
+									12: 20,
+									"o": 22,
+								},
+								form:
+								{
+									"3dn-4": 13,
+									"3dn-6": 15,
+									"3dn-8": 16,
+								}
+							},
+							{
+								stop:
+								{
+									3: 10,
+									6: 9,
+									8: 8,
+									"o": 7,
+								},
+								form:
+								{
+									"3ds-3": 10,
+									"3ds-5": 9,
+									"3dn-4": 9,
+									"3dn-6": 9,
+									"3dn-8": 8,
+								}
+							},
+						],
+					},
+					{
+						row: 37,
+						dir: -1,
+						list:
+						[
+							{
+								stop:
+								{
+									4: 13,
+									5: 14,
+									6: 15,
+									8: 16,
+									10: 17,
+									12: 20,
+									"o": 22,
+								},
+								form:
+								{
+									"3dn-4": 13,
+									"3dn-6": 15,
+									"3dn-8": 16,
+								}
+							},
+							{
+								stop:
+								{
+									3: 10,
+									6: 9,
+									8: 8,
+									"o": 7,
+								},
+								form:
+								{
+									"3ds-3": 10,
+									"3ds-4": 9,
+									"3ds-5": 9,
+									"3ds-6": 9,
+									"3dn-4": 9,
+									"373-6": 9,
+								}
+							},
+						],
+					},
+				],
+				form:
+				[
+					"3ds-3",
+					"3ds-4",
+					"3ds-5",
+					"3ds-6",
+					"3dn-4",
+					"3dn-6",
+					"3dn-8",
+					"373-3",
+					"373-6",
+					"nagara",
+				],
+			},
+			"okazaki":
+			{
+				name: "岡崎",
+				line: "o",
+				width: 14,
+				height: 25,
+				plat: "M33,1H463V63H33ZM81,145H895V207H81ZM145,289H895V351H145Z",
+				track:
+				[
+					{ row: 5, name: "愛知環状\n鉄道線", color: "#17289C", beg: -1, end: 7.25, arrow: "lr" },
+					{ row: 8, name: "東海道本線", color: "#f68b1e", beg: -1, end: -1, arrow: "lrR" },
+					{ row: 14, name: "東海道本線", color: "#f68b1e", beg: -1, end: -1, arrow: "rR" },
+					{ row: 17, name: "東海道本線", color: "#f68b1e", beg: -1, end: -1, arrow: "lL" },
+					{ row: 23, name: "東海道本線", color: "#f68b1e", beg: -1, end: -1, arrow: "lLR" },
+				],
+				number:
+				[
+					{ row: 4, pos: 1, dir: -1, num: 0 },
+					{ row: 9, pos: 1.75, dir: 1, num: 1 },
+					{ row: 13, pos: 1.75, dir: -1, num: 2 },
+					{ row: 18, pos: 3.5, dir: 1, num: 3 },
+					{ row: 22, pos: 3.5, dir: -1, num: 4 },
+				],
+				equip:
+				[
+					{
+						row: 0,
+						list:
+						[
+							{ pos: 6.25, dir: 1, type: "s" },
+							{ pos: 6.75, dir: 1, type: "ev" },
+						],
+					},
+					{
+						row: 9,
+						list:
+						[
+							{ pos: 6, dir: 1, type: "eu" },
+							{ pos: 7.5, dir: 1, type: "si" },
+							{ pos: 8.25, dir: 1, type: "ev" },
+						],
+					},
+					{
+						row: 18,
+						list:
+						[
+							{ pos: 6, dir: 1, type: "eu" },
+							{ pos: 7.5, dir: 1, type: "si" },
+							{ pos: 8.25, dir: 1, type: "ev" },
+						],
+					},
+				],
+				stop:
+				[
+					{
+						row: 3,
+						dir: -1,
+						list:
+						[
+							{
+								stop:
+								{
+									"o": 5,
+								},
+							},
+							{
+							},
+						],
+						def: { pos: 5, dir: 1, form: "3dn-2" },
+					},
+					{
+						row: 6,
+						dir: 1,
+						list:
+						[
+							{
+								stop:
+								{
+									2: 8,
+									4: 9,
+									6: 10,
+									8: 12,
+									"o": 13.75,
+								},
+								form:
+								{
+									"3dn-4": 9,
+									"3dn-6": 10,
+									"3dn-8": 12,
+								}
+							},
+							{
+							},
+						],
+					},
+					{
+						row: 12,
+						dir: -1,
+						list:
+						[
+							{
+								stop:
+								{
+									4: 9,
+									6: 10,
+									8: 12,
+									"o": 13.75,
+								},
+								form:
+								{
+									"3dn-4": 9,
+									"3dn-6": 10,
+									"3dn-8": 12,
+								}
+							},
+							{
+							},
+						],
+					},
+					{
+						row: 15,
+						dir: 1,
+						list:
+						[
+							{
+								stop:
+								{
+									6: 10,
+									8: 12,
+								},
+							},
+							{
+								stop:
+								{
+									4: 5,
+									8: 4,
+									10: 3,
+									"o": 2.5,
+								},
+								form:
+								{
+									"3dn-4": 5,
+									"3dn-6": 4,
+									"3dn-8": 4,
+								}
+							},
+						],
+					},
+					{
+						row: 21,
+						dir: -1,
+						list:
+						[
+							{
+								stop:
+								{
+									4: 9,
+									6: 10,
+									8: 12,
+								},
+							},
+							{
+								stop:
+								{
+									4: 5,
+									8: 4,
+									"o": 3.5,
+								},
+								form:
+								{
+									"3dn-4": 5,
+									"3dn-6": 4,
+									"3dn-8": 4,
+								}
+							},
+						],
+					},
+				],
+				form:
+				[
+					"3dn-4",
+					"3dn-6",
+					"3dn-8",
+				],
+			},
+			"obu":
+			{
+				name: "大府",
+				line: "o",
+				width: 17,
+				height: 22,
+				plat: "M17,1H1039V63H17ZM17,145H1039V207H17ZM161,289H831V351H161Z",
+				track:
+				[
+					{ row: 5, name: "東海道本線", color: "#f68b1e", beg: -1, end: -1, arrow: "rR" },
+					{ row: 8, name: "東海道本線", color: "#f68b1e", beg: -1, end: 9, arrow: "r" },
+					{ row: 8, name: "東海道本線\n武豊線", color: "#f68b1e", beg: 9, end: -1, arrow: "LR" },
+					{ row: 14, name: "東海道本線", color: "#f68b1e", beg: -1, end: 9, arrow: "lr" },
+					{ row: 14, name: "武豊線\n東海道本線", color: "#f68b1e", beg: 9, end: -1, arrow: "LR" },
+					{ row: 17, name: "東海道本線", color: "#f68b1e", beg: -1, end: -1, arrow: "lL" },
+				],
+				number:
+				[
+					{ row: 4, pos: 0.75, dir: -1, num: 1 },
+					{ row: 9, pos: 0.75, dir: 1, num: 2 },
+					{ row: 13, pos: 0.75, dir: -1, num: 3 },
+					{ row: 18, pos: 3.25, dir: 1, num: 4 },
+				],
+				equip:
+				[
+					{
+						row: 0,
+						list:
+						[
+							{ pos: 9, dir: 1, type: "s" },
+							{ pos: 10, dir: 1, type: "ev" },
+							{ pos: 10.5, dir: 1, type: "eui" },
+						],
+					},
+					{
+						row: 9,
+						list:
+						[
+							{ pos: 9, dir: 1, type: "s" },
+							{ pos: 9.75, dir: 1, type: "ev" },
+							{ pos: 10.25, dir: 1, type: "eui" },
+						],
+					},
+					{
+						row: 18,
+						list:
+						[
+							{ pos: 9, dir: 1, type: "s" },
+							{ pos: 9.75, dir: 1, type: "ev" },
+							{ pos: 10.25, dir: 1, type: "eui" },
+						],
+					},
+				],
+				stop:
+				[
+					{
+						row: 3,
+						dir: -1,
+						list:
+						[
+							{
+								stop:
+								{
+									"o": 12,
+								},
+								form:
+								{
+									"3dn-4": 12,
+									"3dn-6": 12,
+									"3dn-8": 12,
+								}
+							},
+							{
+							},
+						],
+					},
+					{
+						row: 6,
+						dir: 1,
+						list:
+						[
+							{
+								stop:
+								{
+									2: 9,
+									4: 11,
+									8: 13,
+									10: 14,
+									"o": 15,
+								},
+								form:
+								{
+									"3dn-4": 11,
+									"3dn-6": 13,
+									"3dn-8": 13,
+								}
+							},
+							{
+								stop:
+								{
+									4: 7,
+									8: 5,
+									10: 4,
+									"o": 3,
+								},
+							},
+						],
+					},
+					{
+						row: 12,
+						dir: -1,
+						list:
+						[
+							{
+								stop:
+								{
+									2: 9,
+									4: 11,
+									8: 13,
+									10: 14,
+									"o": 15,
+								},
+								form:
+								{
+									"3dn-4": 11,
+									"3dn-8": 13,
+								}
+							},
+							{
+								stop:
+								{
+									4: 7,
+									8: 5,
+									10: 4,
+									"o": 3,
+								},
+								form:
+								{
+									"3dn-4": 7,
+									"3dn-6": 5,
+									"3dn-8": 5,
+								}
+							},
+						],
+					},
+					{
+						row: 15,
+						dir: 1,
+						list:
+						[
+							{
+							},
+							{
+								stop:
+								{
+									4: 6.75,
+									6: 5.75,
+									8: 4.75,
+									"o": 2.75,
+								},
+								form:
+								{
+									"3dn-4": 6.75,
+									"3dn-6": 5.75,
+									"3dn-8": 4.75,
+								}
+							},
+						],
+					},
+				],
+				form:
+				[
+					"3dn-4",
+					"3dn-6",
+					"3dn-8",
+				],
+			},
+			"kanayama":
+			{
+				name: "金山",
+				line: "o",
+				width: 16,
+				height: 19,
+				plat: "M65,49H847V111H65ZM241,193H959V255H241Z",
+				track:
+				[
+					{ row: 2, name: "中央本線", color: "#f68b1e", beg: -1, end: -1, arrow: "rR" },
+					{ row: 8, name: "中央本線", color: "#f68b1e", beg: -1, end: -1, arrow: "lL" },
+					{ row: 11, name: "東海道本線", color: "#f68b1e", beg: -1, end: -1, arrow: "rR" },
+					{ row: 17, name: "東海道本線", color: "#f68b1e", beg: -1, end: -1, arrow: "lL" },
+				],
+				number:
+				[
+					{ row: 3, pos: 1.5, dir: 1, num: 1 },
+					{ row: 7, pos: 1.5, dir: -1, num: 2 },
+					{ row: 12, pos: 4.25, dir: 1, num: 3 },
+					{ row: 16, pos: 4.25, dir: -1, num: 4 },
+				],
+				equip:
+				[
+					{
+						row: 3,
+						list:
+						[
+							{ pos: 6.25, dir: -1, type: "eb" },
+							{ pos: 7, dir: -1, type: "ev" },
+							{ pos: 8, dir: -1, type: "s" },
+							{ pos: 9.25, dir: -1, type: "si" },
+						],
+					},
+					{
+						row: 12,
+						list:
+						[
+							{ pos: 7.75, dir: -1, type: "ebs" },
+							{ pos: 8.75, dir: -1, type: "ev" },
+							{ pos: 9.25, dir: -1, type: "si" },
+						],
+					},
+				],
+				stop:
+				[
+					{
+						row: 0,
+						dir: 1,
+						list:
+						[
+							{
+								stop:
+								{
+									8: 11.25,
+									10: 12.25,
+									"o": 13.25,
+								},
+							},
+							{
+							},
+						],
+						def: { pos: 11.25, dir: 1, form: "3dn-6" },
+					},
+					{
+						row: 6,
+						dir: -1,
+						list:
+						[
+							{
+							},
+							{
+								stop:
+								{
+									8: 4,
+									10: 2,
+									"o": 1,
+								},
+								form:
+								{
+								}
+							},
+						],
+						def: { pos: 4, dir: -1, form: "3dn-6" },
+					},
+					{
+						row: 9,
+						dir: 1,
+						list:
+						[
+							{
+								stop:
+								{
+									8: 13,
+									"o": 15,
+								},
+								form:
+								{
+									"3dn-4": 13,
+									"3dn-6": 13,
+									"3dn-8": 13,
+								}
+							},
+							{
+							},
+						],
+					},
+					{
+						row: 15,
+						dir: -1,
+						list:
+						[
+							{
+							},
+							{
+								stop:
+								{
+									8: 5,
+									"o": 4,
+								},
+								form:
+								{
+									"3dn-4": 5,
+									"3dn-6": 5,
+									"3dn-8": 5,
+								}
+							},
+						],
+					},
+				],
+				form:
+				[
+					"3dn-4",
+					"3dn-6",
+					"3dn-8",
+				],
+			},
+			"nagoya":
+			{
+				name: "名古屋",
+				line: "o",
+				width: 15,
+				height: 55,
+				plat: "M129,49H847V111H129ZM113,193H815V225H911V255H113ZM129,337H783V369H831V399H129ZM49,481H831V511H799V543H49ZM129,625H831V655H799V687H129ZM209,769H799V831H209Z",
+				track:
+				[
+					{ row: 2, name: "東海道本線", color: "#f68b1e", beg: -1, end: -1, arrow: "rR" },
+					{ row: 8, name: "東海道本線", color: "#f68b1e", beg: -1, end: -1, arrow: "rR" },
+					{ row: 11, name: "東海道本線", color: "#f68b1e", beg: -1, end: -1, arrow: "lrLR" },
+					{ row: 17, name: "東海道本線", color: "#f68b1e", beg: -1, end: -1, arrow: "lrLR" },
+					{ row: 20, name: "東海道本線", color: "#f68b1e", beg: -1, end: -1, arrow: "lLR" },
+					{ row: 26, name: "東海道本線", color: "#f68b1e", beg: -1, end: -1, arrow: "lL" },
+					{ row: 29, name: "東海道本線", color: "#f68b1e", beg: -1, end: 0, arrow: "l" },
+					{ row: 29, name: "中央本線", color: "#f68b1e", beg: 0, end: -1, arrow: "LR" },
+					{ row: 35, name: "中央本線", color: "#f68b1e", beg: 0, end: -1, arrow: "LR" },
+					{ row: 38, name: "東海道本線", color: "#f68b1e", beg: -1, end: 0, arrow: "lr" },
+					{ row: 38, name: "中央本線", color: "#f68b1e", beg: 0, end: -1, arrow: "LR" },
+					{ row: 44, name: "東海道本線", color: "#f68b1e", beg: -1, end: 0, arrow: "lr" },
+					{ row: 44, name: "関西本線", color: "#f68b1e", beg: 0, end: -1, arrow: "LR" },
+					{ row: 47, name: "東海道本線", color: "#f68b1e", beg: -1, end: 0, arrow: "lr" },
+					{ row: 47, name: "関西本線", color: "#f68b1e", beg: 0, end: -1, arrow: "LR" },
+					{ row: 53, name: "関西本線", color: "#f68b1e", beg: 0, end: -1, arrow: "LR" },
+				],
+				number:
+				[
+					{ row: 3, pos: 0.75, dir: 1, num: 1 },
+					{ row: 7, pos: 0.75, dir: -1, num: 2 },
+					{ row: 12, pos: 3, dir: 1, num: 3 },
+					{ row: 16, pos: 3, dir: -1, num: 4 },
+					{ row: 21, pos: 3.5, dir: 1, num: 5 },
+					{ row: 25, pos: 3, dir: -1, num: 6 },
+					{ row: 30, pos: 3.5, dir: 1, num: 7 },
+					{ row: 34, pos: 3.25, dir: -1, num: 8 },
+					{ row: 39, pos: 2.25, dir: 1, num: 10 },
+					{ row: 43, pos: 2.25, dir: -1, num: 11 },
+					{ row: 48, pos: 2.25, dir: 1, num: 12 },
+					{ row: 52, pos: 4.5, dir: -1, num: 13 },
+				],
+				equip:
+				[
+					{
+						row: 3,
+						list:
+						[
+							{ pos: 4, dir: -1, type: "si" },
+							{ pos: 5, dir: -1, type: "ev" },
+							{ pos: 6.5, dir: -1, type: "eus" },
+							{ pos: 8.75, dir: -1, type: "si" },
+							{ pos: 10, dir: -1, type: "eus" },
+							{ pos: 11, dir: -1, type: "si" },
+						],
+					},
+					{
+						row: 12,
+						list:
+						[
+							{ pos: 4.25, dir: -1, type: "edi" },
+							{ pos: 4.75, dir: -1, type: "ev" },
+							{ pos: 5.75, dir: -1, type: "s" },
+							{ pos: 8.75, dir: -1, type: "si" },
+							{ pos: 10, dir: -1, type: "eus" },
+							{ pos: 11, dir: -1, type: "si" },
+						],
+					},
+					{
+						row: 21,
+						list:
+						[
+							{ pos: 4.25, dir: -1, type: "edi" },
+							{ pos: 4.75, dir: -1, type: "ev" },
+							{ pos: 5.75, dir: -1, type: "s" },
+							{ pos: 8.75, dir: -1, type: "si" },
+							{ pos: 10, dir: -1, type: "ebs" },
+							{ pos: 11, dir: -1, type: "si" },
+						],
+					},
+					{
+						row: 30,
+						list:
+						[
+							{ pos: 4.5, dir: -1, type: "edi" },
+							{ pos: 5, dir: -1, type: "ev" },
+							{ pos: 5.5, dir: -1, type: "s" },
+							{ pos: 8.75, dir: -1, type: "si" },
+							{ pos: 10, dir: -1, type: "eus" },
+							{ pos: 11, dir: -1, type: "si" },
+						],
+					},
+					{
+						row: 39,
+						list:
+						[
+							{ pos: 4.25, dir: -1, type: "edi" },
+							{ pos: 4.75, dir: -1, type: "ev" },
+							{ pos: 5.5, dir: -1, type: "s" },
+							{ pos: 8.75, dir: -1, type: "si" },
+							{ pos: 10, dir: -1, type: "eb" },
+							{ pos: 11, dir: -1, type: "si" },
+						],
+					},
+					{
+						row: 48,
+						list:
+						[
+							{ pos: 4.75, dir: -1, type: "ev" },
+							{ pos: 5.25, dir: -1, type: "s" },
+							{ pos: 8.75, dir: -1, type: "si" },
+						],
+					},
+				],
+				stop:
+				[
+					{
+						row: 0,
+						dir: 1,
+						list:
+						[
+							{
+								stop:
+								{
+									4: 9.25,
+									8: 10.25,
+									683: 11.75,
+									10: 12.75,
+									"o": 13.25,
+								},
+								form:
+								{
+									"3dn-4": 9.25,
+									"3dn-6": 10.25,
+									"3dn-8": 10.25,
+								}
+							},
+							{
+							},
+						],
+					},
+					{
+						row: 6,
+						dir: -1,
+						list:
+						[
+							{
+								stop:
+								{
+									4: 8.75,
+									6: 9.75,
+									8: 10.75,
+									10: 12.75,
+									"o": 13.25,
+								},
+								form:
+								{
+									"3dn-4": 8.75,
+									"3dn-6": 9.75,
+									"3dn-8": 10.75,
+								}
+							},
+							{
+							},
+						],
+					},
+					{
+						row: 9,
+						dir: 1,
+						list:
+						[
+							{
+								stop:
+								{
+									4: 8.75,
+									10: 12.25,
+								},
+								form:
+								{
+									"3dn-8": 12.25,
+									"nagara": 12.25,
+								}
+							},
+							{
+								stop:
+								{
+									2: 7.25,
+									6: 4.75,
+									8: 3,
+									"o": 2,
+								},
+								form:
+								{
+									"3dn-4": 4.75,
+								}
+							},
+						],
+					},
+					{
+						row: 15,
+						dir: -1,
+						list:
+						[
+							{
+								stop:
+								{
+									4: 8.75,
+									8: 11.25,
+									10: 12.25,
+									12: 13.25,
+									"o": 14.25,
+								},
+								form:
+								{
+									"3dn-6": 11.25,
+									"681": 11.25,
+								}
+							},
+							{
+								stop:
+								{
+									2: 7.25,
+									6: 4.75,
+									"o": 2,
+								},
+								form:
+								{
+									"3dn-4": 4.75,
+								}
+							},
+						],
+					},
+					{
+						row: 18,
+						dir: 1,
+						list:
+						[
+							{
+								stop:
+								{
+									4: 9,
+									6: 10,
+									8: 11,
+									"o": 12,
+								},
+							},
+							{
+								stop:
+								{
+									4: 6,
+									6: 4,
+									8: 3,
+									"o": 2,
+								},
+								form:
+								{
+									"3dn-4": 6,
+									"3dn-6": 4,
+									"3dn-8": 3,
+								}
+							},
+						],
+					},
+					{
+						row: 24,
+						dir: 1,
+						list:
+						[
+							{
+								stop:
+								{
+									4: 9,
+									6: 10,
+									8: 11,
+									10: 12,
+									"o": 12.75,
+								},
+							},
+							{
+								stop:
+								{
+									4: 6,
+									6: 4,
+									8: 3,
+									"o": 2,
+								},
+								form:
+								{
+									"3dn-4": 6,
+									"3dn-6": 4,
+									"3dn-8": 3,
+								}
+							},
+						],
+					},
+					{
+						row: 27,
+						dir: 1,
+						list:
+						[
+							{
+								stop:
+								{
+									6: 10.5,
+									"o": 12.5,
+								},
+							},
+							{
+								stop:
+								{
+									4: 6.5,
+									8: 4.5,
+									"o": 2.5,
+								},
+								form:
+								{
+									"nagara": 2.5,
+								}
+							},
+						],
+					},
+					{
+						row: 33,
+						dir: -1,
+						list:
+						[
+							{
+								stop:
+								{
+									6: 9.5,
+									10: 11.5,
+									12: 12,
+								},
+							},
+							{
+								stop:
+								{
+									4: 5.5,
+									8: 3.5,
+									10: 1.5,
+								},
+							},
+						],
+						def: { pos: 3.5, dir: -1, form: "3dn-6" },
+					},
+					{
+						row: 36,
+						dir: 1,
+						list:
+						[
+							{
+								stop:
+								{
+									6: 10.5,
+									"o": 12.25,
+								},
+							},
+							{
+								stop:
+								{
+									4: 6.5,
+									6: 6,
+									8: 4.5,
+									383: 4,
+									"o": 3,
+								},
+							},
+						],
+						def: { pos: 4.5, dir: -1, form: "3dn-6" },
+					},
+					{
+						row: 42,
+						dir: -1,
+						list:
+						[
+							{
+								stop:
+								{
+									2: 8,
+									6: 10,
+									7: 10.5,
+									9: 11,
+									"o": 12,
+								},
+							},
+							{
+								stop:
+								{
+									4: 6,
+									8: 4,
+									383: 3,
+									"o": 2.25,
+								},
+							},
+						],
+						def: { pos: 4, dir: -1, form: "3dn-6" },
+					},
+					{
+						row: 45,
+						dir: 1,
+						list:
+						[
+							{
+								stop:
+								{
+									5: 9.25,
+									6: 10.25,
+									"o": 11.5,
+								},
+							},
+							{
+								stop:
+								{
+									2: 6.25,
+									3: 5.25,
+									6: 4.25,
+									"o": 3.75,
+								},
+							},
+						],
+						def: { pos: 6.25, dir: -1, form: "3dn-2" },
+					},
+					{
+						row: 51,
+						dir: -1,
+						list:
+						[
+							{
+								stop:
+								{
+									4: 8.25,
+									5: 9.25,
+									6: 10.25,
+									"o": 11.5,
+								},
+							},
+							{
+								stop:
+								{
+									2: 6.25,
+									3: 5.25,
+									6: 4.25,
+									"o": 3.75,
+								},
+							},
+						],
+						def: { pos: 6.25, dir: -1, form: "3dn-2" },
+					},
+				],
+				form:
+				[
+					"3dn-4",
+					"3dn-6",
+					"3dn-8",
+					"681",
+					"nagara",
+				],
+			},
+			"gifu":
+			{
+				name: "岐阜",
+				line: "o",
+				width: 18,
+				height: 28,
+				plat: "M49,49H1103V79H975V111H225V79H49ZM257,193H975V255H257ZM49,369H225V337H975V369H1103V399H49Z",
+				track:
+				[
+					{ row: 2, name: "東海道本線", color: "#f68b1e", beg: -1, end: -1, arrow: "rR" },
+					{ row: 8, name: "東海道本線", color: "#f68b1e", beg: -1, end: -1, arrow: "rR" },
+					{ row: 11, name: "東海道本線", color: "#f68b1e", beg: -1, end: 7.5, arrow: "lr" },
+					{ row: 11, name: "東海道本線\n高山本線", color: "#f68b1e", beg: 7.5, end: -1, arrow: "LR" },
+					{ row: 17, name: "東海道本線", color: "#f68b1e", beg: -1, end: 7.5, arrow: "lr" },
+					{ row: 17, name: "高山本線\n東海道本線", color: "#f68b1e", beg: 7.5, end: -1, arrow: "LR" },
+					{ row: 20, name: "東海道本線", color: "#f68b1e", beg: -1, end: -1, arrow: "lL" },
+					{ row: 26, name: "東海道本線", color: "#f68b1e", beg: -1, end: -1, arrow: "lL" },
+				],
+				number:
+				[
+					{ row: 3, pos: 4, dir: 1, num: 1 },
+					{ row: 7, pos: 4, dir: -1, num: 2 },
+					{ row: 12, pos: 4.75, dir: 1, num: 3 },
+					{ row: 16, pos: 4.75, dir: -1, num: 4 },
+					{ row: 21, pos: 4, dir: 1, num: 5 },
+					{ row: 25, pos: 4, dir: -1, num: 6 },
+				],
+				equip:
+				[
+					{
+						row: 3,
+						list:
+						[
+							{ pos: 9.25, dir: -1, type: "si" },
+							{ pos: 10.75, dir: -1, type: "ebs" },
+						],
+					},
+					{
+						row: 12,
+						list:
+						[
+							{ pos: 9.25, dir: -1, type: "si" },
+							{ pos: 10.75, dir: -1, type: "eb" },
+						],
+					},
+					{
+						row: 21,
+						list:
+						[
+							{ pos: 9.25, dir: -1, type: "si" },
+							{ pos: 10.75, dir: -1, type: "ebs" },
+						],
+					},
+				],
+				stop:
+				[
+					{
+						row: 0,
+						dir: 1,
+						list:
+						[
+							{
+								stop:
+								{
+									4: 12,
+									10: 14,
+									12: 15,
+									14: 16,
+									"o": 17,
+								},
+								form:
+								{
+									"3dn-4": 12,
+									"3dn-6": 14,
+									"3dn-8": 14,
+									"681": 14,
+									"nagara": 14,
+								}
+							},
+							{
+							},
+						],
+					},
+					{
+						row: 6,
+						dir: -1,
+						list:
+						[
+							{
+								stop:
+								{
+									2: 10.75,
+									4: 11.75,
+									"o": 15,
+								},
+								form:
+								{
+									"3dn-4": 11.75,
+									"3dn-6": 15,
+									"3dn-8": 15,
+								}
+							},
+							{
+								stop:
+								{
+									1: 9.75,
+									2: 8.75,
+									6: 7.5,
+									8: 5.5,
+									10: 4,
+									"o": 2.75,
+								},
+								form:
+								{
+									"3dn-4": 7.5,
+									"3dn-6": 7.5,
+									"3dn-8": 5.5,
+								}
+							},
+						],
+					},
+					{
+						row: 9,
+						dir: 1,
+						list:
+						[
+							{
+								stop:
+								{
+									2: 10.75,
+									3: 12,
+									"o": 15,
+								},
+								form:
+								{
+									"3dn-8": 15,
+								}
+							},
+							{
+								stop:
+								{
+									1: 9.75,
+									2: 8.75,
+									6: 7.25,
+									8: 5.25,
+									10: 4.25,
+									"o": 3.25,
+								},
+								form:
+								{
+									"3dn-4": 7.25,
+									"3dn-6": 7.25,
+									"3dn-8": 5.25,
+								}
+							},
+						],
+					},
+					{
+						row: 15,
+						dir: -1,
+						list:
+						[
+							{
+								stop:
+								{
+									2: 10.75,
+									3: 12,
+									"o": 15,
+								},
+							},
+							{
+								stop:
+								{
+									1: 9.75,
+									2: 8.75,
+									6: 7.25,
+									8: 5.25,
+									10: 4.25,
+									"o": 3.25,
+								},
+								form:
+								{
+									"3dn-4": 7.25,
+									"3dn-6": 7.25,
+									"3dn-8": 5.25,
+								}
+							},
+						],
+					},
+					{
+						row: 18,
+						dir: 1,
+						list:
+						[
+							{
+								stop:
+								{
+									2: 10.75,
+									8: 13,
+									"o": 15,
+								},
+							},
+							{
+								stop:
+								{
+									1: 9.75,
+									4: 9,
+									6: 7,
+									8: 5,
+									10: 4.25,
+									11: 3.75,
+									"o": 2.75,
+								},
+								form:
+								{
+									"3dn-4": 9,
+									"3dn-6": 7,
+									"3dn-8": 5,
+								}
+							},
+						],
+					},
+					{
+						row: 24,
+						dir: -1,
+						list:
+						[
+							{
+							},
+							{
+								stop:
+								{
+									4: 9,
+									6: 7,
+									8: 6,
+									12: 4,
+									14: 2,
+									"o": 1,
+								},
+								form:
+								{
+									"3dn-4": 9,
+									"3dn-6": 7,
+									"3dn-8": 6,
+									"681": 7,
+									"nagara": 4,
+								}
+							},
+						],
+					},
+				],
+				form:
+				[
+					"3dn-4",
+					"3dn-6",
+					"3dn-8",
+					"681",
+					"nagara",
+				],
+			},
+			"ogaki":
+			{
+				name: "大垣",
+				line: "o",
+				width: 24,
+				height: 31,
+				plat: "M33,49H831V97H1199V159H33ZM113,289H305V241H1247V289H1375V351H113ZM385,433H1503V495H385Z",
+				track:
+				[
+					{ row: 2, name: "樽見鉄道線", color: "#0080ff", beg: 0.5, end: -1, arrow: "LR" },
+					{ row: 5, name: "樽見鉄道線", color: "#0080ff", beg: 13, end: -1, arrow: "LR" },
+					{ row: 11, name: "東海道本線", color: "#f68b1e", beg: -1, end: -1, arrow: "rLR" },
+					{ row: 14, name: "東海道本線", color: "#f68b1e", beg: -1, end: -1, arrow: "rR" },
+					{ row: 17, name: "美濃赤坂線", color: "#f68b1e", beg: -1, end: 4.75, arrow: "lr" },
+					{ row: 23, name: "東海道本線", color: "#f68b1e", beg: -1, end: -1, arrow: "lrL" },
+					{ row: 26, name: "東海道本線", color: "#f68b1e", beg: -1, end: -1, arrow: "lrLR" },
+				],
+				number:
+				[
+					{ row: 3, pos: 11.5, dir: 1, num: 7 },
+					{ row: 6, pos: 14, dir: 1, num: 6 },
+					{ row: 10, pos: 1, dir: -1, num: 5 },
+					{ row: 15, pos: 5.25, dir: 1, num: 4 },
+					{ row: 18, pos: 2, dir: 1, num: 3 },
+					{ row: 22, pos: 2, dir: -1, num: 2 },
+					{ row: 27, pos: 10.75, dir: 1, num: 1 },
+				],
+				equip:
+				[
+					{
+						row: 6,
+						list:
+						[
+							{ pos: 8.5, dir: 1, type: "s" },
+							{ pos: 10, dir: 1, type: "ebi" },
+							{ pos: 10.5, dir: 1, type: "ev" },
+						],
+					},
+					{
+						row: 18,
+						list:
+						[
+							{ pos: 6, dir: 1, type: "s" },
+							{ pos: 7.75, dir: 1, type: "ev" },
+							{ pos: 8.25, dir: 1, type: "eb" },
+							{ pos: 9.75, dir: 1, type: "si" },
+						],
+					},
+					{
+						row: 27,
+						list:
+						[
+							{ pos: 6.5, dir: 1, type: "si" },
+							{ pos: 7.75, dir: 1, type: "ev" },
+							{ pos: 8.25, dir: 1, type: "eb" },
+							{ pos: 9.75, dir: 1, type: "si" },
+						],
+					},
+				],
+				stop:
+				[
+					{
+						row: 0,
+						dir: 1,
+						list:
+						[
+							{
+							},
+							{
+								stop:
+								{
+									"o": 12,
+								},
+							},
+						],
+						def: { pos: 12, dir: -1, form: "tarumi" },
+					},
+					{
+						row: 3,
+						dir: 1,
+						list:
+						[
+							{
+							},
+							{
+								stop:
+								{
+									"o": 15,
+								},
+							},
+						],
+						def: { pos: 15, dir: -1, form: "tarumi" },
+					},
+					{
+						row: 9,
+						dir: -1,
+						list:
+						[
+							{
+								stop:
+								{
+									4: 11,
+									11: 13,
+									"o": 15.5,
+								},
+								form:
+								{
+									"3dn-4": 11,
+									"3dn-6": 13,
+									"3dn-8": 13,
+									"nagara": 13,
+								}
+							},
+							{
+								stop:
+								{
+									6: 7,
+									8: 5,
+									"o": 2,
+								},
+								form:
+								{
+									"3dn-4": 7,
+									"3dn-6": 7,
+									"3dn-8": 5,
+								}
+							},
+						],
+					},
+					{
+						row: 12,
+						dir: 1,
+						list:
+						[
+							{
+								stop:
+								{
+									4: 11,
+									6: 13,
+									8: 15,
+									10: 16,
+									12: 18,
+									"o": 19,
+								},
+								form:
+								{
+									"3dn-4": 11,
+									"3dn-6": 13,
+									"3dn-8": 15,
+									"681": 13,
+								}
+							},
+							{
+							},
+						],
+					},
+					{
+						row: 15,
+						dir: 1,
+						list:
+						[
+							{
+								stop:
+								{
+									"o": 3.75,
+								},
+							},
+							{
+							},
+						],
+						def: { pos: 3.75, dir: 1, form: "3dn-2" },
+					},
+					{
+						row: 21,
+						dir: -1,
+						list:
+						[
+							{
+								stop:
+								{
+									2: 9.5,
+									4: 11.5,
+									6: 13.5,
+									8: 15.5,
+									10: 17.5,
+									"o": 19,
+								},
+								form:
+								{
+									"3dn-4": 11.5,
+									"3dn-6": 13.5,
+									"3dn-8": 15.5,
+								}
+							},
+							{
+								stop:
+								{
+									"o": 7.5,
+								},
+								form:
+								{
+									"3dn-4": 7.5,
+									"3dn-6": 7.5,
+									"3dn-8": 7.5,
+									"681": 7.5,
+								}
+							},
+						],
+					},
+					{
+						row: 24,
+						dir: 1,
+						list:
+						[
+							{
+								stop:
+								{
+									2: 9.5,
+									4: 11.5,
+									6: 13.5,
+									8: 15.5,
+									10: 17.5,
+									"o": 19,
+								},
+								form:
+								{
+									"3dn-4": 11.5,
+									"3dn-6": 13.5,
+									"3dn-8": 15.5,
+								}
+							},
+							{
+								stop:
+								{
+									"o": 7.5,
+								},
+								form:
+								{
+									"3dn-4": 7.5,
+									"3dn-6": 7.5,
+									"3dn-8": 7.5,
+									"681": 7.5,
+									"nagara": 7.5,
+								}
+							},
+						],
+					},
+				],
+				form:
+				[
+					"3dn-4",
+					"3dn-6",
+					"3dn-8",
+					"681",
+					"nagara",
+				],
+			},
+			"maibara":
+			{
+				name: "米原",
+				line: "ob",
+				width: 20,
+				height: 28,
+				plat: "M49,81H113V49H911V111H49ZM209,225H257V193H1151V223H975V255H209ZM449,337H1247V399H449Z",
+				track:
+				[
+					{ row: 2, name: "琵琶湖線", color: "#0072bc", beg: -1, end: 9, arrow: "r" },
+					{ row: 2, name: "東海道本線", color: "#f68b1e", beg: 9, end: -1, arrow: "LR" },
+					{ row: 8, name: "琵琶湖線", color: "#0072bc", beg: -1, end: 9, arrow: "r" },
+					{ row: 8, name: "東海道本線\n琵琶湖線", color: "#f68b1e", beg: 9, end: -1, arrow: "LR" },
+					{ row: 11, name: "琵琶湖線", color: "#0072bc", beg: -1, end: -1, arrow: "rLR" },
+					{ row: 17, name: "琵琶湖線", color: "#0072bc", beg: -1, end: -1, arrow: "rLR" },
+					{ row: 20, name: "琵琶湖線", color: "#0072bc", beg: -1, end: 13.25, arrow: "l" },
+					{ row: 20, name: "琵琶湖線\n東海道本線", color: "#f68b1e", beg: 13.25, end: -1, arrow: "LR" },
+					{ row: 26, name: "琵琶湖線", color: "#0072bc", beg: -1, end: 13.25, arrow: "l" },
+					{ row: 26, name: "琵琶湖線\n東海道本線", color: "#f68b1e", beg: 13.25, end: -1, arrow: "LR" },
+				],
+				number:
+				[
+					{ row: 3, pos: 2.5, dir: 1, num: 8 },
+					{ row: 7, pos: 2.5, dir: -1, num: 7 },
+					{ row: 12, pos: 4.5, dir: 1, num: 6 },
+					{ row: 16, pos: 4.5, dir: -1, num: 5 },
+					{ row: 21, pos: 7.75, dir: 1, num: 3 },
+					{ row: 25, pos: 7.75, dir: -1, num: 2 },
+				],
+				equip:
+				[
+					{
+						row: 3,
+						list:
+						[
+							{ pos: 10, dir: 1, type: "eus" },
+							{ pos: 10.5, dir: 1, type: "ev" },
+						],
+					},
+					{
+						row: 12,
+						list:
+						[
+							{ pos: 10, dir: 1, type: "eus" },
+							{ pos: 11.75, dir: 1, type: "ev" },
+							{ pos: 12.5, dir: 1, type: "si" },
+						],
+					},
+					{
+						row: 21,
+						list:
+						[
+							{ pos: 10.75, dir: 1, type: "s" },
+							{ pos: 11.75, dir: 1, type: "ev" },
+							{ pos: 12.5, dir: 1, type: "eusi" },
+						],
+					},
+				],
+				stop:
+				[
+					{
+						row: 0,
+						dir: 1,
+						list:
+						[
+							{
+								stop:
+								{
+									4: 10,
+									8: 11,
+									"x": 14,
+								},
+								form:
+								{
+									"3d-6": 11,
+									"3d-8": 11,
+									"3d-10": 14,
+									"3d-12": 14,
+								}
+							},
+							{
+								stop:
+								{
+									3: 7,
+									4: 6,
+									6: 4,
+									8: 3,
+									"x": 2,
+								},
+								form:
+								{
+									"3dn-4": 6,
+									"3dn-6": 4,
+									"3dn-8": 3,
+								}
+							},
+						],
+					},
+					{
+						row: 6,
+						dir: -1,
+						list:
+						[
+							{
+								stop:
+								{
+									8: 11,
+									"x": 14,
+								},
+								form:
+								{
+									"3d-6": 11,
+									"3d-8": 11,
+									"3d-10": 14,
+									"3d-12": 14,
+								}
+							},
+							{
+								stop:
+								{
+									1: 10,
+									2: 9,
+									3: 8,
+									4: 7,
+									681: 6,
+									6: 5,
+									9: 3,
+									"x": 2,
+								},
+								form:
+								{
+									"3dn-4": 7,
+									"3dn-6": 5,
+									"3dn-8": 3,
+								}
+							},
+						],
+					},
+					{
+						row: 9,
+						dir: 1,
+						list:
+						[
+							{
+								stop:
+								{
+									10: 15,
+									"x": 17,
+								},
+								form:
+								{
+									"3d-6": 15,
+									"3d-8": 15,
+									"3d-10": 15,
+									"3d-12": 17,
+								}
+							},
+							{
+								stop:
+								{
+									1: 11,
+									4: 10,
+									681: 8.75,
+									6: 8,
+									8: 7,
+									9: 5.5,
+									"x": 5,
+								},
+							},
+						],
+					},
+					{
+						row: 15,
+						dir: -1,
+						list:
+						[
+							{
+								stop:
+								{
+									"x": 15.25,
+								},
+								form:
+								{
+									"3d-6": 15.25,
+									"3d-8": 15.25,
+									"3d-10": 15.25,
+									"3d-12": 15.25,
+								}
+							},
+							{
+								stop:
+								{
+									1: 11.25,
+									4: 10.25,
+									681: 8.75,
+									8: 6.25,
+									9: 5.5,
+									"x": 3.25,
+								},
+							},
+						],
+					},
+					{
+						row: 18,
+						dir: 1,
+						list:
+						[
+							{
+							},
+							{
+								stop:
+								{
+									4: 12.25,
+									10: 9.25,
+									"x": 7.25,
+								},
+								form:
+								{
+									"3dn-4": 12.25,
+									"3dn-6": 9.25,
+									"3dn-8": 9.25,
+									"3d-6": 9.25,
+									"3d-8": 9.25,
+									"3d-10": 9.25,
+									"3d-12": 7.25,
+								}
+							},
+						],
+					},
+					{
+						row: 24,
+						dir: -1,
+						list:
+						[
+							{
+							},
+							{
+								stop:
+								{
+									4: 12.25,
+									10: 9.25,
+									"x": 7.25,
+								},
+								form:
+								{
+									"3dn-4": 12.25,
+									"3dn-6": 9.25,
+									"3dn-8": 9.25,
+									"3d-6": 9.25,
+									"3d-8": 9.25,
+									"3d-10": 9.25,
+									"3d-12": 7.25,
+								}
+							},
+						],
+					},
+				],
+				form:
+				[
+					"3dn-4",
+					"3dn-6",
+					"3dn-8",
+					"3d-12",
+					"3d-10",
+					"3d-8",
+					"3d-6",
+				],
+			},
+			"kusatsu":
+			{
+				name: "草津",
+				line: "b",
+				width: 21,
+				height: 28,
+				plat: "M17,49H847V111H17ZM17,225H33V193H879V223H863V255H17ZM481,337H1343V399H481Z",
+				track:
+				[
+					{ row: 2, name: "琵琶湖線", color: "#0072bc", beg: -1, end: 6.5, arrow: "r" },
+					{ row: 2, name: "琵琶湖線\n草津線", color: "#0072bc", beg: 6.5, end: -1, arrow: "R" },
+					{ row: 8, name: "琵琶湖線", color: "#0072bc", beg: -1, end: 6.5, arrow: "r" },
+					{ row: 8, name: "琵琶湖線\n草津線", color: "#0072bc", beg: 6.5, end: -1, arrow: "R" },
+					{ row: 11, name: "琵琶湖線", color: "#0072bc", beg: -1, end: 7.5, arrow: "l" },
+					{ row: 11, name: "琵琶湖線\n草津線", color: "#0072bc", beg: 7.5, end: -1, arrow: "L" },
+					{ row: 17, name: "琵琶湖線", color: "#0072bc", beg: -1, end: 7, arrow: "l" },
+					{ row: 17, name: "琵琶湖線\n草津線", color: "#0072bc", beg: 7, end: -1, arrow: "L" },
+					{ row: 20, name: "琵琶湖線", color: "#0072bc", beg: -1, end: 8, arrow: "l" },
+					{ row: 20, name: "草津線", color: "#5a9934", beg: 8, end: -1, arrow: "LR" },
+					{ row: 26, name: "草津線", color: "#5a9934", beg: 9, end: -1, arrow: "LR" },
+				],
+				number:
+				[
+					{ row: 3, pos: 0.75, dir: 1, num: 6 },
+					{ row: 7, pos: 0.75, dir: -1, num: 5 },
+					{ row: 12, pos: 1, dir: 1, num: 4 },
+					{ row: 16, pos: 1, dir: -1, num: 3 },
+					{ row: 21, pos: 10.25, dir: 1, num: 2 },
+					{ row: 25, pos: 10.25, dir: -1, num: 1 },
+				],
+				equip:
+				[
+					{
+						row: 3,
+						list:
+						[
+							{ pos: 6.5, dir: 1, type: "s" },
+							{ pos: 8, dir: 1, type: "ebi" },
+							{ pos: 8.5, dir: 1, type: "ev" },
+							{ pos: 9.25, dir: 1, type: "si" },
+						],
+					},
+					{
+						row: 12,
+						list:
+						[
+							{ pos: 6.5, dir: 1, type: "s" },
+							{ pos: 8, dir: 1, type: "ebi" },
+							{ pos: 8.5, dir: 1, type: "ev" },
+							{ pos: 9.25, dir: 1, type: "si" },
+						],
+					},
+					{
+						row: 21,
+						list:
+						[
+							{ pos: 8, dir: 1, type: "si" },
+							{ pos: 8.5, dir: 1, type: "ev" },
+							{ pos: 7.5, dir: 1, type: "ebi" },
+						],
+					},
+				],
+				stop:
+				[
+					{
+						row: 0,
+						dir: 1,
+						list:
+						[
+							{
+								stop:
+								{
+									8: 10.5,
+									"x": 12.5,
+								},
+								form:
+								{
+									"3d-8": 10.5,
+									"3d-12": 12.5,
+								}
+							},
+							{
+							},
+						],
+					},
+					{
+						row: 6,
+						dir: -1,
+						list:
+						[
+							{
+								stop:
+								{
+									8: 10.5,
+									9: 11.5,
+									12: 12.5,
+									"x": 13.25,
+								},
+								form:
+								{
+									"3d-6": 10.5,
+									"3d-8": 10.5,
+									"3d-10": 12.5,
+									"3d-12": 12.5,
+									"4d-7": 10.5,
+								}
+							},
+							{
+								stop:
+								{
+									8: 4.5,
+									"x": 0.5,
+								},
+							},
+						],
+					},
+					{
+						row: 9,
+						dir: 1,
+						list:
+						[
+							{
+								stop:
+								{
+									4: 6,
+									8: 10.5,
+									"x": 13.5,
+								},
+							},
+							{
+								stop:
+								{
+									8: 4.5,
+									"x": 1.5,
+								},
+								form:
+								{
+									"3d-6": 4.5,
+									"3d-8": 4.5,
+									"3d-10": 1.5,
+									"3d-12": 1.5,
+								}
+							},
+						],
+					},
+					{
+						row: 15,
+						dir: -1,
+						list:
+						[
+							{
+							},
+							{
+								stop:
+								{
+									8: 4,
+									12: 1,
+									"x": 0.5,
+								},
+								form:
+								{
+									"3d-8": 4,
+									"3d-12": 1,
+								}
+							},
+						],
+					},
+					{
+						row: 18,
+						dir: 1,
+						list:
+						[
+							{
+							},
+							{
+								stop:
+								{
+									"x": 8,
+								},
+								form:
+								{
+									"3d-8": 8,
+								}
+							},
+						],
+					},
+					{
+						row: 24,
+						dir: -1,
+						list:
+						[
+							{
+							},
+							{
+								stop:
+								{
+									"x": 10.5,
+								},
+							},
+						],
+						def: { pos: 10.5, dir: -1, form: "3d-4" },
+					},
+				],
+				form:
+				[
+					"3d-12",
+					"3d-10",
+					"3d-8",
+					"3d-6",
+					"4d-7",
+				],
+			},
+			"yamashina":
+			{
+				name: "山科",
+				line: "b",
+				width: 14,
+				height: 19,
+				plat: "M49,49H847V111H49ZM49,193H847V255H49Z",
+				track:
+				[
+					{ row: 2, name: "琵琶湖線", color: "#0072bc", beg: -1, end: 7, arrow: "r" },
+					{ row: 2, name: "琵琶湖線\n湖西線", color: "#0072bc", beg: 7, end: -1, arrow: "R" },
+					{ row: 8, name: "琵琶湖線", color: "#0072bc", beg: -1, end: 7, arrow: "r" },
+					{ row: 8, name: "湖西線\n琵琶湖線", color: "#0072bc", beg: 7, end: -1, arrow: "R" },
+					{ row: 11, name: "琵琶湖線", color: "#0072bc", beg: -1, end: -1, arrow: "lL" },
+					{ row: 17, name: "琵琶湖線", color: "#0072bc", beg: -1, end: 7, arrow: "l" },
+					{ row: 17, name: "湖西線\n琵琶湖線", color: "#0072bc", beg: 7, end: -1, arrow: "L" },
+				],
+				number:
+				[
+					{ row: 3, pos: 1.5, dir: 1, num: 4 },
+					{ row: 7, pos: 1.5, dir: -1, num: 3 },
+					{ row: 12, pos: 1.5, dir: 1, num: 2 },
+					{ row: 16, pos: 1.5, dir: -1, num: 1 },
+				],
+				equip:
+				[
+					{
+						row: 3,
+						list:
+						[
+							{ pos: 8.75, dir: -1, type: "eusi" },
+							{ pos: 9.75, dir: -1, type: "eds" },
+						],
+					},
+					{
+						row: 12,
+						list:
+						[
+							{ pos: 8.75, dir: -1, type: "si" },
+							{ pos: 9.75, dir: -1, type: "eb" },
+						],
+					},
+				],
+				stop:
+				[
+					{
+						row: 0,
+						dir: 1,
+						list:
+						[
+							{
+								stop:
+								{
+									8: 12,
+									"x": 13,
+								},
+								form:
+								{
+									"3d-4": 12,
+									"3d-8": 12,
+									"3d-12": 13,
+								}
+							},
+							{
+							},
+						],
+					},
+					{
+						row: 6,
+						dir: -1,
+						list:
+						[
+							{
+								stop:
+								{
+									8: 12,
+									"x": 13,
+								},
+								form:
+								{
+									"3d-6": 12,
+									"3d-8": 12,
+									"3d-10": 13,
+									"3d-12": 13,
+									"4d-7": 12,
+								}
+							},
+							{
+							},
+						],
+					},
+					{
+						row: 9,
+						dir: 1,
+						list:
+						[
+							{
+							},
+							{
+								stop:
+								{
+									4: 7,
+									8: 5,
+									10: 2,
+									"x": 1,
+								},
+								form:
+								{
+									"3d-6": 5,
+									"3d-8": 5,
+									"3d-10": 2,
+									"3d-12": 1,
+								}
+							},
+						],
+					},
+					{
+						row: 15,
+						dir: -1,
+						list:
+						[
+							{
+							},
+							{
+								stop:
+								{
+									4: 7,
+									8: 5,
+									10: 2,
+									"x": 1,
+								},
+								form:
+								{
+									"3d-4": 7,
+									"3d-8": 5,
+									"3d-12": 1,
+									"4d-7": 5,
+								}
+							},
+						],
+					},
+				],
+				form:
+				[
+					"3d-12",
+					"3d-10",
+					"3d-8",
+					"3d-6",
+					"3d-4",
+					"4d-7",
+				],
+			},
+			"kyoto":
+			{
+				name: "京都",
+				line: "b",
+			},
+			"shinosaka":
+			{
+				name: "新大阪",
+				line: "b",
+			},
+			"osaka":
+			{
+				name: "大阪",
+				line: "b",
+			},
+			"amagasaki":
+			{
+				name: "尼崎",
+				line: "b",
+			},
+			"sannomiya":
+			{
+				name: "三ノ宮",
+				line: "be",
+			},
+		};
+		var ready = false;
+		var curid = "";
+		function drawform()
+		{
+			if (!ready)
+				return;
+			var form = document.getElementById("formation").options[document.getElementById("formation").selectedIndex].value;
+			var dir = document.getElementById("dirdown").checked ? 1 : 0;
+			stadata[curid].stop.forEach(function (s, i, a)
+			{
+				if (!s.def)
+				{
+					var use = document.getElementById("t-frm-" + i);
+					var use2 = document.getElementById("t-dor-" + i);
+					if (s.list[dir].form && s.list[dir].form[form])
+					{
+						use.setAttribute("x", s.list[dir].form[form] * 64 + (dir - 1) * frmdata[form].len);
+						use.setAttributeNS("http://www.w3.org/1999/xlink", "href", "#frm-" + form);
+						use.style.color = "black";
+						use2.setAttribute("x", s.list[dir].form[form] * 64 + (dir - 1) * frmdata[form].len);
+						use2.setAttributeNS("http://www.w3.org/1999/xlink", "href", "#dor-" + form);
+						use2.style.color = "black";
+					} else
+						if (s.list[1 - dir].form && s.list[1 - dir].form[form])
+						{
+							use.setAttribute("x", s.list[1 - dir].form[form] * 64 - dir * frmdata[form].len);
+							use.setAttributeNS("http://www.w3.org/1999/xlink", "href", "#frm-" + form);
+							use.style.color = "gray";
+							use2.setAttribute("x", s.list[1 - dir].form[form] * 64 - dir * frmdata[form].len);
+							use2.setAttributeNS("http://www.w3.org/1999/xlink", "href", "#dor-" + form);
+							use2.style.color = "gray";
+						} else
+						{
+							use.setAttribute("x", stadata[curid].width * 64);
+							use.removeAttributeNS("http://www.w3.org/1999/xlink", "href");
+							use2.setAttribute("x", stadata[curid].width * 64);
+							use2.removeAttributeNS("http://www.w3.org/1999/xlink", "href");
+						}
+				}
+			});
+		}
+		function createSVG(tag)
+		{
+			return document.createElementNS("http://www.w3.org/2000/svg", tag);
+		}
+		function draw(id)
+		{
+			curid = id;
+			var svg = createSVG("svg");
+			svg.setAttribute("viewBox", "-128 0 " + (stadata[id].width * 64 + 256) + " " + stadata[id].height * 16);
+			svg.setAttribute("width", (stadata[id].width * 32 + 128) + "px");
+			var path = createSVG("path");
+			path.setAttribute("d", stadata[id].plat);
+			path.setAttribute("stroke", "black");
+			path.setAttribute("stroke-width", "2");
+			path.setAttribute("fill", "none");
+			svg.appendChild(path);
+			stadata[id].number.forEach(function (n, i, a)
+			{
+				var text = createSVG("text");
+				text.setAttribute("x", n.pos * 64);
+				text.setAttribute("y", n.row * 16 + n.dir * 4 + n.dir * 12 + 12);
+				text.setAttribute("font-size", 32);
+				text.setAttribute("font-weight", "bold");
+				text.setAttribute("text-anchor", "middle");
+				text.innerHTML = n.num;
+				svg.appendChild(text);
+			});
+			if (stadata[id].track)
+			{
+				stadata[id].track.forEach(function (t, i, a)
+				{
+					var line = createSVG("line");
+					line.setAttribute("x1", t.beg < 0 ? -32 : t.beg * 64);
+					line.setAttribute("x2", t.end < 0 ? stadata[id].width * 64 + 32 : t.end * 64);
+					line.setAttribute("y1", t.row * 16);
+					line.setAttribute("y2", t.row * 16);
+					line.setAttribute("stroke", t.color);
+					line.setAttribute("stroke-width", 4);
+					svg.appendChild(line);
+					if (t.beg < 0)
+					{
+						t.name.split("\n").forEach(function (s, j, a)
+						{
+							var text = createSVG("text");
+							text.setAttribute("x", -32);
+							text.setAttribute("y", t.row * 16 - a.length * 8 + j * 16 + 14);
+							text.setAttribute("font-size", 16);
+							text.setAttribute("font-weight", "bold");
+							text.setAttribute("text-anchor", "end");
+							text.setAttribute("fill", t.color);
+							text.innerHTML = s;
+							svg.appendChild(text);
+						});
+					}
+					if (t.end < 0)
+					{
+						t.name.split("\n").forEach(function (s, j, a)
+						{
+							var text = createSVG("text");
+							text.setAttribute("x", stadata[id].width * 64 + 32);
+							text.setAttribute("y", t.row * 16 - a.length * 8 + j * 16 + 14);
+							text.setAttribute("font-size", 16);
+							text.setAttribute("font-weight", "bold");
+							text.setAttribute("text-anchor", "start");
+							text.setAttribute("fill", t.color);
+							text.innerHTML = s;
+							svg.appendChild(text);
+						});
+					}
+					t.arrow.split("").forEach(function (c, j, a)
+					{
+						var use = createSVG("use");
+						use.setAttribute("x", c == c.toLowerCase() ? -16 : stadata[id].width * 64 + 16);
+						use.setAttribute("y", t.row * 16);
+						use.setAttributeNS("http://www.w3.org/1999/xlink", "href", "#arw-" + c.toLowerCase());
+						use.setAttribute("fill", t.color);
+						svg.appendChild(use);
+					});
+				});
+			}
+			stadata[id].equip.forEach(function (e, i, a)
+			{
+				e.list.forEach(function (l, j, a)
+				{
+					var use = createSVG("use");
+					use.setAttribute("x", l.pos * 64);
+					use.setAttribute("y", e.row * 16 - l.dir * 8 + 16);
+					use.setAttributeNS("http://www.w3.org/1999/xlink", "href", "#" + l.type);
+					svg.appendChild(use);
+				});
+			});
+			stadata[id].stop.forEach(function (s, i, a)
+			{
+				if (s.def)
+				{
+					var use = createSVG("use");
+					use.setAttribute("x", s.def.pos * 64 - (s.def.dir + 1) * frmdata[s.def.form].len / 2);
+					use.setAttribute("y", s.row * 16);
+					use.setAttributeNS("http://www.w3.org/1999/xlink", "href", "#frm-" + s.def.form);
+					use.style.color = "gray";
+					svg.appendChild(use);
+					var use = createSVG("use");
+					use.setAttribute("x", s.def.pos * 64 - (s.def.dir + 1) * frmdata[s.def.form].len / 2);
+					use.setAttribute("y", s.row * 16 + 32 + s.dir * 11);
+					use.setAttributeNS("http://www.w3.org/1999/xlink", "href", "#dor-" + s.def.form);
+					use.style.color = "gray";
+					svg.appendChild(use);
+				} else
+				{
+					var use = createSVG("use");
+					use.setAttribute("id", "t-frm-" + i);
+					use.setAttribute("y", s.row * 16);
+					use.style.color = "black";
+					svg.appendChild(use);
+					var use = createSVG("use");
+					use.setAttribute("id", "t-dor-" + i);
+					use.setAttribute("y", s.row * 16 + 32 + s.dir * 11);
+					use.style.color = "black";
+					svg.appendChild(use);
+				}
+				s.list.forEach(function (l, j, a)
+				{
+					if (l.stop)
+						Object.keys(l.stop).forEach(function (o, k, a)
+						{
+							var use = createSVG("use");
+							use.setAttribute("x", l.stop[o] * 64);
+							use.setAttribute("y", s.row * 16 + j * 32 + 16);
+							if (o == "x" || o == "o" || o == "")
+							{
+								use.setAttributeNS("http://www.w3.org/1999/xlink", "href", "#stop" + o);
+								svg.appendChild(use);
+							} else
+							{
+								use.setAttributeNS("http://www.w3.org/1999/xlink", "href", "#stop");
+								svg.appendChild(use);
+								var text = createSVG("text");
+								text.setAttribute("x", l.stop[o] * 64);
+								text.setAttribute("y", s.row * 16 + j * 32 + 16 + 6);
+								text.setAttribute("font-size", 16);
+								text.setAttribute("font-weight", "bold");
+								text.setAttribute("text-anchor", "middle");
+								text.innerHTML = o;
+								svg.appendChild(text);
+							}
+						});
+				});
+			});
+			var body = document.getElementById("body");
+			ready = false;
+			if (body.hasChildNodes())
+				body.replaceChild(svg, body.children[0]);
+			else
+				body.appendChild(svg);
+			var form = document.getElementById("formation");
+			var last = form.length ? form.options[form.selectedIndex].value : "";
+			form.length = 0;
+			stadata[id].form.forEach(function (f, i, a)
+			{
+				form.add(new Option(frmdata[f].name, f));
+				if (f == last || !i)
+					form.selectedIndex = i;
+			});
+			ready = true;
+			drawform();
+		}
+		function makelist()
+		{
+			Object.keys(frmdata).forEach(function (key)
+			{
+				var g = createSVG("g");
+				g.setAttribute("id", "frm-" + key);
+				var cur = 0;
+				var idx = 0;
+				var doors = [];
+				frmdata[key].form.forEach(function (o, i, a)
+				{
+					rect = createSVG("rect");
+					rect.setAttribute("x", cur + (cardata[o].length - cardata[o].car) / 2 + 1);
+					rect.setAttribute("y", 19);
+					rect.setAttribute("width", cardata[o].car - 2);
+					rect.setAttribute("height", 26);
+					rect.setAttribute("stroke", "currentColor");
+					rect.setAttribute("stroke-width", 2);
+					rect.setAttribute("fill", "white");
+					g.appendChild(rect);
+					if (cardata[o].split)
+						cardata[o].split.forEach(function (s, j, a)
+						{
+							line = createSVG("line");
+							line.setAttribute("x1", cur + cardata[o].length / 2 + s);
+							line.setAttribute("y1", 19);
+							line.setAttribute("x2", cur + cardata[o].length / 2 + s);
+							line.setAttribute("y2", 45);
+							line.setAttribute("stroke", "currentColor");
+							line.setAttribute("stroke-width", 2);
+							g.appendChild(line);
+						});
+					cardata[o].doors.forEach(function (d, j, a)
+					{
+						doors.push(cur + cardata[o].length / 2 + d.pos - d.width / 2);
+						doors.push(cur + cardata[o].length / 2 + d.pos + d.width / 2);
+					});
+					if (frmdata[key].equip)
+						for (; idx < frmdata[key].equip.length; ++idx)
+						{
+							if (frmdata[key].equip[idx].car - 1 != i)
+								break;
+							var use = createSVG("use");
+							use.setAttribute("x", cur + cardata[o].length / 2 + frmdata[key].equip[idx].dir * 16 - 8);
+							use.setAttribute("y", 24);
+							use.setAttributeNS("http://www.w3.org/1999/xlink", "href", "#" + frmdata[key].equip[idx].type);
+							g.appendChild(use);
+						}
+					var text = createSVG("text");
+					text.setAttribute("x", cur + cardata[o].length / 2);
+					text.setAttribute("y", 38);
+					text.setAttribute("font-size", 16);
+					text.setAttribute("font-weight", "bold");
+					text.setAttribute("text-anchor", "middle");
+					text.setAttribute("fill", "currentColor");
+					text.innerHTML = frmdata[key].num ? frmdata[key].num[i] : i + 1;
+					g.appendChild(text);
+					cur += cardata[o].length;
+				});
+				document.getElementById("defs").appendChild(g);
+				if (doors.length)
+				{
+					var line = createSVG("line");
+					line.setAttribute("id", "dor-" + key);
+					line.setAttribute("x1", doors[0]);
+					line.setAttribute("y1", 0);
+					line.setAttribute("x2", doors[doors.length - 1]);
+					line.setAttribute("y2", 0);
+					line.setAttribute("stroke", "currentColor");
+					line.setAttribute("stroke-width", 2);
+					var array = "";
+					for (var i = 1; i < doors.length; ++i)
+						array += "," + (doors[i] - doors[i - 1]);
+					line.setAttribute("stroke-dasharray", array.substr(1));
+					document.getElementById("defs").appendChild(line);
+				}
+				frmdata[key].len = cur;
+			});
+			Object.keys(stadata).reverse().forEach(function (key)
+			{
+				a = document.createElement("a");
+				a.classList.add("listitem");
+				if (stadata[key].plat)
+					a.setAttribute("href", "#" + key);
+				else
+					a.classList.add("disabled");
+				a.setAttribute("name", key);
+				if (stadata[key].plat)
+					a.addEventListener("click", function ()
+					{
+						if (location.hash)
+							document.getElementsByName(location.hash.substr(1))[0].classList.remove("selected");
+						this.classList.add("selected");
+						draw(key);
+					});
+				var svg = createSVG("svg");
+				svg.setAttribute("viewBox", "-3 -2 6 4");
+				svg.setAttribute("width", "1.5em");
+				var use = createSVG("use");
+				use.setAttribute("x", 0);
+				use.setAttribute("y", 0);
+				use.setAttributeNS("http://www.w3.org/1999/xlink", "href", "#list" + stadata[key].line);
+				svg.appendChild(use);
+				a.appendChild(svg);
+				a.appendChild(document.createTextNode(stadata[key].name));
+				document.getElementById("list").appendChild(a);
+			});
+			var hash = location.hash;
+			if (hash.length)
+				if (stadata[hash.substr(1)])
+				{
+					document.getElementsByName(hash.substr(1))[0].classList.add("selected");
+					draw(hash.substr(1));
+				}
+		}
+		document.addEventListener("DOMContentLoaded", makelist, false);
+	</script>
+	<style>
+		.listitem
+		{
+			width: 1.5em;
+			margin-top: 0.25em;
+			padding-top: 0.25em;
+			padding-bottom: 0.25em;
+			display: inline-block;
+			text-align: center;
+			vertical-align: top;
+			white-space: normal;
+			color: black;
+			text-decoration: none;
+		}
+		.listitem.disabled
+		{
+			color: gray;
+		}
+		.listitem.selected
+		{
+			background-color: lightpink;
+		}
+	</style>
+</head>
+<body xmlns:xlink="http://www.w3.org/1999/xlink">
+	<svg display="none">
+		<defs id ="defs">
+			<g id="arw-r">
+				<path d="M14,0L2,-8V8Z" stroke="none" />
+			</g>
+			<g id="arw-l">
+				<path d="M-14,0L-2,-8V8Z" stroke="none" />
+			</g>
+			<g id="au">
+				<path d="M4,6H10V12L12,10V4H6Z" stroke="none" fill="black" />
+				<line x1="11" y1="5" x2="4" y2="12" stroke="black" stroke-width="2"/>
+			</g>
+			<g id="ad">
+				<path d="M4,6V12H10L12,10H6V4Z" stroke="none" fill="black" />
+				<line x1="12" y1="4" x2="5" y2="11" stroke="black" stroke-width="2"/>
+			</g>
+			<g id="ab">
+				<path d="M6,4H12V10L14,8V2H8ZM2,8V14H8L10,12H4V6Z" stroke="none" fill="black" />
+				<line x1="13" y1="3" x2="3" y2="13" stroke="black" stroke-width="2"/>
+			</g>
+			<g id="et">
+				<path d="M23,5L7,21H4A3,3,0,0,0,4,27H9L25,11H28A3,3,0,0,0,28,5Z" stroke="black" stroke-width="2" fill="white" />
+			</g>
+			<g id="ets">
+				<path d="M23,5L7,21H4A3,3,0,0,0,4,27H12V23H16V19H20V15H24V11H28A3,3,0,0,0,28,5Z" stroke="black" stroke-width="2" fill="white" />
+			</g>
+			<g id="eu">
+				<use xlink:href="#au" />
+				<use xlink:href="#et" />
+			</g>
+			<g id="eui">
+				<use xlink:href="#eu" transform="matrix(-1,0,0,1,32,0)" />
+			</g>
+			<g id="ed">
+				<use xlink:href="#ad" />
+				<use xlink:href="#et" />
+			</g>
+			<g id="edi">
+				<use xlink:href="#ed" transform="matrix(-1,0,0,1,32,0)" />
+			</g>
+			<g id="eb">
+				<use xlink:href="#ab" />
+				<use xlink:href="#et" />
+			</g>
+			<g id="ebi">
+				<use xlink:href="#eb" transform="matrix(-1,0,0,1,32,0)" />
+			</g>
+			<g id="eus">
+				<use xlink:href="#au" />
+				<use xlink:href="#ets" />
+			</g>
+			<g id="eusi">
+				<use xlink:href="#eus" transform="matrix(-1,0,0,1,32,0)" />
+			</g>
+			<g id="eds">
+				<use xlink:href="#ad" />
+				<use xlink:href="#ets" />
+			</g>
+			<g id="edsi">
+				<use xlink:href="#eds" transform="matrix(-1,0,0,1,32,0)" />
+			</g>
+			<g id="ebs">
+				<use xlink:href="#ab" />
+				<use xlink:href="#ets" />
+			</g>
+			<g id="ebsi">
+				<use xlink:href="#ebs" transform="matrix(-1,0,0,1,32,0)" />
+			</g>
+			<g id="s">
+				<path d="M5,27H10V23H14V19H18V15H22V11H27" stroke="black" stroke-width="2" fill="none" />
+			</g>
+			<g id="si">
+				<use xlink:href="#s" transform="matrix(-1,0,0,1,32,0)" />
+			</g>
+			<g id="ev">
+				<rect x="5" y="5" width="22" height="22" stroke="black" stroke-width="2" fill="none"/>
+				<path d="M17,8H15L19,24H21L25,8H23L20,20Z" stroke="none" fill="black" />
+				<path d="M16,9H9V23H16M9,16H14" stroke="black" stroke-width="2" fill="none" />
+			</g>
+			<rect id="stop" x="-7.5" y="-7.5" width="15" height="15" stroke="black" stroke-width="1" fill="white" transform="matrix(1,1,-1,1,0,0)" />
+			<g id="stopo">
+				<use xlink:href="#stop" />
+				<circle cx="0" cy="0" r="5.5" stroke="black" stroke-width="3" fill="none" />
+			</g>
+			<g id="stopx">
+				<use xlink:href="#stop" />
+				<line x1="-7.5" y1="-7.5" x2="7.5" y2="7.5" stroke="black" stroke-width="3" />
+				<line x1="-7.5" y1="7.5" x2="7.5" y2="-7.5" stroke="black" stroke-width="3" />
+			</g>
+			<g id="listge">
+				<line x1="-3" y1="0" x2="0" y2="0" stroke="#0b8e0e" stroke-width="1" />
+				<circle cx="0" cy="0" r="1.5" stroke="none" fill="#0b8e0e" />
+			</g>
+			<g id="listg">
+				<line x1="-3" y1="0" x2="3" y2="0" stroke="#0b8e0e" stroke-width="1" />
+				<circle cx="0" cy="0" r="1.5" stroke="none" fill="#0b8e0e" />
+			</g>
+			<g id="listgo">
+				<line x1="0" y1="0" x2="3" y2="0" stroke="#0b8e0e" stroke-width="1" />
+				<line x1="-3" y1="0" x2="0" y2="0" stroke="#f77321" stroke-width="1" />
+				<path d="M0,-1.5A1.5,1.5 0 0 1 0,1.5" stroke="none" fill="#0b8e0e" />
+				<path d="M0,-1.5A1.5,1.5 0 0 0 0,1.5" stroke="none" fill="#f77321" />
+			</g>
+			<g id="listo">
+				<line x1="-3" y1="0" x2="3" y2="0" stroke="#f77321" stroke-width="1" />
+				<circle cx="0" cy="0" r="1.5" stroke="none" fill="#f77321" />
+			</g>
+			<g id="listob">
+				<line x1="0" y1="0" x2="3" y2="0" stroke="#f77321" stroke-width="1" />
+				<line x1="-3" y1="0" x2="0" y2="0" stroke="#0073bc" stroke-width="1" />
+				<path d="M0,-1.5A1.5,1.5 0 0 1 0,1.5" stroke="none" fill="#f77321" />
+				<path d="M0,-1.5A1.5,1.5 0 0 0 0,1.5" stroke="none" fill="#0073bc" />
+			</g>
+			<g id="listb">
+				<line x1="-3" y1="0" x2="3" y2="0" stroke="#0073bc" stroke-width="1" />
+				<circle cx="0" cy="0" r="1.5" stroke="none" fill="#0073bc" />
+			</g>
+			<g id="listbe">
+				<line x1="0" y1="0" x2="3" y2="0" stroke="#0073bc" stroke-width="1" />
+				<circle cx="0" cy="0" r="1.5" stroke="none" fill="#0073bc" />
+			</g>
+			<g id="toilet">
+				<line x1="8" y1="0" x2="8" y2="16" stroke="black" stroke-width="1" />
+				<circle cx="3.5" cy="1.5" r="1.5" stroke="none" fill="red" />
+				<circle cx="12.5" cy="1.5" r="1.5" stroke="none" fill="blue" />
+				<path d="M5,4L7,12H5V16H2V12H0L2,4Z" stroke="none" fill="red" />
+				<path d="M14.5,4A1.5,1.5 0 0 1 16,5.5V10H14V16H11V10H9V5.5A1.5,1.5 0 0 1 10.5,4Z" stroke="none" fill="blue" />
+			</g>
+			<use id="toiletp" xlink:href="#toilet" opacity="0.5" />
+			<g id="green">
+				<path d="M0,5A2.5,2.5 0 0 1 2.5,2.5A2.5,2.5 0 0 1 5,0H11A2.5,2.5 0 0 1 13.5,2.5A2.5,2.5 0 0 1 16,5V11A2.5,2.5 0 0 1 13.5,13.5A2.5,2.5 0 0 1 11,16H5A2.5,2.5 0 0 1 2.5,13.5A2.5,2.5 0 0 1 0,11Z" stroke="none" fill="white" />
+				<path d="M7.5,8L3.5,12A1.5,1.5 0 0 1 1,11V5A1.5,1.5 0 0 1 3.5,4ZM8,7.5L4,3.5A1.5,1.5 0 0 1 5,1H11A1.5,1.5 0 0 1 12,3.5ZM8.5,8L12.5,4A1.5,1.5 0 0 1 15,5V11A1.5,1.5 0 0 1 12.5,12ZM8,8.5L12,12.5A1.5,1.5 0 0 1 11,15H5A1.5,1.5 0 0 1 4,12.5Z" stroke="none" fill="#409d28" />
+			</g>
+		</defs>
+	</svg>
+	<div id="body" style="width: 100%; overflow: auto; position: absolute; top: 0; left: 0; right: 0; bottom: 8em;"></div>
+	<div style="width: 100%; height: 8em; position: absolute; left: 0; right: 0; bottom: 0; z-index: 1; background-color: white;">
+		<div style="width: 100%; height: 2em; display: table;">
+			<label style="display: table-cell; vertical-align: middle;"><input type="radio" id="dirdown" name="direction" value="down" checked="checked" onchange="drawform();" />下り</label>
+			<select id="formation" style="display: table-cell; vertical-align: middle;" onchange="drawform();"></select>
+			<label style="display: table-cell; vertical-align: middle;">上り<input type="radio" id="dirup" name="direction" value="up" onchange="drawform();" /></label>
+		</div>
+		<div id="list" style="width: 100%; height: 6em; overflow-x: auto; overflow-y: hidden; white-space: nowrap;"></div>
+	</div>
+</body>
+</html>
